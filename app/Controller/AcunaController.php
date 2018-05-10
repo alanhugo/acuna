@@ -11,5 +11,23 @@ class AcunaController extends AppController{
 		$this->layout = "wescon";
 	}
 	
+	public function conocenos() {
+        
+		$this->layout = "wescon";
+	}
 	
+	public function venta() {
+        
+		$this->layout = "wescon";
+	}
+	
+	public function entregado() {
+        
+		$this->layout = "wescon";
+	}
+	
+	public function contacto() {
+        
+		$this->layout = "wescon";
+	}
 }
