@@ -29,6 +29,7 @@
 	Router::connect('/proyectos-en-venta', array('controller' => 'acuna', 'action' => 'venta'));
 	Router::connect('/proyectos-entregados', array('controller' => 'acuna', 'action' => 'entregado'));
 	Router::connect('/contacto', array('controller' => 'acuna', 'action' => 'contacto'));
+	Router::connect('/proyecto', array('controller' => 'acuna', 'action' => 'proyecto'));
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
  */

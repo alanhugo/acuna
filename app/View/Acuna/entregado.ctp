@@ -4,7 +4,7 @@
 		 <li class="b2-slider-item">
 			<div class="b2-tb-item">
 			   <div class="b2-tc-item">
-				  <a href="departamentos-lima.html" class="b2-item">
+				  <a href="proyecto" class="b2-item">
 					 <div class="b2-cnt">
 						<div class="b2-img">
 						   <div class="b2-img-inside" style="background-image: url('theme/uploads/proyectos-entregados/home-san-diego.jpg')"
@@ -23,7 +23,7 @@
 		 <li class="b2-slider-item">
 			<div class="b2-tb-item">
 			   <div class="b2-tc-item">
-				  <a href="departamentos-lima.html" class="b2-item">
+				  <a href="proyecto" class="b2-item">
 					 <div class="b2-cnt">
 						<div class="b2-img">
 						   <div class="b2-img-inside" style="background-image: url('theme/uploads/proyectos-entregados/1parques-de-villasol.png')"
@@ -42,7 +42,7 @@
 		 <li class="b2-slider-item">
 			<div class="b2-tb-item">
 			   <div class="b2-tc-item">
-				  <a href="departamentos-lima.html" class="b2-item">
+				  <a href="proyecto" class="b2-item">
 					 <div class="b2-cnt">
 						<div class="b2-img">
 						   <div class="b2-img-inside" style="background-image: url('theme/uploads/proyectos-entregados/1condominio-santa-fe.png')"
@@ -61,7 +61,7 @@
 		 <li class="b2-slider-item">
 			<div class="b2-tb-item">
 			   <div class="b2-tc-item">
-				  <a href="departamentos-lima.html" class="b2-item">
+				  <a href="proyecto" class="b2-item">
 					 <div class="b2-cnt">
 						<div class="b2-img">
 						   <div class="b2-img-inside" style="background-image: url('theme/uploads/proyectos-entregados/1edificio-bamboo.png')"
@@ -80,7 +80,7 @@
 		 <li class="b2-slider-item">
 			<div class="b2-tb-item">
 			   <div class="b2-tc-item">
-				  <a href="departamentos-lima.html" class="b2-item">
+				  <a href="proyecto" class="b2-item">
 					 <div class="b2-cnt">
 						<div class="b2-img">
 						   <div class="b2-img-inside" style="background-image: url('theme/uploads/proyectos-entregados/1edificio-los-ruisenores.png')"
@@ -99,7 +99,7 @@
 		 <li class="b2-slider-item">
 			<div class="b2-tb-item">
 			   <div class="b2-tc-item">
-				  <a href="departamentos-lima.html" class="b2-item">
+				  <a href="proyecto" class="b2-item">
 					 <div class="b2-cnt">
 						<div class="b2-img">
 						   <div class="b2-img-inside" style="background-image: url('theme/uploads/proyectos-entregados/1edificio-del-parque.png')"
@@ -118,7 +118,7 @@
 		 <li class="b2-slider-item">
 			<div class="b2-tb-item">
 			   <div class="b2-tc-item">
-				  <a href="departamentos-lima.html" class="b2-item">
+				  <a href="proyecto" class="b2-item">
 					 <div class="b2-cnt">
 						<div class="b2-img">
 						   <div class="b2-img-inside" style="background-image: url('theme/uploads/proyectos-entregados/1edificio-san-antonio.png')"
@@ -137,7 +137,7 @@
 		 <li class="b2-slider-item">
 			<div class="b2-tb-item">
 			   <div class="b2-tc-item">
-				  <a href="departamentos-lima.html" class="b2-item">
+				  <a href="proyecto" class="b2-item">
 					 <div class="b2-cnt">
 						<div class="b2-img">
 						   <div class="b2-img-inside" style="background-image: url('theme/uploads/proyectos-entregados/1edificio-dona-delmira.png')"
@@ -156,7 +156,7 @@
 		 <li class="b2-slider-item">
 			<div class="b2-tb-item">
 			   <div class="b2-tc-item">
-				  <a href="departamentos-lima.html" class="b2-item">
+				  <a href="proyecto" class="b2-item">
 					 <div class="b2-cnt">
 						<div class="b2-img">
 						   <div class="b2-img-inside" style="background-image: url('theme/uploads/proyectos-entregados/1calle-27.png')"
@@ -175,7 +175,7 @@
 		 <li class="b2-slider-item">
 			<div class="b2-tb-item">
 			   <div class="b2-tc-item">
-				  <a href="departamentos-lima.html" class="b2-item">
+				  <a href="proyecto" class="b2-item">
 					 <div class="b2-cnt">
 						<div class="b2-img">
 						   <div class="b2-img-inside" style="background-image: url('theme/uploads/proyectos-entregados/1edificio-las-auroras.png')"
@@ -194,7 +194,7 @@
 		 <li class="b2-slider-item">
 			<div class="b2-tb-item">
 			   <div class="b2-tc-item">
-				  <a href="departamentos-lima.html" class="b2-item">
+				  <a href="proyecto" class="b2-item">
 					 <div class="b2-cnt">
 						<div class="b2-img">
 						   <div class="b2-img-inside" style="background-image: url('theme/uploads/proyectos-entregados/1edificio-la-molina.png')"

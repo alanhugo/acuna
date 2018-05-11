@@ -3,9 +3,9 @@
  <section class="footer-copy">
 	<div class="wancho">
 	   <div class="footer-top cf">
-		  <div class="footer-copy-left"><a href="www.wescon.html"><img src="static/img/logo-footer.png" alt="" width="201" height="51"></a></div>
+		  <div class="footer-copy-left"><a href="www.wescon.html"><img src="theme/static/img/logo-footer.png" alt="" width="201" height="51"></a></div>
 		  <div class="footer-copy-right">
-			 <p><span>Miembro de:</span><span><img src="static/img/aziperu-asociado.png" alt=""></span></p>
+			 <p><span>Miembro de:</span><span><img src="theme/static/img/aziperu-asociado.png" alt=""></span></p>
 		  </div>
 	   </div>
 	   <div class="footer-center">

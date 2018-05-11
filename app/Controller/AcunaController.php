@@ -30,4 +30,9 @@ class AcunaController extends AppController{
         
 		$this->layout = "wescon";
 	}
+	
+	public function proyecto() {
+        
+		$this->layout = "wescon";
+	}
 }
