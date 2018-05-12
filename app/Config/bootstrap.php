@@ -112,3 +112,40 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
+
+
+switch (Configure::read('environment')){
+	case 'localhost':
+		Configure::write('mym.url','http://localhost/github/acuna/');
+		//Configure::write('SCRIPT_MIN','');
+		break;
+	case 'production':
+		Configure::write('mym.url','http://sistema.mym-iceperu.com/');
+		//Configure::write('SCRIPT_MIN','.min');
+		break;
+	default:
+		Configure::write('mym.url','http://localhost/github/mym/');
+		//Configure::write('SCRIPT_MIN','');
+}
+
+//Configure::write('ENV_WEBROOT','');
+Configure::write('ENV_WEBROOT_FULL_URL',Configure::read('mym.url'));
+
+/*if(Configure::read('environment') == 'staging'){
+	if((isset($_SERVER['SERVER_NAME']) && (strpos($_SERVER['SERVER_NAME'], 'stagingmaster.livingalpha.com') !==  false || strpos($_SERVER['SERVER_NAME'], 'stagingmaster.livingalplha.com') !==  false)) || (isset($_SERVER['HTTP_HOST']) && $_SERVER['HTTP_HOST'] == '23.21.250.206')){
+		Configure::write('ENV_WEBROOT','');
+	}else{
+		Configure::write('ENV_WEBROOT','/'.trim(@file_get_contents(dirname(__FILE__).'/branch_name')));
+		Configure::write('ENV_WEBROOT_FULL_URL',Configure::read('LivingAlpha.url').trim(@file_get_contents(dirname(__FILE__).'/branch_name')).'/');
+	}
+}*/
+
+//echo "<script>var env_webroot_script = '".Configure::read('mym.url')."';</script>";
+define('ENV_WEBROOT_FULL_URL',Configure::read('ENV_WEBROOT_FULL_URL'));
+
+/**
+ * Load the BotDetect Captcha CakePHP plugin
+ */
+CakePlugin::load(array(
+  'BotDetect' => array('routes' => true)
+));
