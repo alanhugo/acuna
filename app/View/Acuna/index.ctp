@@ -55,6 +55,7 @@
 	  <div class="b1-link"><a href="#proyectos"><span class="icon-bottom"></span></a></div>
    </div>
 </section>
+<div class="wancho" align="right"><a href=<?php echo ENV_WEBROOT_FULL_URL.'banners/index'?>>Editar</a></div>
 <section id="proyectos" class="b2">
    <div class="wancho">
 	  <div class="b2-title">

@@ -1,7 +1,7 @@
 <?php
 App::uses('AppModel','Model');
-  class User extends AppModel {
-    public $name = 'User';
+  class Banner extends AppModel {
+    public $name = 'Banner';
     //public $displayField = 'nombre_usuario';
     
     //public $virtualFields = array('captcha' => 0);
@@ -11,64 +11,22 @@ App::uses('AppModel','Model');
     	parent::beforeFilter();
     }
     
-    public $belongsTo = array(
-    		'TipoUsuario' => array(
-    				'className' => 'TipoUsuario',
-    				'foreignKey' => 'tipo_user_id',
-    				'conditions' => '',
-    				'fields' => '',
-    				'order' => ''
-    		)
-    );
-    
-    public $hasOne = array(
-    		'Persona' => array(
-    				'className'    => 'Persona',
-    				'foreignKey' => 'id',
-    				'fields' => '',
-    				'order' => ''
-    				//'dependent'    => true
-    		)
-    );
+ 
 
     public $validate = array(
-        'username'    => array(
+        'titulo'    => array(
             'required' => array(
                 'rule' => array('notEmpty','isUnique'),
-                'message' => 'Nombre de usuario es requerido'
+                'message' => 'Titulo es requerido'
             )
         ),
-        'password'     => array(
+        'subtitulo'     => array(
             'required' => array(
                 'rule' => array('notEmpty'),
-                'message' => 'La clave es requerida'
+                'message' => 'SubTitulo es requerido'
             )
         )
     );
-    
-    public function beforeSave($options = array()) {
-    
-    	/* password hashing */
-    	if (isset($this->data[$this->alias]['password'])) {
-    		$this->data[$this->alias]['password'] = AuthComponent::password($this->data[$this->alias]['password']);
-    	}
-    	return true;
-    }
-    
-    
-    public function listAllUsers($order_by='User.created', $search_username='',$order='DESC') {
-    	$arr_obj_user = $this->findObjects('all',array(
-    			'conditions'=>array(
-    					'AND' => array(
-    							'User.username LIKE'=> '%'.$search_username.'%',
-    							'User.estado != ' => 0
-    					)
-    			),
-    			'order'=> array($order_by.' '.$order)
-    	)
-    	);
-    	return $arr_obj_user;
-    }
     
     public function listFindUsers($order_by='User.estado', $search_username='',$order='DESC', $start=0, $per_page=10) {
     	$arr_obj_user = $this->findObjects('all',array(

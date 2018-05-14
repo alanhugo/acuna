@@ -222,12 +222,12 @@
 /**
  * A random string used in security hashing methods.
  */
-	Configure::write('Security.salt', 'DYhG93b0qyJfIxfs2guVoUubWwvniR2G0FgaC9miAlan');
+	Configure::write('Security.salt', 'DYhG93b0qyJfIxfs2guVoUubWwvniR2G0FgaC9mix');
 
 /**
  * A random numeric string (digits only) used to encrypt/decrypt strings.
  */
-	Configure::write('Security.cipherSeed', '76859309657453542496749683645112114');
+	Configure::write('Security.cipherSeed', '76859309657453542496749683645x');
 
 /**
  * Apply timestamps with the last modified time to static assets (js, css, images).
@@ -238,8 +238,6 @@
  * timestamping regardless of debug value.
  */
 	//Configure::write('Asset.timestamp', true);
-
-date_default_timezone_set('America/Lima');
 
 /**
  * Compress CSS output by removing comments, whitespace, repeating tags, etc.
@@ -277,9 +275,10 @@ date_default_timezone_set('America/Lima');
  * then the value of `Config.timezone` will be used. This feature allows you to set users' timezone just
  * once instead of passing it each time in function calls.
  */
-	//Configure::write('Config.timezone', 'Europe/Paris');
+	//Configure::write('Config.timezone', 'Europe/Paris')
 
 /**
+ *
  * Cache Engine Configuration
  * Default settings provided below
  *
@@ -316,20 +315,18 @@ date_default_timezone_set('America/Lima');
  *		'password' => 'password', //plaintext password (xcache.admin.pass)
  *	));
  *
- * Memcached (http://www.danga.com/memcached/)
- *
- * Uses the memcached extension. See http://php.net/memcached
+ * Memcache (http://www.danga.com/memcached/)
  *
  * 	 Cache::config('default', array(
- *		'engine' => 'Memcached', //[required]
+ *		'engine' => 'Memcache', //[required]
  *		'duration' => 3600, //[optional]
  *		'probability' => 100, //[optional]
  * 		'prefix' => Inflector::slug(APP_DIR) . '_', //[optional]  prefix every cache file with this string
  * 		'servers' => array(
  * 			'127.0.0.1:11211' // localhost, default port 11211
  * 		), //[optional]
- * 		'persistent' => 'my_connection', // [optional] The name of the persistent connection.
- * 		'compress' => false, // [optional] compress data in Memcached (slower, but uses less memory)
+ * 		'persistent' => true, // [optional] set this to false for non-persistent connections
+ * 		'compress' => false, // [optional] compress data in Memcache (slower, but uses less memory)
  *	));
  *
  *  Wincache (http://php.net/wincache)
@@ -386,4 +383,3 @@ Cache::config('_cake_model_', array(
 	'serialize' => ($engine === 'File'),
 	'duration' => $duration
 ));
-
