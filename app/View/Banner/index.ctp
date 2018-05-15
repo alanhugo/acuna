@@ -9,7 +9,7 @@
 			</li>
 		</ol>
 	</div>
-	<div class="col-lg-2" style="padding-top:30px"><button class="btn btn-primary btn-nuevo-Banner"><i class="icon-plus"></i> <?php echo utf8_encode(__('Agregar Área')); ?></button></div>
+	<div class="col-lg-2" style="padding-top:30px"><button class="btn btn-primary btn-nuevo-banner"><i class="icon-plus"></i> <?php echo utf8_encode(__('Agregar Baner')); ?></button></div>
  </div>
 
 <div class="wrapper wrapper-content animated fadeInRight">
@@ -36,7 +36,7 @@
 				</div>
 				<div class="ibox-content" id="conteiner_all_rows">
 					<?php 
-						if(isset($list_Banners)){
+						if(isset($list_banners)){
 			      			echo $this->element('Banner/banner_row');
 						}
 					?>

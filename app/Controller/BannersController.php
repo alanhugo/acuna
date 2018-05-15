@@ -3,12 +3,12 @@ class BannersController extends AppController{
 	public $name = 'Banner';	
 	
 	public function index($page=null,$order_by=null,$order_by_or=null,$search_banner=null) {
-		if($this->obj_logged_user->getAttr('tipo_usuario_id') == 2) {
+		/*if($this->obj_logged_user->getAttr('tipo_user_id') == 2) {
         	$this->redirect(array('controller' => 'errors', 'action' => 'error_404'));
 			exit();
-        }
+        }*/
 
-		$this->layout = "default";
+		$this->layout = "default_adm";
 		$this->loadModel('Banner');
 		
 		$page = 0;

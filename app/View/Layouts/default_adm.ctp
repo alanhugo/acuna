@@ -48,26 +48,26 @@
     <!-- Chosen -->
 	<script src="<?php echo ENV_WEBROOT_FULL_URL?>js/plugins/chosen/chosen.jquery.js"></script>
 	
-	<!-- Data picker -->
-	<script src="<?php echo ENV_WEBROOT_FULL_URL?>js/plugins/datapicker/bootstrap-datepicker.js"></script>
+	<!-- Data picker 
+	<script src="<?php echo ENV_WEBROOT_FULL_URL?>js/plugins/datapicker/bootstrap-datepicker.js"></script>-->
 	
-	<!-- Highchart -->
-	<script src="<?php echo ENV_WEBROOT_FULL_URL?>js/plugins/highcharts-4.1.5/highcharts.js"></script>
+	<!-- Highchart 
+	<script src="<?php echo ENV_WEBROOT_FULL_URL?>js/plugins/highcharts-4.1.5/highcharts.js"></script>-->
 	
 	<!-- Input Mask-->
     <script src="<?php echo ENV_WEBROOT_FULL_URL?>js/plugins/jasny/jasny-bootstrap.min.js"></script>
 
-    <!-- Custom and plugin javascript -->
+    <!-- Custom and plugin javascript 
     <script src="<?php echo ENV_WEBROOT_FULL_URL?>js/inspinia.js"></script>
     <script src="<?php echo ENV_WEBROOT_FULL_URL?>js/plugins/pace/pace.min.js"></script>
     <script src="<?php echo ENV_WEBROOT_FULL_URL?>js/plugins/peity/jquery.peity.min.js"></script>
     <script src="<?php echo ENV_WEBROOT_FULL_URL?>js/demo/peity-demo.js"></script>
     <script src="<?php echo ENV_WEBROOT_FULL_URL?>js/plugins/toastr/toastr.min.js"></script>
 	<script src="<?php echo ENV_WEBROOT_FULL_URL?>js/plugins/dropzone/dropzone.js"></script>
-	<script src="<?php echo ENV_WEBROOT_FULL_URL?>js/plugins/video/responsible-video.js"></script>
+	<script src="<?php echo ENV_WEBROOT_FULL_URL?>js/plugins/video/responsible-video.js"></script>-->
 	
-	<!-- Upload image (Foto de usuario) -->
-	<script src="<?php echo ENV_WEBROOT_FULL_URL?>js/bootstrap-fileupload.js"></script>
+	<!-- Upload image (Foto de usuario) 
+	<script src="<?php echo ENV_WEBROOT_FULL_URL?>js/bootstrap-fileupload.js"></script>-->
     
     <script>
 	$(document).ready(function () {
@@ -103,7 +103,7 @@
     <nav class="navbar-default navbar-static-side" role="navigation">
         <div class="sidebar-collapse">
             <!-- Elemento Menu -->
-			<?php echo $this->Element('menu'); ?>
+			<?php //echo $this->Element('menu'); ?>
         </div>
     </nav>
 
@@ -123,7 +123,7 @@
                     <span class="m-r-sm text-muted welcome-message">Bienvenido <strong><?php echo ucwords($this->Session->read('Auth.User.username'))?></strong>.</span>|
                 </li>
                 <li>
-                	<?php echo ucwords(utf8_encode($obj_logged_user->Area->getAttr('nombre'))); ?> |
+                	<?php //echo ucwords(utf8_encode($obj_logged_user->Area->getAttr('nombre'))); ?> |
                 </li>
                 <!-- 
                 <li class="dropdown">
@@ -193,7 +193,7 @@
         
         <div class="footer">
             <div class="pull-right">
-                Universidad de Chiclayo.
+                INMOVILIARIA ACUÑA.
             </div>
             <div>
                 <strong>Copyright</strong> Altagora &copy; 2015
@@ -204,13 +204,8 @@
         </div>
     
     <!-- Scripts de Mantenimientos -->
-    <script src="<?= ENV_WEBROOT_FULL_URL;?>js/ajax/accion.js" type="text/javascript"></script>
-    <script src="<?= ENV_WEBROOT_FULL_URL;?>js/ajax/area.js" type="text/javascript"></script>
-    <script src="<?= ENV_WEBROOT_FULL_URL;?>js/ajax/tipo_documento.js" type="text/javascript"></script>
-    <script src="<?= ENV_WEBROOT_FULL_URL;?>js/ajax/persona.js" type="text/javascript"></script>
-    <script src="<?= ENV_WEBROOT_FULL_URL;?>js/ajax/tramite.js" type="text/javascript"></script>
-    <script src="<?= ENV_WEBROOT_FULL_URL;?>js/ajax/usuario.js" type="text/javascript"></script>
-    <script src="<?= ENV_WEBROOT_FULL_URL;?>js/ajax/configuration.js" type="text/javascript"></script>
+    <script src="<?= ENV_WEBROOT_FULL_URL;?>js/banner.js" type="text/javascript"></script>
+   
     <script>var env_webroot_script = '<?php echo ENV_WEBROOT_FULL_URL; ?>';</script>
 
     <!-- Page-Level Scripts -->
