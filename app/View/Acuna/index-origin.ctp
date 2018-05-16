@@ -1,20 +1,56 @@
 <section class="b1">
    <div class="wancho">
 	  <ul class="b1-slider">
-	  	 <?php if(isset($obj_banners)) { 
-	  	 		foreach ($obj_banners as $banner) { ?>
-			 <li class="b1-item" style="background-image: url(<?php echo ENV_WEBROOT_FULL_URL.'files/banner/'.$banner->getAttr('imagen');?>)">
-				<div class="b1-cnt">
-				   <div class="b1-table">
-					  <div class="b1-text">
-						 <h2><?php echo $banner->getAttr('titulo');?><br><span><?php echo $banner->getAttr('subtitulo');?></span></h2>
-						 <a class="btn-yellow" href="proyectos-en-venta/proyectos-en-venta.html" >INFORMATE AQUI</a>
-					  </div>
-				   </div>
-				</div>
-			 </li>
-		 <?php }
-		} ?>
+		 <li class="b1-item" style="background-image: url('theme/uploads/bg-home.jpg')">
+			<div class="b1-cnt">
+			   <div class="b1-table">
+				  <div class="b1-text">
+					 <h2>Tus mejores momentos<br><span>ya no seran un sueño</span></h2>
+					 <a class="btn-yellow" href="proyectos-en-venta/proyectos-en-venta.html" >INFORMATE AQUI</a>
+				  </div>
+			   </div>
+			</div>
+		 </li>
+		 <li class="b1-item" style="background-image: url('theme/uploads/home/banner-principal-amauta--2017-06-06--17-08-08.png')">
+			<div class="b1-cnt">
+			   <div class="b1-table">
+				  <div class="b1-text">
+					 <h2>Vive Cerca de Todo<br><span>Depas en Entrega Inmediata</span></h2>
+					 <a class="btn-yellow" href="proyecto/en-venta/departamentos-lima/departamentos-lima.html" >MÁS INFORMACIÓN</a>
+				  </div>
+			   </div>
+			</div>
+		 </li>
+		 <li class="b1-item" style="background-image: url('theme/uploads/home/banner-principal-chincha--2017-06-06--17-08-09.png')">
+			<div class="b1-cnt">
+			   <div class="b1-table">
+				  <div class="b1-text">
+					 <h2>No hay nada más bonito<br><span>que tener un hogar</span></h2>
+					 <a class="btn-yellow" href="proyecto/en-venta/casas-chincha/casas-chincha.html" >MÁS INFORMACIÓN</a>
+				  </div>
+			   </div>
+			</div>
+		 </li>
+		 <li class="b1-item" style="background-image: url('theme/uploads/home/banner-principal-los-sauces--2017-06-06--17-08-11.png')">
+			<div class="b1-cnt">
+			   <div class="b1-table">
+				  <div class="b1-text">
+					 <h2>Casas y Depas<br><span>en Entrega Inmediata</span></h2>
+					 <a class="btn-yellow" href="proyecto/en-venta/casas-depas-chiclayo/casas-depas-chiclayo.html" >MÁS INFORMACIÓN</a>
+				  </div>
+			   </div>
+			</div>
+		 </li>
+		 <li class="b1-item" style="background-image: url('theme/uploads/home/banner-principal-el-olivar.png')">
+			<div class="b1-cnt">
+			   <div class="b1-table">
+				  <div class="b1-text">
+					 <h2>Casas y Depas<br><span>en Entrega Inmediata</span></h2>
+					 <a class="btn-yellow" href="proyecto/en-venta/casas-depas-carabayllo/casas-depas-carabayllo.html" >MÁS INFORMACIÓN</a>
+				  </div>
+			   </div>
+			</div>
+		 </li>
 	  </ul>
 	  <div class="b1-link"><a href="#proyectos"><span class="icon-bottom"></span></a></div>
    </div>

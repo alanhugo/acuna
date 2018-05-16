@@ -7,7 +7,10 @@ class AcunaController extends AppController{
 	}
 	
 	public function index() {
-        
+        $this->loadModel('Banner');
+        $obj_banners = $this->Banner->listAllBanners();
+        $this->set(compact('obj_banners'));
+
 		$this->layout = "wescon";
 	}
 	
