@@ -121,6 +121,27 @@ class BannersController extends AppController{
 				}
 			}else{
 				//insert
+				debug($this->request->data['Banner']);exit();
+				if($this->request->data['Banner']['imagen']['name'] != ''){
+					
+					$imagen = $this->request->data['Banner']['imagen']['name'];
+					$arr = explode(".", $imagen);
+					$extension = strtolower(array_pop($arr));
+					$new_file_name = time().'.'.$extension;
+					
+					$this->request->data['Banner']['imagen'] = $new_file_name;
+						
+					//$image_tmp = $this->request->data['Banner']['imagen']['tmp_name'];
+					
+					
+					$uploaddir = APP.WEBROOT_DIR.'/files/banner/';
+					$uploadfile = $uploaddir . basename($new_file_name);
+				
+					move_uploaded_file($_FILES['data']['tmp_name']['Banner']['imagen'], $uploadfile);
+				
+				}else{
+					unset($this->request->data['Banner']['imagen']);
+				}
 
 				$this->Banner->create();
 				if ($this->Banner->save($this->request->data)) {

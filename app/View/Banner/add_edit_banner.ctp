@@ -19,58 +19,40 @@
 						</div>
 					</div>
 					<div class="ibox-content">
-						<?php echo $this->Form->create('Banner',array('method'=>'post', 'id'=>'add_edit_banner', 'accept-charset' => 'utf-8', 'class' => 'form-horizontal'));?>
+						<?php echo $this->Form->create('Banner',array('method'=>'post', 'id'=>'add_edit_banner', 'accept-charset' => 'utf-8', 'class' => 'form-horizontal','type' => 'file'));?>
 							<div class="form-group">
-								<label class="col-sm-2 control-label"><?php echo utf8_encode('Área'); ?></label>
+								<label class="col-sm-2 control-label"><?php echo utf8_encode('Título'); ?></label>
 								<div class="col-sm-6">
 									<input name="data[Banner][titulo]" class="txtBanner form-control" id="txtBanner" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" maxlength="100" type="text" value="<?php echo (isset($obj_banner))?utf8_decode($obj_banner->getAttr('titulo')):''; ?>">
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-2 control-label"><?php echo utf8_encode('Área'); ?></label>
+								<label class="col-sm-2 control-label"><?php echo utf8_encode('subtítulo'); ?></label>
 								<div class="col-sm-6">
 									<input name="data[Banner][subtitulo]" class="txtBanner form-control" id="txtBanner" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" maxlength="100" type="text" value="<?php echo (isset($obj_banner))?utf8_decode($obj_banner->getAttr('subtitulo')):''; ?>">
 								</div>
 							</div>
-						<?php if($obj_logged_user->getAttr('tipo_usuario_id') == 3) {?>
-							<div class="form-group">
-								<label class="col-sm-2 control-label">Permiso (Tr&aacute;mite)</label>
-								<div class="col-sm-2">
-									<select class="form-control m-b" name="data[Banner][permiso]">
-										
-										<?php if(isset($obj_banner)){ ?>
-											<option value="">Selecionar</option>
-											<option value="1" <?php echo($obj_banner->getAttr('permiso')==1)?'selected':''; ?>>Si</option>
-											<option value="0" <?php echo($obj_banner->getAttr('permiso')==0)?'selected':''; ?>>No</option>
-										<?php }else{?>
-											<option value="" selected>Selecionar</option>
-											<option value="1">Si</option>
-											<option value="0">No</option>
-										<?php }?>
-									</select>
-								</div>
-							</div>
-						<?php } ?>
 
-						<?php //if($obj_logged_user->getAttr('tipo_usuario_id') == 3) {?>
 							<div class="form-group">
-								<label class="col-sm-2 control-label">Permiso (Activar email)</label>
-								<div class="col-sm-2">
-									<select class="form-control m-b" name="data[Banner][permiso_email]">
-										
-										<?php if(isset($obj_banner)){ ?>
-											<option value="">Selecionar</option>
-											<option value="1" <?php echo($obj_banner->getAttr('permiso_email')==1)?'selected':''; ?>>Si</option>
-											<option value="0" <?php echo($obj_banner->getAttr('permiso_email')==0)?'selected':''; ?>>No</option>
+								<div class="span3 col-md-3 col-sm-6 col-xs-6">
+									<label for="BannerImagen">Imagen</label>
+									<div class='fileupload fileupload-new' data-provides='fileupload'>
+										<div class='uneditable-input span2'><i class='icon-file fileupload-exists'></i>
+											<span class="btn btn-default btn-file" style="width:106px;height: 37px;margin-bottom: 4px;">
+												<input type="file" name="data[Banner][imagen]" style="opacity:0; position:absolute;height: 35px;left: 0px;top: 29px;" id="BannerImagen">
+												<span class="fileinput-new">Select image</span>
+											</span>
+										</div>
+										<div class='fileupload-preview thumbnail' style='width:40%;height:40%;'>
+										<?php if(isset($obj_banner) && $obj_banner->getAttr('imagen')!=''){?>
+											<img src="<?php echo ENV_WEBROOT_FULL_URL.'files/banner/'.$obj_banner->getAttr('imagen'); ?>">
 										<?php }else{?>
-											<option value="" selected>Selecionar</option>
-											<option value="1">Si</option>
-											<option value="0">No</option>
+											<img src="">
 										<?php }?>
-									</select>
+										</div>
+									</div>
 								</div>
 							</div>
-						<?php //} ?>
 						
 							<div class="hr-line-dashed"></div>
 							<div class="form-group">

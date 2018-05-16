@@ -66,8 +66,10 @@
 	<script src="<?php echo ENV_WEBROOT_FULL_URL?>js/plugins/dropzone/dropzone.js"></script>
 	<script src="<?php echo ENV_WEBROOT_FULL_URL?>js/plugins/video/responsible-video.js"></script>-->
 	
-	<!-- Upload image (Foto de usuario) 
-	<script src="<?php echo ENV_WEBROOT_FULL_URL?>js/bootstrap-fileupload.js"></script>-->
+	<!-- Upload image (Foto de usuario) -->
+	<!--<script src="<?php echo ENV_WEBROOT_FULL_URL?>js/bootstrap-fileupload.js"></script>-->
+
+    <script src="<?= ENV_WEBROOT_FULL_URL;?>lib/bootstrap-fileupload.js"></script>
     
     <script>
 	$(document).ready(function () {
@@ -125,59 +127,7 @@
                 <li>
                 	<?php //echo ucwords(utf8_encode($obj_logged_user->Area->getAttr('nombre'))); ?> |
                 </li>
-                <!-- 
-                <li class="dropdown">
-                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-                        <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
-                    </a>
-                    <ul class="dropdown-menu dropdown-messages">
-                        <li>
-                            <div class="dropdown-messages-box">
-                                <a href="profile.html" class="pull-left">
-                                    <img alt="image" class="img-circle" src="<?php echo ENV_WEBROOT_FULL_URL?>img/a7.jpg">
-                                </a>
-                                <div class="media-body">
-                                    <small class="pull-right">46h ago</small>
-                                    <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>. <br>
-                                    <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <div class="text-center link-block">
-                                <a href="mailbox.html">
-                                    <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                </li> 
-                <li class="dropdown">
-                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-                        <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
-                    </a>
-                    <ul class="dropdown-menu dropdown-alerts">
-                        <li>
-                            <a href="mailbox.html">
-                                <div>
-                                    <i class="fa fa-envelope fa-fw"></i> You have 16 messages
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="profile.html">
-                                <div>
-                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-                                    <span class="pull-right text-muted small">12 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-				-->
+               
                 <li>
                     <a href="<?php echo ENV_WEBROOT_FULL_URL?>usuarios/logout">
                         <i class="fa fa-sign-out"></i> Salir
@@ -204,9 +154,14 @@
         </div>
     
     <!-- Scripts de Mantenimientos -->
-    <script src="<?= ENV_WEBROOT_FULL_URL;?>js/banner.js" type="text/javascript"></script>
+    <script src="<?= ENV_WEBROOT_FULL_URL;?>js/ajax/banner.js" type="text/javascript"></script>
    
     <script>var env_webroot_script = '<?php echo ENV_WEBROOT_FULL_URL; ?>';</script>
+
+    <!-- SCRIPT FILEUPLOAD -->
+    <?php if($this->request->params['action']=='add_edit_banner'){?>
+    <script src="<?= ENV_WEBROOT_FULL_URL;?>lib/bootstrap-fileupload.js"></script>
+    <?php }?>
 
     <!-- Page-Level Scripts -->
     <script>
