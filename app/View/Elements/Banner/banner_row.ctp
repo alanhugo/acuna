@@ -3,9 +3,9 @@
 		<thead>
 			<tr>
 				<th></th>
-				<th><?php echo utf8_encode(__('Título')); ?></th>
-				<th><?php echo utf8_encode(__('SubTítulo')); ?></th>
-				<th><?php echo utf8_encode(__('Imagen')); ?></th>
+				<th><?php echo 'Título'; ?></th>
+				<th><?php echo 'SubTítulo'; ?></th>
+				<th><?php echo 'Imagen'; ?></th>
 				<th>Acci&oacute;n</th>
 			</tr>
 		</thead>
@@ -17,7 +17,7 @@
 				<td><?php echo $cont++?></td>
 				<td><?php echo utf8_encode($banner->getAttr('titulo')); ?></td>
 				<td><?php echo utf8_encode($banner->getAttr('subtitulo')); ?></td>
-				<td><img src = <?php //echo ENV_WEBROOT_FULL_URL.'file/banner/' utf8_encode($banner->getAttr('imagen')); ?>></td>
+				<td><img src = <?php echo ENV_WEBROOT_FULL_URL.'files/banner/'.$banner->getAttr('imagen'); ?> width='80'></td>
 				<td><a><i class="fa fa-edit text-navy edit-banner-trigger"></i> </a>
 					<a href="#myModalDeleteBanner" role="button" data-toggle="modal"
 					data-target="#myModalDeletebanner"><i

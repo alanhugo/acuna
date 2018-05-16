@@ -51,12 +51,18 @@ $(document).ready(function(){
 	
 	$body.off('click','.btn-crear-banner-trigger');
 	$body.on('click','.btn-crear-banner-trigger',function(){
-		$form = $(this).parents('form').eq(0);
+		//$form = $(this).parents('form').eq(0);
+		var formData = new FormData($("#add_edit_banner")[0]);
+
+		//alert("opcion 1" + $("#add_edit_banner").attr('action')); return false;
+		//alert("opcion 2" + $("#add_edit_banner")[0]); return false;	
 		$.ajax({
-			url: $form.attr('action'),
-			data: $form.serialize(),
+			url: $("#add_edit_banner").attr('action'),
+			data: formData,
 			dataType: 'json',
-			type: 'post'
+			type: 'post',
+			contentType: false,
+            processData: false,
 		}).done(function(data){
 			if(data.success==true){
 				$('#div-crear-banner').hide();

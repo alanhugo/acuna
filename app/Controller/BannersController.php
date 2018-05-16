@@ -121,7 +121,7 @@ class BannersController extends AppController{
 				}
 			}else{
 				//insert
-				debug($this->request->data['Banner']);exit();
+				//debug($this->request->data['Banner']);exit();
 				if($this->request->data['Banner']['imagen']['name'] != ''){
 					
 					$imagen = $this->request->data['Banner']['imagen']['name'];
@@ -142,6 +142,8 @@ class BannersController extends AppController{
 				}else{
 					unset($this->request->data['Banner']['imagen']);
 				}
+
+				$this->request->data['Banner']['estado'] = 1;
 
 				$this->Banner->create();
 				if ($this->Banner->save($this->request->data)) {

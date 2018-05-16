@@ -19,23 +19,23 @@
 						</div>
 					</div>
 					<div class="ibox-content">
-						<?php echo $this->Form->create('Banner',array('method'=>'post', 'id'=>'add_edit_banner', 'accept-charset' => 'utf-8', 'class' => 'form-horizontal','type' => 'file'));?>
+						<?php echo $this->Form->create('Banner',array('action'=>'add_edit_banner','method'=>'post', 'id'=>'add_edit_banner', 'type' => 'file', 'accept-charset' => 'utf-8', 'class' => 'form-horizontal'));?>
 							<div class="form-group">
-								<label class="col-sm-2 control-label"><?php echo utf8_encode('Título'); ?></label>
+								<label class="col-sm-2 control-label"><?php echo 'Título'; ?></label>
 								<div class="col-sm-6">
 									<input name="data[Banner][titulo]" class="txtBanner form-control" id="txtBanner" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" maxlength="100" type="text" value="<?php echo (isset($obj_banner))?utf8_decode($obj_banner->getAttr('titulo')):''; ?>">
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-2 control-label"><?php echo utf8_encode('subtítulo'); ?></label>
+								<label class="col-sm-2 control-label"><?php echo 'subtítulo'; ?></label>
 								<div class="col-sm-6">
 									<input name="data[Banner][subtitulo]" class="txtBanner form-control" id="txtBanner" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" maxlength="100" type="text" value="<?php echo (isset($obj_banner))?utf8_decode($obj_banner->getAttr('subtitulo')):''; ?>">
 								</div>
 							</div>
 
 							<div class="form-group">
-								<div class="span3 col-md-3 col-sm-6 col-xs-6">
-									<label for="BannerImagen">Imagen</label>
+								<label class="col-sm-2 control-label">Imagen</label>
+								<div class="col-sm-6">
 									<div class='fileupload fileupload-new' data-provides='fileupload'>
 										<div class='uneditable-input span2'><i class='icon-file fileupload-exists'></i>
 											<span class="btn btn-default btn-file" style="width:106px;height: 37px;margin-bottom: 4px;">
