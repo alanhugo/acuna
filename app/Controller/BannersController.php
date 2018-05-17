@@ -111,17 +111,7 @@ class BannersController extends AppController{
 				//update
 				
 				$this->Banner->id = $banner_id;
-	
-				if ($this->Banner->save($this->request->data)) {
-					echo json_encode(array('success'=>true,'msg'=>__('Guardado con &eacute;xito.'),'Banner_id'=>$banner_id));
-					exit();
-				}else{
-					echo json_encode(array('success'=>false,'msg'=>__('Su informaci&oacute;n es incorrecta'),'validation'=>$this->Banner->validationErrors));
-					exit();
-				}
-			}else{
-				//insert
-				//debug($this->request->data['Banner']);exit();
+
 				if($this->request->data['Banner']['imagen']['name'] != ''){
 					
 					$imagen = $this->request->data['Banner']['imagen']['name'];
@@ -142,6 +132,30 @@ class BannersController extends AppController{
 				}else{
 					unset($this->request->data['Banner']['imagen']);
 				}
+	
+				if ($this->Banner->save($this->request->data)) {
+					echo json_encode(array('success'=>true,'msg'=>__('Guardado con &eacute;xito.'),'Banner_id'=>$banner_id));
+					exit();
+				}else{
+					echo json_encode(array('success'=>false,'msg'=>__('Su informaci&oacute;n es incorrecta'),'validation'=>$this->Banner->validationErrors));
+					exit();
+				}
+			}else{
+				//insert
+				//debug($this->request->data['Banner']);exit();
+				if($this->request->data['Banner']['imagen']['name'] != ''){
+					$this->request->data['Banner']['imagen'] = $this->request->data['Banner']['imagen']['name'];
+					
+					//$image_tmp = $this->request->data['Banner']['imagen']['tmp_name'];
+					$uploaddir = APP.WEBROOT_DIR.'/files/banner/';
+					$uploadfile = $uploaddir . basename($_FILES['data']['name']['Banner']['imagen']);
+				
+					move_uploaded_file($_FILES['data']['tmp_name']['Banner']['imagen'], $uploadfile);
+				
+				}else{
+					unset($this->request->data['Banner']['imagen']);
+				}
+				
 
 				$this->request->data['Banner']['estado'] = 1;
 
