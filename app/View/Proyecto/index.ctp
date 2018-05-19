@@ -9,7 +9,7 @@
 			</li>
 		</ol>
 	</div>
-	<div class="col-lg-2" style="padding-top:30px"><button class="btn btn-primary btn-nuevo-proyecto"><i class="icon-plus"></i> <?php echo utf8_encode(__('Agregar Baner')); ?></button></div>
+	<div class="col-lg-2" style="padding-top:30px"><button class="btn btn-primary btn-nuevo-proyecto"><i class="icon-plus"></i> <?php echo utf8_encode(__('Agregar Proyecto')); ?></button></div>
  </div>
 
 <div class="wrapper wrapper-content animated fadeInRight">
