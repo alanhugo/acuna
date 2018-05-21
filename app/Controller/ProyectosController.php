@@ -112,25 +112,25 @@ class ProyectosController extends AppController{
 				
 				$this->Proyecto->id = $proyecto_id;
 
-				if($this->request->data['Proyecto']['imagen']['name'] != ''){
+				if($this->request->data['Proyecto']['thumbnail']['name'] != ''){
 					
-					$imagen = $this->request->data['Proyecto']['imagen']['name'];
-					$arr = explode(".", $imagen);
+					$thumbnail = $this->request->data['Proyecto']['thumbnail']['name'];
+					$arr = explode(".", $thumbnail);
 					$extension = strtolower(array_pop($arr));
 					$new_file_name = time().'.'.$extension;
 					
-					$this->request->data['Proyecto']['imagen'] = $new_file_name;
+					$this->request->data['Proyecto']['thumbnail'] = $new_file_name;
 						
-					//$image_tmp = $this->request->data['Proyecto']['imagen']['tmp_name'];
+					//$image_tmp = $this->request->data['Proyecto']['thumbnail']['tmp_name'];
 					
 					
-					$uploaddir = APP.WEBROOT_DIR.'/files/proyecto/';
+					$uploaddir = APP.WEBROOT_DIR.'/files/thumb-proy/';
 					$uploadfile = $uploaddir . basename($new_file_name);
 				
-					move_uploaded_file($_FILES['data']['tmp_name']['Proyecto']['imagen'], $uploadfile);
+					move_uploaded_file($_FILES['data']['tmp_name']['Proyecto']['thumbnail'], $uploadfile);
 				
 				}else{
-					unset($this->request->data['Proyecto']['imagen']);
+					unset($this->request->data['Proyecto']['thumbnail']);
 				}
 	
 				if ($this->Proyecto->save($this->request->data)) {
@@ -143,17 +143,17 @@ class ProyectosController extends AppController{
 			}else{
 				//insert
 				//debug($this->request->data['Proyecto']);exit();
-				if($this->request->data['Proyecto']['imagen']['name'] != ''){
-					$this->request->data['Proyecto']['imagen'] = $this->request->data['Proyecto']['imagen']['name'];
+				if($this->request->data['Proyecto']['thumbnail']['name'] != ''){
+					$this->request->data['Proyecto']['thumbnail'] = $this->request->data['Proyecto']['thumbnail']['name'];
 					
-					//$image_tmp = $this->request->data['Proyecto']['imagen']['tmp_name'];
-					$uploaddir = APP.WEBROOT_DIR.'/files/proyecto/';
-					$uploadfile = $uploaddir . basename($_FILES['data']['name']['Proyecto']['imagen']);
+					//$image_tmp = $this->request->data['Proyecto']['thumbnail']['tmp_name'];
+					$uploaddir = APP.WEBROOT_DIR.'/files/thumb-proy/';
+					$uploadfile = $uploaddir . basename($_FILES['data']['name']['Proyecto']['thumbnail']);
 				
-					move_uploaded_file($_FILES['data']['tmp_name']['Proyecto']['imagen'], $uploadfile);
+					move_uploaded_file($_FILES['data']['tmp_name']['Proyecto']['thumbnail'], $uploadfile);
 				
 				}else{
-					unset($this->request->data['Proyecto']['imagen']);
+					unset($this->request->data['Proyecto']['thumbnail']);
 				}
 				
 

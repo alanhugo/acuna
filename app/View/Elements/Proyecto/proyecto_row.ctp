@@ -15,8 +15,8 @@
 			<tr class="proyecto_row_container"
 				proyecto_id="<?php echo $proyecto->getAttr('id'); ?>">
 				<td><?php echo $cont++?></td>
-				<td><?php echo utf8_encode($proyecto->getAttr('titulo')); ?></td>
-				<td><?php echo utf8_encode($proyecto->getAttr('subtitulo')); ?></td>
+				<td><?php echo utf8_encode($proyecto->getAttr('thumb_titulo')); ?></td>
+				<td><?php echo utf8_encode($proyecto->getAttr('thumb_subtitulo')); ?></td>
 				<td><img src = <?php echo ENV_WEBROOT_FULL_URL.'files/thumb-proy/'.$proyecto->getAttr('thumbnail'); ?> width='80'></td>
 				<td><a><i class="fa fa-edit text-navy edit-proyecto-trigger"></i> </a>
 					<a href="#myModalDeleteProyecto" role="button" data-toggle="modal"

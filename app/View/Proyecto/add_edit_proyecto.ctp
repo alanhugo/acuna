@@ -23,13 +23,13 @@
 							<div class="form-group">
 								<label class="col-sm-2 control-label"><?php echo 'Título'; ?></label>
 								<div class="col-sm-6">
-									<input name="data[Proyecto][titulo]" class="txtProyecto form-control" id="txtProyecto" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('titulo')):''; ?>">
+									<input name="data[Proyecto][thumb_titulo]" class="txtProyecto form-control" id="txtProyecto" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('titulo')):''; ?>">
 								</div>
 							</div>
 							<div class="form-group">
 								<label class="col-sm-2 control-label"><?php echo 'subtítulo'; ?></label>
 								<div class="col-sm-6">
-									<input name="data[Proyecto][subtitulo]" class="txtProyecto form-control" id="txtProyecto" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('subtitulo')):''; ?>">
+									<input name="data[Proyecto][thumb_subtitulo]" class="txtProyecto form-control" id="txtProyecto" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('subtitulo')):''; ?>">
 								</div>
 							</div>
 
@@ -39,13 +39,49 @@
 									<div class='fileupload fileupload-new' data-provides='fileupload'>
 										<div class='uneditable-input span2'><i class='icon-file fileupload-exists'></i>
 											<span class="btn btn-default btn-file" style="width:106px;height: 37px;margin-bottom: 4px;">
-												<input type="file" name="data[Proyecto][imagen]" style="opacity:0; position:absolute;height: 35px;left: 0px;top: 29px;" id="ProyectoImagen">
+												<input type="file" name="data[Proyecto][thumbnail]" style="opacity:0; position:absolute;height: 35px;left: 0px;top: 29px;" id="ProyectoImagen">
 												<span class="fileinput-new">Select image</span>
 											</span>
 										</div>
 										<div class='fileupload-preview thumbnail' style='width:40%;height:40%;'>
-										<?php if(isset($obj_proyecto) && $obj_proyecto->getAttr('imagen')!=''){?>
-											<img src="<?php echo ENV_WEBROOT_FULL_URL.'files/proyecto/'.$obj_proyecto->getAttr('imagen'); ?>">
+										<?php if(isset($obj_proyecto) && $obj_proyecto->getAttr('thumbnail')!=''){?>
+											<img src="<?php echo ENV_WEBROOT_FULL_URL.'files/thumb-proy/'.$obj_proyecto->getAttr('imagen'); ?>">
+										<?php }else{?>
+											<img src="">
+										<?php }?>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							SECCIÓN 1
+
+							<div class="form-group">
+								<label class="col-sm-2 control-label"><?php echo 'Título Sección 1'; ?></label>
+								<div class="col-sm-6">
+									<input name="data[Proyecto][sect1_titulo]" class="txtProyecto form-control" id="txtProyecto" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('sect1_titulo')):''; ?>">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label"><?php echo 'Subtítulo Sección 1'; ?></label>
+								<div class="col-sm-6">
+									<input name="data[Proyecto][sect1_subtitulo]" class="txtProyecto form-control" id="txtProyecto" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('sect1_subtitulo')):''; ?>">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-sm-2 control-label">Imagen Section 1</label>
+								<div class="col-sm-6">
+									<div class='fileupload fileupload-new' data-provides='fileupload'>
+										<div class='uneditable-input span2'><i class='icon-file fileupload-exists'></i>
+											<span class="btn btn-default btn-file" style="width:106px;height: 37px;margin-bottom: 4px;">
+												<input type="file" name="data[Proyecto][sect1_img]" style="opacity:0; position:absolute;height: 35px;left: 0px;top: 29px;" id="ProyectoImagen2">
+												<span class="fileinput-new">Select image</span>
+											</span>
+										</div>
+										<div class='fileupload-preview thumbnail' style='width:40%;height:40%;'>
+										<?php if(isset($obj_proyecto) && $obj_proyecto->getAttr('sect1_img')!=''){?>
+											<img src="<?php echo ENV_WEBROOT_FULL_URL.'files/sect1-img/'.$obj_proyecto->getAttr('sect1_img'); ?>">
 										<?php }else{?>
 											<img src="">
 										<?php }?>

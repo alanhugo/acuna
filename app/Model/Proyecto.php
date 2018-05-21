@@ -5,7 +5,7 @@ App::uses('AppModel','Model');
 
     
     public $validate = array(
-            'titulo'    => array(
+            'thumb_titulo'    => array(
                     'notempty' => array(
                             'rule' => array('notEmpty'),
                             'message' => 'El titulo es requerida'
@@ -17,7 +17,7 @@ App::uses('AppModel','Model');
   public function listAllProyectos($order_by='Proyecto.created', $search_proyecto='',$order='DESC') {
             $arr_obj_proyecto = $this->findObjects('all',array(
                     'conditions'=>array(
-                                    'Proyecto.titulo LIKE'=> '%'.$search_proyecto.'%',
+                                    'Proyecto.thumb_titulo LIKE'=> '%'.$search_proyecto.'%',
                                     'Proyecto.estado != ' => 0
                     ),
                     'order'=> array($order_by.' '.$order)
@@ -29,7 +29,7 @@ App::uses('AppModel','Model');
     public function listFindProyectos($order_by='Trabajadore.created', $search_proyecto='',$order='DESC') {
             $arr_obj_proyecto = $this->findObjects('all',array(
                     'conditions'=>array(
-                            'Proyecto.titulo LIKE'=> '%'.$search_proyecto.'%',
+                            'Proyecto.thumb_titulo LIKE'=> '%'.$search_proyecto.'%',
                             'Proyecto.estado != ' => 0
                     ),
                     /*'page'=> $start,
