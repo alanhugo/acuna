@@ -132,6 +132,29 @@ class ProyectosController extends AppController{
 				}else{
 					unset($this->request->data['Proyecto']['thumbnail']);
 				}
+
+				/* EDITAR IMAGEN SECCIÓN 1*/
+				if($this->request->data['Proyecto']['sect1_img']['name'] != ''){
+					
+					$thumbnail = $this->request->data['Proyecto']['sect1_img']['name'];
+					$arr = explode(".", $thumbnail);
+					$extension = strtolower(array_pop($arr));
+					$new_file_name = time().'.'.$extension;
+					
+					$this->request->data['Proyecto']['sect1_img'] = $new_file_name;
+						
+					//$image_tmp = $this->request->data['Proyecto']['thumbnail']['tmp_name'];
+					
+					
+					$uploaddir = APP.WEBROOT_DIR.'/files/sect1-img/';
+					$uploadfile = $uploaddir . basename($new_file_name);
+				
+					move_uploaded_file($_FILES['data']['tmp_name']['Proyecto']['sect1_img'], $uploadfile);
+				
+				}else{
+					unset($this->request->data['Proyecto']['sect1_img']);
+				}
+				/* FIN EDITAR IMAGEN SECCIÓN 1*/
 	
 				if ($this->Proyecto->save($this->request->data)) {
 					echo json_encode(array('success'=>true,'msg'=>__('Guardado con &eacute;xito.'),'Proyecto_id'=>$proyecto_id));
@@ -142,7 +165,7 @@ class ProyectosController extends AppController{
 				}
 			}else{
 				//insert
-				//debug($this->request->data['Proyecto']);exit();
+
 				if($this->request->data['Proyecto']['thumbnail']['name'] != ''){
 					$this->request->data['Proyecto']['thumbnail'] = $this->request->data['Proyecto']['thumbnail']['name'];
 					
@@ -155,6 +178,23 @@ class ProyectosController extends AppController{
 				}else{
 					unset($this->request->data['Proyecto']['thumbnail']);
 				}
+
+				/* NUEVA IMAGEN SECCIÓN 1 */
+
+				if($this->request->data['Proyecto']['sect1_img']['name'] != ''){
+					$this->request->data['Proyecto']['sect1_img'] = $this->request->data['Proyecto']['sect1_img']['name'];
+					
+					//$image_tmp = $this->request->data['Proyecto']['thumbnail']['tmp_name'];
+					$uploaddir = APP.WEBROOT_DIR.'/files/sect1-img/';
+					$uploadfile = $uploaddir . basename($_FILES['data']['name']['Proyecto']['sect1_img']);
+				
+					move_uploaded_file($_FILES['data']['tmp_name']['Proyecto']['sect1_img'], $uploadfile);
+				
+				}else{
+					unset($this->request->data['Proyecto']['sect1_img']);
+				}
+				
+				/* FIN NUEVA IMAGEN SECCIÓN 1 */
 				
 
 				$this->request->data['Proyecto']['estado'] = 1;

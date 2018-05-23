@@ -23,13 +23,13 @@
 							<div class="form-group">
 								<label class="col-sm-2 control-label"><?php echo 'Título'; ?></label>
 								<div class="col-sm-6">
-									<input name="data[Proyecto][thumb_titulo]" class="txtProyecto form-control" id="txtProyecto" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('titulo')):''; ?>">
+									<input name="data[Proyecto][thumb_titulo]" class="txtProyecto form-control" id="txtProyecto" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('thumb_titulo')):''; ?>">
 								</div>
 							</div>
 							<div class="form-group">
 								<label class="col-sm-2 control-label"><?php echo 'subtítulo'; ?></label>
 								<div class="col-sm-6">
-									<input name="data[Proyecto][thumb_subtitulo]" class="txtProyecto form-control" id="txtProyecto" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('subtitulo')):''; ?>">
+									<input name="data[Proyecto][thumb_subtitulo]" class="txtProyecto form-control" id="txtProyecto" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('thumb_subtitulo')):''; ?>">
 								</div>
 							</div>
 
@@ -45,7 +45,7 @@
 										</div>
 										<div class='fileupload-preview thumbnail' style='width:40%;height:40%;'>
 										<?php if(isset($obj_proyecto) && $obj_proyecto->getAttr('thumbnail')!=''){?>
-											<img src="<?php echo ENV_WEBROOT_FULL_URL.'files/thumb-proy/'.$obj_proyecto->getAttr('imagen'); ?>">
+											<img src="<?php echo ENV_WEBROOT_FULL_URL.'files/thumb-proy/'.$obj_proyecto->getAttr('thumbnail'); ?>">
 										<?php }else{?>
 											<img src="">
 										<?php }?>
@@ -55,7 +55,6 @@
 							</div>
 
 							SECCIÓN 1
-
 							<div class="form-group">
 								<label class="col-sm-2 control-label"><?php echo 'Título Sección 1'; ?></label>
 								<div class="col-sm-6">
@@ -68,7 +67,7 @@
 									<input name="data[Proyecto][sect1_subtitulo]" class="txtProyecto form-control" id="txtProyecto" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('sect1_subtitulo')):''; ?>">
 								</div>
 							</div>
-
+							
 							<div class="form-group">
 								<label class="col-sm-2 control-label">Imagen Section 1</label>
 								<div class="col-sm-6">
@@ -89,7 +88,7 @@
 									</div>
 								</div>
 							</div>
-						
+							
 							<div class="hr-line-dashed"></div>
 							<div class="form-group">
 								<div class="col-sm-4 col-sm-offset-2">
