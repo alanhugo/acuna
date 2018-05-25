@@ -88,6 +88,13 @@
 									</div>
 								</div>
 							</div>
+
+							<div class="form-group">
+								<div id="sect1-texto">
+									<!--<textArea name="data[Proyecto][sect1_texto]" class="summernote" />-->
+									<?php echo $this->Form->input('sect1_texto', array('div' => false, 'label' => false,'type'=>'textarea','rows'=>'5','cols'=>'80', 'class'=> 'summernote form-control','id' =>'sect1-texto')); ?>
+								</div>
+							</div>
 							
 							<div class="hr-line-dashed"></div>
 							<div class="form-group">
@@ -104,3 +111,11 @@
 	</div>
 
 </div>
+
+<script>
+	 $(document).ready(function(){
+
+            $('.summernote').summernote();
+
+       });
+</script>

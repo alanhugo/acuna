@@ -30,8 +30,10 @@
 	<link href="<?php echo ENV_WEBROOT_FULL_URL?>css/plugins/datapicker/datepicker3.css" rel="stylesheet">
     
     <link href="<?php echo ENV_WEBROOT_FULL_URL?>css/animate.css" rel="stylesheet">
-    <link href="<?php echo ENV_WEBROOT_FULL_URL?>css/style.css" rel="stylesheet">
+    
+    <link href="<?php echo ENV_WEBROOT_FULL_URL?>css/plugins/summernote/summernote.css" rel="stylesheet">
 
+    <link href="<?php echo ENV_WEBROOT_FULL_URL?>css/style.css" rel="stylesheet">
     <!-- Mainly scripts -->
     <script src="<?php echo ENV_WEBROOT_FULL_URL?>js/jquery-2.1.1.js"></script>
     <script src="<?php echo ENV_WEBROOT_FULL_URL?>js/bootstrap.min.js"></script>
@@ -47,6 +49,8 @@
     
     <!-- Chosen -->
 	<script src="<?php echo ENV_WEBROOT_FULL_URL?>js/plugins/chosen/chosen.jquery.js"></script>
+
+    <script src="<?php echo ENV_WEBROOT_FULL_URL?>js/plugins/summernote/summernote.min.js"></script>
 	
 	<!-- Data picker 
 	<script src="<?php echo ENV_WEBROOT_FULL_URL?>js/plugins/datapicker/bootstrap-datepicker.js"></script>-->
