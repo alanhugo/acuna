@@ -48,19 +48,39 @@ $(document).ready(function(){
 	$body.on('click','div#div-crear-proyecto .btn-cancelar-crear-proyecto', function(){
 		$('#div-crear-proyecto').fadeOut();
 	});
+
+	$body.off('keypress','.note-editable');
+	$body.on('keypress','.note-editable',function(){
+		
+		//$('#sect1-texto').val($('.note-editable').html());
+		$("textarea#sect1-texto").html($('.note-editable').html());//prueba asi me cagaste a ver
+	});
+
+	$body.off('click','.note-toolbar');
+	$body.on('click','.note-toolbar',function(){
+		
+		//$('#sect1-texto').val($('.note-editable').html());
+		$("textarea#sect1-texto").html($('.note-editable').html());//prueba asi me cagaste a ver
+	});
+
 	
 	$body.off('click','.btn-crear-proyecto-trigger');
 	$body.on('click','.btn-crear-proyecto-trigger',function(){
 		//$form = $(this).parents('form').eq(0);
+		//alert($('textarea#sect1-texto').text()); return false;
+
 		var formData = new FormData($("#add_edit_proyecto")[0]);
 
 		//alert("opcion 1" + $("#add_edit_proyecto").attr('action')); return false;
-		//alert("opcion 2" + $("#add_edit_proyecto")[0]); return false;	
+		//alert("opcion 2" + $("#add_edit_proyecto")[0]); return false;
+
+
 		$.ajax({
 			url: $("#add_edit_proyecto").attr('action'),
 			data: formData,
 			dataType: 'json',
 			type: 'post',
+			cache: false,
 			contentType: false,
             processData: false,
 		}).done(function(data){
@@ -69,7 +89,7 @@ $(document).ready(function(){
 				$('#conteiner_all_rows').load(env_webroot_script + escape('proyectos/find_proyectos/1/'+null+'/'+null+'/'+''+'/'+''),function(){
 					$('#dtable_proyectos').DataTable();
 				});
-				toastr.success(data.msg);
+				//toastr.success(data.msg);
 			}else{
 				$.each(data.validation, function( key, value ) {
 					toastr.error(value[0]);

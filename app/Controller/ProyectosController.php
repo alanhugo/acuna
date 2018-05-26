@@ -164,7 +164,10 @@ class ProyectosController extends AppController{
 					exit();
 				}
 			}else{
-				//insert
+				//INSERT
+
+
+				//debug($this->request->data['Proyecto']); exit();
 
 				if($this->request->data['Proyecto']['thumbnail']['name'] != ''){
 					$this->request->data['Proyecto']['thumbnail'] = $this->request->data['Proyecto']['thumbnail']['name'];

@@ -32,6 +32,7 @@
     <link href="<?php echo ENV_WEBROOT_FULL_URL?>css/animate.css" rel="stylesheet">
     
     <link href="<?php echo ENV_WEBROOT_FULL_URL?>css/plugins/summernote/summernote.css" rel="stylesheet">
+    <link href="<?php echo ENV_WEBROOT_FULL_URL?>css/plugins/summernote/summernote-bs3.css" rel="stylesheet">
 
     <link href="<?php echo ENV_WEBROOT_FULL_URL?>css/style.css" rel="stylesheet">
     <!-- Mainly scripts -->
