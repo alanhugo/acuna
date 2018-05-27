@@ -31,9 +31,10 @@
     
     <link href="<?php echo ENV_WEBROOT_FULL_URL?>css/animate.css" rel="stylesheet">
     
+    
     <link href="<?php echo ENV_WEBROOT_FULL_URL?>css/plugins/summernote/summernote.css" rel="stylesheet">
     <link href="<?php echo ENV_WEBROOT_FULL_URL?>css/plugins/summernote/summernote-bs3.css" rel="stylesheet">
-
+    <link href="<?php echo ENV_WEBROOT_FULL_URL?>css/custom.css" rel="stylesheet">
     <link href="<?php echo ENV_WEBROOT_FULL_URL?>css/style.css" rel="stylesheet">
     <!-- Mainly scripts -->
     <script src="<?php echo ENV_WEBROOT_FULL_URL?>js/jquery-2.1.1.js"></script>
