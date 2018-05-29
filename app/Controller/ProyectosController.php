@@ -112,6 +112,31 @@ class ProyectosController extends AppController{
 				
 				$this->Proyecto->id = $proyecto_id;
 
+				/* EDITAR BANNER DEL PROYECTO */
+
+				if($this->request->data['Proyecto']['proy_banner']['name'] != ''){
+					
+					$banner = $this->request->data['Proyecto']['proy_banner']['name'];
+					$arr = explode(".", $banner);
+					$extension = strtolower(array_pop($arr));
+					$new_file_name = time().'.'.$extension;
+					
+					$this->request->data['Proyecto']['proy_banner'] = $new_file_name;
+						
+					//$image_tmp = $this->request->data['Proyecto']['thumbnail']['tmp_name'];
+					
+					
+					$uploaddir = APP.WEBROOT_DIR.'/files/proy-banner/';
+					$uploadfile = $uploaddir . basename($new_file_name);
+				
+					move_uploaded_file($_FILES['data']['tmp_name']['Proyecto']['proy_banner'], $uploadfile);
+				
+				}else{
+					unset($this->request->data['Proyecto']['proy_banner']);
+				}
+
+				/* EDITAR THUMBNAIL DEL PROYECTO*/
+
 				if($this->request->data['Proyecto']['thumbnail']['name'] != ''){
 					
 					$thumbnail = $this->request->data['Proyecto']['thumbnail']['name'];
@@ -167,7 +192,22 @@ class ProyectosController extends AppController{
 				//INSERT
 
 
-				//debug($this->request->data['Proyecto']); exit();
+				// NUEVO BANNER DEL PROYECTO
+
+				if($this->request->data['Proyecto']['proy_banner']['name'] != ''){
+					$this->request->data['Proyecto']['proy_banner'] = $this->request->data['Proyecto']['proy_banner']['name'];
+					
+					//$image_tmp = $this->request->data['Proyecto']['thumbnail']['tmp_name'];
+					$uploaddir = APP.WEBROOT_DIR.'/files/proy-banner/';
+					$uploadfile = $uploaddir . basename($_FILES['data']['name']['Proyecto']['proy-banner']);
+				
+					move_uploaded_file($_FILES['data']['tmp_name']['Proyecto']['proy-banner'], $uploadfile);
+				
+				}else{
+					unset($this->request->data['Proyecto']['proy-banner']);
+				}
+
+				// NUEVO THUMBNAIL DEL PROYECTO
 
 				if($this->request->data['Proyecto']['thumbnail']['name'] != ''){
 					$this->request->data['Proyecto']['thumbnail'] = $this->request->data['Proyecto']['thumbnail']['name'];
@@ -224,17 +264,14 @@ class ProyectosController extends AppController{
 	}
 
 	public function view ($proyecto_id=null){
+		
+		$this->loadModel('Proyecto');
 		$this->layout = "wescon";
 
-		$this->loadModel('Proyecto');
-
 		if(isset($proyecto_id)){
-			$proyecto = $this->Proyecto->listProyectosById(1);
-
-			//debug($proyecto[0]->data['Proyecto']);
+			$obj_proyecto = $this->Proyecto->findById($proyecto_id);
 		}
-
-		$this->set(compact('proyecto'));
+		$this->set(compact('obj_proyecto'));
 	}
 	
 	public function delete_proyecto(){

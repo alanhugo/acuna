@@ -1,4 +1,4 @@
-<section class="b1">
+	<section class="b1">
    <div class="wancho">
 	  <ul class="b1-slider">
 	  	 <?php if(isset($obj_banners)) { 
@@ -32,7 +32,7 @@
 					<li class="b2-slider-item">
 					   <div class="b2-tb-item">
 						  <div class="b2-tc-item">
-							 <a href=<?php echo ENV_WEBROOT_FULL_URL.'proyectos/view/1' ?> class="b2-item">
+							 <a href=<?php echo ENV_WEBROOT_FULL_URL.'proyectos/view/'.$proyecto->getAttr('id'); ?> class="b2-item">
 							 	
 								<div class="b2-cnt">
 										<div class="b2-img">
