@@ -17,6 +17,17 @@
    </div>
 </section>
 <section class="b9 wancho">
+	   <div class="b9-cnt">
+		  <div class="b9-desc">
+		<?php
+			if(isset($proyecto)){
+				echo "HOLA A TODOS".$proyecto;
+			}
+		?>
+	</div>
+	</div>
+</section>
+<section class="b9 wancho">
    <div class="b9-cnt">
 	  <div class="b9-desc">
 		 <div class="b9-ctn-text">
@@ -24,6 +35,11 @@
 			   <h2>Vive tu independencia cerca de todo<br><span>Amauta 2272</span></h2>
 			</div>
 			<div class="b9-text">
+				<?php
+			if(isset($proyecto)){
+				echo "HOLA A TODOS".$proyecto[0];
+			}
+		?>
 			   <p style="text-align:justify">Amauta 2272, cuenta con las comodidades necesarias para vivir en un entorno con gran desarrollo urbano y comercial ubicado en Cercado de Lima. F&aacute;cil acceso a los principales avenidas, universidades, colegios, centros comerciales, hospitales, servicios de transporte y dem&aacute;s servicios de Lima.</p>
 			   <p style="text-align:justify">Comparte tus mejores momentos en la comodidad de un condominio cerrado donde tu familia est&eacute; protegida las 24 horas con controles de vigilancia en sus ingresos. Encuentra todo lo necesario para pasar una tarde en familia o amigos, rodeado de amplios espacios familiares y de esparcimiento. La seguridad de tu familia es nuestra prioridad.</p>
 			   <p style="text-align:justify">&nbsp;</p>

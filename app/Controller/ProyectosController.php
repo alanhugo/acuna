@@ -226,11 +226,15 @@ class ProyectosController extends AppController{
 	public function view ($proyecto_id=null){
 		$this->layout = "wescon";
 
+		$this->loadModel('Proyecto');
+
 		if(isset($proyecto_id)){
-			
+			$proyecto = $this->Proyecto->listProyectosById(1);
+
+			//debug($proyecto[0]->data['Proyecto']);
 		}
 
-		//$this->set(compact('varname'));
+		$this->set(compact('proyecto'));
 	}
 	
 	public function delete_proyecto(){

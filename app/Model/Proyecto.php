@@ -52,6 +52,16 @@ App::uses('AppModel','Model');
                         'order' => array('Proyecto.created ASC')
                 ));
     }
+
+    /* Usado para ...VIEW de proyectos   */ 
+    public function listProyectosById($proyecto_id) {
+        return $this->findObjects('all',
+                array(
+                        'conditions'=>array(
+                                'Proyecto.id != '=> $proyecto_id
+                        )
+                ));
+    }
     
     /**
      * Delete actividades
