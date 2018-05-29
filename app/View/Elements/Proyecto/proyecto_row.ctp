@@ -17,7 +17,7 @@
 				<td><?php echo $cont++?></td>
 				<td><?php echo utf8_encode($proyecto->getAttr('thumb_titulo')); ?></td>
 				<td><?php echo utf8_encode($proyecto->getAttr('thumb_subtitulo')); ?></td>
-				<td><img src = <?php echo ENV_WEBROOT_FULL_URL.'files/thumb-proy/'.$proyecto->getAttr('thumbnail'); ?> width='80'></td>
+				<td><img src = <?php echo ENV_WEBROOT_FULL_URL.'files/proy-thumb/'.$proyecto->getAttr('thumbnail'); ?> width='80'></td>
 				<td><a><i class="fa fa-edit text-navy edit-proyecto-trigger"></i> </a>
 					<a href="#myModalDeleteProyecto" role="button" data-toggle="modal"
 					data-target="#myModalDeleteproyecto"><i

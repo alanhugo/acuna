@@ -27,106 +27,38 @@
 	  </div>
 	  <div class="b2-slider-wrap">
 		 <ul class="b2-slider">
-			<li class="b2-slider-item">
-			   <div class="b2-tb-item">
-				  <div class="b2-tc-item">
-					 <a href="departamentos-lima.html" class="b2-item">
-						<div class="b2-cnt">
-						   <div class="b2-img">
-							  <div class="b2-img-inside" style="background-image: url('theme/uploads/proyecto-amauta/amauta-home1.png')"
-								 ></div>
-						   </div>
-						   <div class="b2-state"><span>Próxima Entrega</span></div>
-						   <div class="b2-text">
-							  <p class="b2-dor">2 y 3 ambientes</p>
-							  <p class="b2-dir">Amauta 2272</p>
-						   </div>
-						</div>
-					 </a>
-				  </div>
-			   </div>
-			</li>
-			<li class="b2-slider-item">
-			   <div class="b2-tb-item">
-				  <div class="b2-tc-item">
-					 <a href="departamentos-lima.html" class="b2-item">
-						<div class="b2-cnt">
-						   <div class="b2-img">
-							  <div class="b2-img-inside" style="background-image: url('theme/uploads/arenales/home.jpg')"
-								 ></div>
-						   </div>
-						   <div class="b2-state"><span>Próximo Proyecto</span></div>
-						   <div class="b2-text">
-							  <p class="b2-dor">1, 2 y 3 ambientes</p>
-							  <p class="b2-dir">Conecta</p>
-						   </div>
-						</div>
-					 </a>
-				  </div>
-			   </div>
-			</li>
-			<li class="b2-slider-item">
-			   <div class="b2-tb-item">
-				  <div class="b2-tc-item">
-					 <a href="departamentos-lima.html" class="b2-item">
-						<div class="b2-cnt">
-						   <div class="b2-img">
-							  <div class="b2-img-inside" style="background-image: url('theme/uploads/chincha-home1.png')"
-								 ></div>
-						   </div>
-						   <div class="b2-state"><span>En Construcción</span></div>
-						   <div class="b2-text">
-							  <p class="b2-dor">Techo propio te regala s/33,200</p>
-							  <p class="b2-dir">Urbanización Chincha Verde</p>
-						   </div>
-						</div>
-					 </a>
-				  </div>
-			   </div>
-			</li>
-			<li class="b2-slider-item">
-			   <div class="b2-tb-item">
-				  <div class="b2-tc-item">
-					 <a href="departamentos-lima.html" class="b2-item">
-						<div class="b2-cnt">
-						   <div class="b2-img">
-							  <div class="b2-img-inside" style="background-image: url('theme/uploads/sauces-home1.png')"
-								 ></div>
-						   </div>
-						   <div class="b2-state"><span>Entrega Inmediata</span></div>
-						   <div class="b2-text">
-							  <p class="b2-dor">Casas y Departamentos</p>
-							  <p class="b2-dir">Club Los Sauces Chiclayo</p>
-						   </div>
-						</div>
-					 </a>
-				  </div>
-			   </div>
-			</li>
-			<li class="b2-slider-item">
-			   <div class="b2-tb-item">
-				  <div class="b2-tc-item">
-					 <a href="departamentos-lima.html" class="b2-item">
-						<div class="b2-cnt">
-						   <div class="b2-img">
-							  <div class="b2-img-inside" style="background-image: url('theme/uploads/olivar-home1.png')"
-								 ></div>
-						   </div>
-						   <div class="b2-state"><span>Entrega Inmediata</span></div>
-						   <div class="b2-text">
-							  <p class="b2-dor">Casas  y Departamentos</p>
-							  <p class="b2-dir">El Olivar de Carabayllo</p>
-						   </div>
-						</div>
-					 </a>
-				  </div>
-			   </div>
-			</li>
-		 </ul>
+		 	<?php if(isset($obj_proyectos)) { 
+	  	 		foreach ($obj_proyectos as $proyecto) { ?>
+					<li class="b2-slider-item">
+					   <div class="b2-tb-item">
+						  <div class="b2-tc-item">
+							 <a href=<?php echo ENV_WEBROOT_FULL_URL.'proyectos/view/1' ?> class="b2-item">
+							 	
+								<div class="b2-cnt">
+										<div class="b2-img">
+											<div class="b2-img-inside" style="background-image: url(<?php echo ENV_WEBROOT_FULL_URL.'files/proy-thumb/'.$proyecto->getAttr('thumbnail');?>)">
+											</div>
+										</div>
+										   <!--<div class="b2-state"><span>Próxima Entrega</span></div>-->
+										<div class="b2-text">
+											<p class="b2-dor"><?php echo $proyecto->getAttr('thumb_titulo');?></p>
+											<p class="b2-dir"><?php echo $proyecto->getAttr('thumb_subtitulo');?></p>
+										</div>
+								</div>
+							</a>
+						  </div>
+					   </div>
+					</li>
+			<?php
+				}
+			}
+			?>	
+		</ul>
 	  </div>
 	  <div class="b2-btn"><a class="btn-big" href="proyectos-en-venta/proyectos-en-venta.html">VER MAS PROYECTOS</a></div>
    </div>
 </section>
+<div class="wancho" align="right"><a href=<?php echo ENV_WEBROOT_FULL_URL.'proyectos/index'?>>Editar</a></div>
 <section class="b3">
    <div class="wancho">
 	  <div class="b3-video">

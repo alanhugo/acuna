@@ -8,8 +8,10 @@ class AcunaController extends AppController{
 	
 	public function index() {
         $this->loadModel('Banner');
+        $this->loadModel('Proyecto');
         $obj_banners = $this->Banner->listAllBanners();
-        $this->set(compact('obj_banners'));
+        $obj_proyectos = $this->Proyecto->listAllProyectos();
+        $this->set(compact('obj_banners', 'obj_proyectos'));
 
 		$this->layout = "wescon";
 	}
@@ -34,7 +36,7 @@ class AcunaController extends AppController{
 		$this->layout = "wescon";
 	}
 	
-	public function proyecto() {
+	public function content() {
         
 		$this->layout = "wescon";
 	}

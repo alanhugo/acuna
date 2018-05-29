@@ -124,7 +124,7 @@ class ProyectosController extends AppController{
 					//$image_tmp = $this->request->data['Proyecto']['thumbnail']['tmp_name'];
 					
 					
-					$uploaddir = APP.WEBROOT_DIR.'/files/thumb-proy/';
+					$uploaddir = APP.WEBROOT_DIR.'/files/proy-thumb/';
 					$uploadfile = $uploaddir . basename($new_file_name);
 				
 					move_uploaded_file($_FILES['data']['tmp_name']['Proyecto']['thumbnail'], $uploadfile);
@@ -173,7 +173,7 @@ class ProyectosController extends AppController{
 					$this->request->data['Proyecto']['thumbnail'] = $this->request->data['Proyecto']['thumbnail']['name'];
 					
 					//$image_tmp = $this->request->data['Proyecto']['thumbnail']['tmp_name'];
-					$uploaddir = APP.WEBROOT_DIR.'/files/thumb-proy/';
+					$uploaddir = APP.WEBROOT_DIR.'/files/proy-thumb/';
 					$uploadfile = $uploaddir . basename($_FILES['data']['name']['Proyecto']['thumbnail']);
 				
 					move_uploaded_file($_FILES['data']['tmp_name']['Proyecto']['thumbnail'], $uploadfile);
@@ -222,6 +222,16 @@ class ProyectosController extends AppController{
 			}
 		}
 	}
+
+	public function view ($proyecto_id=null){
+		$this->layout = "wescon";
+
+		if(isset($proyecto_id)){
+			
+		}
+
+		//$this->set(compact('varname'));
+	}
 	
 	public function delete_proyecto(){
 		$this->layout = 'ajax';
@@ -247,7 +257,6 @@ class ProyectosController extends AppController{
 				//exit();
 			}
 			exit();*/
-		}
-	
+		}	
 	}	
 }

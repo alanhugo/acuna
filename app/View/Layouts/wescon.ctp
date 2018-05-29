@@ -31,12 +31,12 @@
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="theme/uploads/favicon/72.png">
       <link rel="apple-touch-icon-precomposed" href="theme/uploads/favicon/57.png">
       <!-- end favicon -->
-      <link rel="stylesheet" href="theme/static/css/jquery.bxslider.css">
-      <link rel="stylesheet" href="theme/static/js/slick/slick.css">
-      <link rel="stylesheet" href="theme/static/js/slick/slick-theme.css">
-      <link rel="stylesheet" type="text/css" href="theme/static/css/styles.css"/>
-      <link rel="stylesheet" type="text/css" href="theme/static/css/blocks_styl.css"/>
-      <link rel="stylesheet" href="theme/static/css/validationEngine.jquery.css" type="text/css"/>
+      <link rel="stylesheet" href="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/css/jquery.bxslider.css'; ?>">
+      <link rel="stylesheet" href="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/js/slick/slick.css'; ?>">
+      <link rel="stylesheet" href="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/js/slick/slick-theme.css';?>">
+      <link rel="stylesheet" type="text/css" href="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/css/styles.css';?>"/>
+      <link rel="stylesheet" type="text/css" href="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/css/blocks_styl.css';?>"/>
+      <link rel="stylesheet" href="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/css/validationEngine.jquery.css';?>" type="text/css"/>
       <!--[if lt IE 9]><script src="static/js/html5.js"></script><script src="static/js/respond.js" type="text/javascript"></script>
       <link rel="stylesheet" type="text/css" href="http://www.wescon.pe/static/css/ie.css"/>
       <![endif]-->
@@ -63,13 +63,13 @@
       <div class="menu-sidebar">
          <div class="menu-sidebar-cnt"></div>
       </div>
-      <script src="theme/static/js/jquery1.8.3.min.js" type="text/javascript"></script>
-	  <script src="theme/static/js/jquery.placeholder.js" type="text/javascript"></script>
-	  <script src="theme/static/js/jquery.validationEngine.js" type="text/javascript"></script>
-	  <script src="theme/static/js/jquery.validationEngine-es.js" type="text/javascript"></script>
-	  <script src="theme/static/js/main.js" type="text/javascript"></script><!-- JSADD START -->
-	  <script src="theme/static/js/jquery.bxslider.min.js"></script>
-	  <script src="theme/static/js/slick/slick.js"></script><script>
+      <script src="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/js/jquery1.8.3.min.js'; ?>" type="text/javascript"></script>
+	  <script src="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/js/jquery.placeholder.js'; ?>" type="text/javascript"></script>
+	  <script src="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/js/jquery.validationEngine.js'; ?>" type="text/javascript"></script>
+	  <script src="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/js/jquery.validationEngine-es.js'; ?>" type="text/javascript"></script>
+	  <script src="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/js/main.js'; ?>" type="text/javascript"></script><!-- JSADD START -->
+	  <script src="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/js/jquery.bxslider.min.js'; ?>"></script>
+	  <script src="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/js/slick/slick.js'; ?>"></script><script>
          $(function(){
              $('.b1-slider').bxSlider({
                  mode:'vertical',
