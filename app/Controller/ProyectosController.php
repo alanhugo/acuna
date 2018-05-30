@@ -104,6 +104,8 @@ class ProyectosController extends AppController{
 	 */
 	public function add_edit_proyecto($proyecto_id=null){
 		$this->layout = 'ajax';
+		$this->loadModel('TipoVivienda');
+
 		
 		if($this->request->is('post')  || $this->request->is('put')){
 			if(isset($proyecto_id) && intval($proyecto_id) > 0){
@@ -171,7 +173,7 @@ class ProyectosController extends AppController{
 					//$image_tmp = $this->request->data['Proyecto']['thumbnail']['tmp_name'];
 					
 					
-					$uploaddir = APP.WEBROOT_DIR.'/files/sect1-img/';
+					$uploaddir = APP.WEBROOT_DIR.'/files/proy-sect1-img/';
 					$uploadfile = $uploaddir . basename($new_file_name);
 				
 					move_uploaded_file($_FILES['data']['tmp_name']['Proyecto']['sect1_img'], $uploadfile);
@@ -199,12 +201,12 @@ class ProyectosController extends AppController{
 					
 					//$image_tmp = $this->request->data['Proyecto']['thumbnail']['tmp_name'];
 					$uploaddir = APP.WEBROOT_DIR.'/files/proy-banner/';
-					$uploadfile = $uploaddir . basename($_FILES['data']['name']['Proyecto']['proy-banner']);
+					$uploadfile = $uploaddir . basename($_FILES['data']['name']['Proyecto']['proy_banner']);
 				
-					move_uploaded_file($_FILES['data']['tmp_name']['Proyecto']['proy-banner'], $uploadfile);
+					move_uploaded_file($_FILES['data']['tmp_name']['Proyecto']['proy_banner'], $uploadfile);
 				
 				}else{
-					unset($this->request->data['Proyecto']['proy-banner']);
+					unset($this->request->data['Proyecto']['proy_banner']);
 				}
 
 				// NUEVO THUMBNAIL DEL PROYECTO
@@ -228,7 +230,7 @@ class ProyectosController extends AppController{
 					$this->request->data['Proyecto']['sect1_img'] = $this->request->data['Proyecto']['sect1_img']['name'];
 					
 					//$image_tmp = $this->request->data['Proyecto']['thumbnail']['tmp_name'];
-					$uploaddir = APP.WEBROOT_DIR.'/files/sect1-img/';
+					$uploaddir = APP.WEBROOT_DIR.'/files/proy-sect1-img/';
 					$uploadfile = $uploaddir . basename($_FILES['data']['name']['Proyecto']['sect1_img']);
 				
 					move_uploaded_file($_FILES['data']['tmp_name']['Proyecto']['sect1_img'], $uploadfile);
@@ -261,6 +263,8 @@ class ProyectosController extends AppController{
 				$this->set(compact('proyecto_id','obj_proyecto'));
 			}
 		}
+		$list_all_tipo_viviendas = $this->TipoVivienda->listAllTipoViviendas();
+		$this->set(compact('proyecto_id','obj_proyecto','list_all_tipo_viviendas'));
 	}
 
 	public function view ($proyecto_id=null){
@@ -271,6 +275,9 @@ class ProyectosController extends AppController{
 		if(isset($proyecto_id)){
 			$obj_proyecto = $this->Proyecto->findById($proyecto_id);
 		}
+
+		
+		
 		$this->set(compact('obj_proyecto'));
 	}
 	

@@ -3,6 +3,23 @@ App::uses('AppModel','Model');
   class Proyecto extends AppModel {
     public $name = 'Proyecto';
 
+    public $belongsTo = array(
+            'TipoVivienda' => array(
+                    'className' => 'TipVivienda',
+                    'foreignKey' => 'tipo_vivenda_id',
+                    'conditions' => '',
+                    'fields' => '',
+                    'order' => ''
+            ),
+
+            'Banco' => array(
+                    'className' => 'Banco',
+                    'foreignKey' => 'bco_id',
+                    'conditions' => '',
+                    'fields' => '',
+                    'order' => ''
+            )
+    );
     
     public $validate = array(
             'thumb_titulo'    => array(

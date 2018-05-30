@@ -1,9 +1,9 @@
-<section class="b23 wancho" style="background-image: url('theme/uploads/cabecera-amauta--2017-06-15--12-10-32.jpg')">
+<section class="b23 wancho" style="background-image: url(<?php echo ENV_WEBROOT_FULL_URL.'files/proy-banner/'.$obj_proyecto->getAttr('proy_banner');?>)">
    <div class=" b23cntbox">
 	  <div class="b23table">
 		 <div class="left">
 			<div class="b23-title">
-			   <h2 class="g-title white">2 y 3 ambientes<br><span>Amauta 2272</span></h2>
+			   <h2 class="g-title white"><?php echo $obj_proyecto->getAttr('thumb_titulo');?><br><span><?php echo $obj_proyecto->getAttr('thumb_subtitulo');?></span></h2>
 			</div>
 		 </div>
 		 <div class="right btn-2">
@@ -21,21 +21,14 @@
 	  <div class="b9-desc">
 		 <div class="b9-ctn-text">
 			<div class="b9-title">
-			   <h2>Vive tu independencia cerca de todo<br><span>Amauta 2272</span></h2>
+			   <h2><?php echo $obj_proyecto->getAttr('sect1_titulo');?><br><span><?php echo $obj_proyecto->getAttr('sect1_subtitulo');?></span></h2>
 			</div>
 			<div class="b9-text">
-				<?php
-					if(isset($obj_proyecto)){
-						debug($obj_proyecto->getAttr('id'));
-					}
-				?>
-			   <p style="text-align:justify">Amauta 2272, cuenta con las comodidades necesarias para vivir en un entorno con gran desarrollo urbano y comercial ubicado en Cercado de Lima. F&aacute;cil acceso a los principales avenidas, universidades, colegios, centros comerciales, hospitales, servicios de transporte y dem&aacute;s servicios de Lima.</p>
-			   <p style="text-align:justify">Comparte tus mejores momentos en la comodidad de un condominio cerrado donde tu familia est&eacute; protegida las 24 horas con controles de vigilancia en sus ingresos. Encuentra todo lo necesario para pasar una tarde en familia o amigos, rodeado de amplios espacios familiares y de esparcimiento. La seguridad de tu familia es nuestra prioridad.</p>
-			   <p style="text-align:justify">&nbsp;</p>
+			   <?php echo $obj_proyecto->getAttr('sect1_texto'); ?>
 			</div>
 		 </div>
 		 <div class="b23-botone"><a href="http://www.wescon.pe/uploads/brochure/book-2daetapa-2-ilovepdf-compressed.pdf" class="btn-white" download="/uploads/brochure/book-2daetapa-2-ilovepdf-compressed.pdf" >DESCARGAR BROCHURE</a></div>
-		 <div class="b9-img"><img src="theme/uploads/proyecto-amauta/imagen-dscripcion.jpg" alt=""></div>
+		 <div class="b9-img"><img src="<?php echo ENV_WEBROOT_FULL_URL.'files/proy-sect1-img/'.$obj_proyecto->getAttr('sect1_img');?>" alt=""></div>
 		 <div class="b9-char">
 			<ul class="b9-char-cnt">
 			   <li class="b9-area b9-char-item">

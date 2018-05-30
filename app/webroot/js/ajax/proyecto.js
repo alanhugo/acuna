@@ -92,7 +92,7 @@ $(document).ready(function(){
 				//toastr.success(data.msg);
 			}else{
 				$.each(data.validation, function( key, value ) {
-					toastr.error(value[0]);
+					//toastr.error(value[0]);
 					$('[name="data[Proyecto]['+key+']"]').parent().addClass('control-group has-error');
 					$('[name="data[Proyecto]['+key+']"]').change(function() {
 						$('[name="data[Proyecto]['+key+']"]').parent().removeClass('control-group has-error');

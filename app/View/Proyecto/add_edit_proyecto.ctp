@@ -109,7 +109,7 @@
 												</div>
 												<div class='fileupload-preview thumbnail' style='width:40%;height:40%;'>
 												<?php if(isset($obj_proyecto) && $obj_proyecto->getAttr('sect1_img')!=''){?>
-													<img src="<?php echo ENV_WEBROOT_FULL_URL.'files/sect1-img/'.$obj_proyecto->getAttr('sect1_img'); ?>">
+													<img src="<?php echo ENV_WEBROOT_FULL_URL.'files/proy-sect1-img/'.$obj_proyecto->getAttr('sect1_img'); ?>">
 												<?php }else{?>
 													<img src="">
 												<?php }?>
@@ -125,6 +125,43 @@
 										</div>
 									</div>
 							</fieldset>
+
+							<fieldset>
+    							<legend></legend>
+
+    							<div class="form-group">
+										<label class="col-sm-2 control-label"><?php echo 'Área'; ?></label>
+										<div class="col-sm-6">
+											<input name="data[Proyecto][area]" class="txt-area form-control" id="txtArea" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('area')):''; ?>">
+										</div>
+								</div>
+
+								
+
+								<div class="form-group">
+										<label class="col-sm-2 control-label"><?php echo 'Tipo de vivienda'; ?></label>
+										<div class="col-sm-6">
+											<select name = "data[Proyecto][tipo_vivienda_id]" class='form-control'>
+										        <?php 
+											        if (isset($list_all_tipo_viviendas)){
+											            	foreach ($list_all_tipo_viviendas as $k => $v) {
+																if(isset($obj_proyecto) || isset($proyecto_id)){
+																	if($v['TipoVivienda']['id'] == $obj_proyecto->getAttr('tipo_vivienda_id')){
+																		$selected = " selected = 'selected'";
+																	}else{
+																		$selected = "";
+																	}
+																}else{
+																	$selected = "";
+																}
+											            		echo "<option value = ".$v['TipoVivienda']['id'].$selected.">".$v['TipoVivienda']['descripcion']."</option>";
+											            	}
+											        }
+										        ?>
+								        	</select>
+										</div>
+								</div>
+    						</fieldset>
 							
 							<div class="hr-line-dashed"></div>
 							<div class="form-group">
