@@ -136,8 +136,6 @@
 										</div>
 								</div>
 
-								
-
 								<div class="form-group">
 										<label class="col-sm-2 control-label"><?php echo 'Tipo de vivienda'; ?></label>
 										<div class="col-sm-6">
@@ -161,7 +159,47 @@
 								        	</select>
 										</div>
 								</div>
+								<div class="form-group">
+										<label class="col-sm-2 control-label"><?php echo 'Banco'; ?></label>
+										<div class="col-sm-6">
+											<select name = "data[Proyecto][bco_id]" class='form-control'>
+										        <?php 
+											        if (isset($list_all_tipo_bancos)){
+											            	foreach ($list_all_tipo_bancos as $k => $v) {
+																if(isset($obj_proyecto) || isset($proyecto_id)){
+																	if($v['Banco']['id'] == $obj_proyecto->getAttr('bco_id')){
+																		$selected = " selected = 'selected'";
+																	}else{
+																		$selected = "";
+																	}
+																}else{
+																	$selected = "";
+																}
+											            		echo "<option value = ".$v['Banco']['id'].$selected.">".$v['Banco']['nombre']."</option>";
+											            	}
+											        }
+										        ?>
+								        	</select>
+										</div>
+								</div>
     						</fieldset>
+
+    						<fieldset>
+    							<legend>Ubicaci&oacute;n</legend>
+
+    							<div class="form-group">
+    									<label class="col-sm-2 control-label"><?php echo 'T&iacute;tulo'; ?></label>
+										<div class="col-sm-6">
+											<input name="data[Proyecto][ubicacion_titulo]" class="txt-area form-control" id="txtUbiTitulo" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('ubicacion_titulo')):''; ?>">
+										</div>
+								</div>
+								<div class="form-group">
+										<div id="div-cat-ubi">
+											<!--<textArea name="data[Proyecto][sect1_texto]" class="summernote" />-->
+											<?php echo $this->Form->input('ubicacion_texto', array('div' => false, 'label' => false,'type'=>'textarea','rows'=>'5','cols'=>'80', 'class'=> 'summernote form-control','id' =>'cat-ubi')); //TEXT AREA?>
+										</div>
+								</div>
+							</fieldset>
 							
 							<div class="hr-line-dashed"></div>
 							<div class="form-group">

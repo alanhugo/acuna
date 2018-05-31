@@ -5,8 +5,8 @@ App::uses('AppModel','Model');
 
     public $belongsTo = array(
             'TipoVivienda' => array(
-                    'className' => 'TipVivienda',
-                    'foreignKey' => 'tipo_vivenda_id',
+                    'className' => 'TipoVivienda',
+                    'foreignKey' => 'tipo_vivienda_id',
                     'conditions' => '',
                     'fields' => '',
                     'order' => ''

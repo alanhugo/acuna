@@ -105,6 +105,7 @@ class ProyectosController extends AppController{
 	public function add_edit_proyecto($proyecto_id=null){
 		$this->layout = 'ajax';
 		$this->loadModel('TipoVivienda');
+		$this->loadModel('Banco');
 
 		
 		if($this->request->is('post')  || $this->request->is('put')){
@@ -264,7 +265,8 @@ class ProyectosController extends AppController{
 			}
 		}
 		$list_all_tipo_viviendas = $this->TipoVivienda->listAllTipoViviendas();
-		$this->set(compact('proyecto_id','obj_proyecto','list_all_tipo_viviendas'));
+		$list_all_tipo_bancos = $this->Banco->listAllBancos();
+		$this->set(compact('proyecto_id','obj_proyecto','list_all_tipo_viviendas', 'list_all_tipo_bancos'));
 	}
 
 	public function view ($proyecto_id=null){

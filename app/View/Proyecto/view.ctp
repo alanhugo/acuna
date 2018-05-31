@@ -33,15 +33,15 @@
 			<ul class="b9-char-cnt">
 			   <li class="b9-area b9-char-item">
 				  <p>Área</p>
-				  <p><strong>Desde 59 m2</strong></p>
+				  <p><strong><?php echo $obj_proyecto->getAttr('area');?></strong></p>
 			   </li>
 			   <li class="b9-type b9-char-item">
 				  <p>Tipo</p>
-				  <p><strong>Departamentos</strong></p>
+				  <p><strong><?php echo $obj_proyecto->TipoVivienda->getAttr('descripcion');?></strong></p>
 			   </li>
 			   <li class="b9-fin b9-char-item">
 				  <p>Financiado</p>
-				  <p><img src="theme/uploads/bancos/bcp.png" alt=""></p>
+				  <p><?php echo $obj_proyecto->Banco->getAttr('nombre');?><!--<img src="theme/uploads/bancos/bcp.png" alt="">--></p>
 			   </li>
 			</ul>
 		 </div>
@@ -52,10 +52,16 @@
    <div class="b10-main">
 	  <div class="b10-buttons">
 		 <ul>
+		 	<li><a href="#" data-id="b10-tab3"><span>Ubicación</span></a></li>
 			<li><a href="#" data-id="b10-tab1"><span>Áreas Comunes</span></a></li>
-			<li><a href="#" data-id="b10-tab2"><span>Ventajas del Proyecto</span></a></li>
-			<li><a href="#" data-id="b10-tab3"><span>Ubicación</span></a></li>
+			<li><a href="#" data-id="b10-tab2"><span>Departamentos</span></a></li>
+			<li><a href="#" data-id="b10-tab2"><span>Áreas verdes</span></a></li>
+			<li><a href="#" data-id="b10-tab2"><span>Requisitos Techo Propio</span></a></li>
+			<li><a href="#" data-id="b10-tab2"><span>Proyecto</span></a></li>
+			<li><a href="#" data-id="b10-tab2"><span>Casas</span></a></li>
+			<li><a href="#" data-id="b10-tab2"><span>Promociones</span></a></li>
 			<li><a href="#" data-id="b10-tab4"><span>Más Facilidades</span></a></li>
+			<li><a href="#" data-id="b10-tab2"><span>Ventajas del Proyecto</span></a></li>
 		 </ul>
 	  </div>
 	  <div class="b19-content">
