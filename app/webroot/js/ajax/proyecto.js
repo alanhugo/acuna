@@ -71,13 +71,24 @@ $(document).ready(function(){
 		$("textarea#cat-ubi").html($('#div-cat-ubi .note-editable').html());
 	});
 
+	$body.off('click','#div-cat-ubi .note-toolbar');
+	$body.on('click','#div-cat-ubi .note-toolbar',function(){
+		
+		$("textarea#cat-ubi").html($('#div-cat-ubi .note-editable').html());
+	});
+
+	/// EDITOR CAT. ÁREA COMÚN
+	$body.off('keypress','#div-cat-area-comun .note-editable');
+	$body.on('keypress','#div-cat-area-comun .note-editable',function(){
+		
+		$("textarea#cat-area-comun").html($('#div-cat-area-comun .note-editable').html());
+	});
+
 	$body.off('click','#sect1-texto .note-toolbar');
 	$body.on('click','#sect1-texto .note-toolbar',function(){
 		
 		$("textarea#cat-ubi").html($('#div-cat-ubi .note-editable').html());
 	});
-
-	/// EDITOR CAT. UBICACIÓN
 
 // FIN EVENTOS PARA EDITORES
 

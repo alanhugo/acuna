@@ -200,6 +200,23 @@
 										</div>
 								</div>
 							</fieldset>
+
+							<fieldset>
+    							<legend>&Aacute;rea Com&uacute;n</legend>
+
+    							<div class="form-group">
+    									<label class="col-sm-2 control-label"><?php echo 'T&iacute;tulo'; ?></label>
+										<div class="col-sm-6">
+											<input name="data[Proyecto][area_com_titulo]" class="txt-area-com form-control" id="txtAcomTitulo" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('area_com_titulo')):''; ?>">
+										</div>
+								</div>
+								<div class="form-group">
+										<div id="div-cat-area-comun">
+											<!--<textArea name="data[Proyecto][sect1_texto]" class="summernote" />-->
+											<?php echo $this->Form->input('area_com_texto', array('div' => false, 'label' => false,'type'=>'textareacom','rows'=>'5','cols'=>'80', 'class'=> 'summernote form-control','id' =>'cat-area-comun')); //TEXT AREA?>
+										</div>
+								</div>
+							</fieldset>
 							
 							<div class="hr-line-dashed"></div>
 							<div class="form-group">
