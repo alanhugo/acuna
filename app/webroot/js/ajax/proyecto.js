@@ -49,19 +49,35 @@ $(document).ready(function(){
 		$('#div-crear-proyecto').fadeOut();
 	});
 
-	$body.off('keypress','.note-editable');
-	$body.on('keypress','.note-editable',function(){
+// EVENTOS PARA EDITORES
+
+	///  EDITOR SECCIÓN UNO
+	$body.off('keypress','#sect1-texto .note-editable');
+	$body.on('keypress','#sect1-texto .note-editable',function(){
 		
-		//$('#sect1-texto').val($('.note-editable').html());
-		$("textarea#sect1-texto").html($('.note-editable').html());//prueba asi me cagaste a ver
+		$("textarea#sect1-texto").html($('#sect1-texto .note-editable').html());
 	});
 
-	$body.off('click','.note-toolbar');
-	$body.on('click','.note-toolbar',function(){
+	$body.off('click','#sect1-texto .note-toolbar');
+	$body.on('click','#sect1-texto .note-toolbar',function(){
 		
-		//$('#sect1-texto').val($('.note-editable').html());
-		$("textarea#sect1-texto").html($('.note-editable').html());//prueba asi me cagaste a ver
+		$("textarea#sect1-texto").html($('#sect1-texto .note-editable').html());
 	});
+
+	/// EDITOR CAT. UBICACIÓN
+	$body.off('keypress','#div-cat-ubi .note-editable');
+	$body.on('keypress','#div-cat-ubi .note-editable',function(){
+		
+		$("textarea#cat-ubi").html($('#div-cat-ubi .note-editable').html());
+	});
+
+	$body.off('click','#sect1-texto .note-toolbar');
+	$body.on('click','#sect1-texto .note-toolbar',function(){
+		
+		$("textarea#cat-ubi").html($('#div-cat-ubi .note-editable').html());
+	});
+
+// FIN EVENTOS PARA EDITORES
 
 	
 	$body.off('click','.btn-crear-proyecto-trigger');
