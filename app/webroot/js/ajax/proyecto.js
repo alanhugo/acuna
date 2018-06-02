@@ -77,6 +77,8 @@ $(document).ready(function(){
 		$("textarea#cat-ubi").html($('#div-cat-ubi .note-editable').html());
 	});
 
+	/// EDITOR CAT. UBICACIÓN
+
 // FIN EVENTOS PARA EDITORES
 
 	
