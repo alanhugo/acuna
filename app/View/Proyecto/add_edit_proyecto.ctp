@@ -213,11 +213,149 @@
 								<div class="form-group">
 										<div id="div-cat-area-comun">
 											<!--<textArea name="data[Proyecto][sect1_texto]" class="summernote" />-->
-											<?php echo $this->Form->input('area_com_texto', array('div' => false, 'label' => false,'type'=>'textareacom','rows'=>'5','cols'=>'80', 'class'=> 'summernote form-control','id' =>'cat-area-comun')); //TEXT AREA?>
+											<?php echo $this->Form->input('area_com_texto', array('div' => false, 'label' => false,'type'=>'textarea','rows'=>'5','cols'=>'80', 'class'=> 'summernote form-control','id' =>'cat-area-comun')); //TEXT AREA?>
+										</div>
+								</div>
+							</fieldset>
+
+							<fieldset>
+    							<legend>Departamentos</legend>
+
+    							<div class="form-group">
+    									<label class="col-sm-2 control-label"><?php echo 'T&iacute;tulo'; ?></label>
+										<div class="col-sm-6">
+											<input name="data[Proyecto][depart_titulo]" class="txt-departamento form-control" id="txtDepaTitulo" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('depart_titulo')):''; ?>">
+										</div>
+								</div>
+								<div class="form-group">
+										<div id="div-cat-departamento">
+											<!--<textArea name="data[Proyecto][sect1_texto]" class="summernote" />-->
+											<?php echo $this->Form->input('depart_texto', array('div' => false, 'label' => false,'type'=>'textarea','rows'=>'5','cols'=>'80', 'class'=> 'summernote form-control','id' =>'cat-depart')); //TEXT AREA?>
 										</div>
 								</div>
 							</fieldset>
 							
+							<div class="hr-line-dashed"></div>
+							<div class="form-group">
+								<div class="col-sm-4 col-sm-offset-2">
+									<button type="button" class="btn btn-primary btn-crear-proyecto-trigger" style="margin-right:17px;"><?php echo __('Guardar'); ?></button>
+									<button type="button" class="btn btn-white btn-cancelar-crear-proyecto"><?php echo __('Cancelar');?></button>
+								</div>
+							</div>
+
+							<fieldset>
+    							<legend>&Aacute;reas Verdes</legend>
+
+    							<div class="form-group">
+    									<label class="col-sm-2 control-label"><?php echo 'T&iacute;tulo'; ?></label>
+										<div class="col-sm-6">
+											<input name="data[Proyecto][area_verd_titulo]" class="txt-verd-tit form-control" id="txtVerdeTitulo" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('area_verd_titulo')):''; ?>">
+										</div>
+								</div>
+								<div class="form-group">
+										<div id="div-cat-area-verd">
+											<!--<textArea name="data[Proyecto][sect1_texto]" class="summernote" />-->
+											<?php echo $this->Form->input('area_verd_texto', array('div' => false, 'label' => false,'type'=>'textarea','rows'=>'5','cols'=>'80', 'class'=> 'summernote form-control','id' =>'cat-area-verd')); //TEXT AREA?>
+										</div>
+								</div>
+							</fieldset>
+							
+							<fieldset>
+    							<legend>Techo propio</legend>
+
+    							<div class="form-group">
+    									<label class="col-sm-2 control-label"><?php echo 'T&iacute;tulo'; ?></label>
+										<div class="col-sm-6">
+											<input name="data[Proyecto][tech_prop_titulo]" class="txt-tech-prop form-control" id="txtTechTitulo" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('tech_prop_titulo')):''; ?>">
+										</div>
+								</div>
+								<div class="form-group">
+										<div id="div-cat-tech-prop">
+											<?php echo $this->Form->input('tech_prop_texto', array('div' => false, 'label' => false,'type'=>'textarea','rows'=>'5','cols'=>'80', 'class'=> 'summernote form-control','id' =>'cat-tech-prop')); //TEXT AREA?>
+										</div>
+								</div>
+							</fieldset>	
+
+							<fieldset>
+    							<legend>Proyecto</legend>
+
+    							<div class="form-group">
+    									<label class="col-sm-2 control-label"><?php echo 'T&iacute;tulo'; ?></label>
+										<div class="col-sm-6">
+											<input name="data[Proyecto][pro_titulo]" class="txt-proyecto form-control" id="txtProyecto" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('pro_titulo')):''; ?>">
+										</div>
+								</div>
+								<div class="form-group">
+										<div id="div-cat-proyecto">
+											<?php echo $this->Form->input('pro_texto', array('div' => false, 'label' => false,'type'=>'textarea','rows'=>'5','cols'=>'80', 'class'=> 'summernote form-control','id' =>'cat-proyecto')); //TEXT AREA?>
+										</div>
+								</div>
+							</fieldset>
+
+							<fieldset>
+    							<legend>Casas</legend>
+
+    							<div class="form-group">
+    									<label class="col-sm-2 control-label"><?php echo 'T&iacute;tulo'; ?></label>
+										<div class="col-sm-6">
+											<input name="data[Proyecto][casas_titulo]" class="txt-proyecto form-control" id="txtCasas" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('casas_titulo')):''; ?>">
+										</div>
+								</div>
+								<div class="form-group">
+										<div id="div-cat-casas">
+											<?php echo $this->Form->input('casas_texto', array('div' => false, 'label' => false,'type'=>'textarea','rows'=>'5','cols'=>'80', 'class'=> 'summernote form-control','id' =>'cat-casas')); //TEXT AREA?>
+										</div>
+								</div>
+							</fieldset>	
+
+							<fieldset>
+    							<legend>Promociones</legend>
+
+    							<div class="form-group">
+    									<label class="col-sm-2 control-label"><?php echo 'T&iacute;tulo'; ?></label>
+										<div class="col-sm-6">
+											<input name="data[Proyecto][promo_titulo]" class="txt-promo form-control" id="txtPromo" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('promo_titulo')):''; ?>">
+										</div>
+								</div>
+								<div class="form-group">
+										<div id="div-cat-promo">
+											<?php echo $this->Form->input('promo_texto', array('div' => false, 'label' => false,'type'=>'textarea','rows'=>'5','cols'=>'80', 'class'=> 'summernote form-control','id' =>'cat-promo')); //TEXT AREA?>
+										</div>
+								</div>
+							</fieldset>
+
+							<fieldset>
+    							<legend>M&aacute;s facilidades</legend>
+
+    							<div class="form-group">
+    									<label class="col-sm-2 control-label"><?php echo 'T&iacute;tulo'; ?></label>
+										<div class="col-sm-6">
+											<input name="data[Proyecto][facilidad_titulo]" class="txt-facil form-control" id="txtFacil" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('facilidad_titulo')):''; ?>">
+										</div>
+								</div>
+								<div class="form-group">
+										<div id="div-cat-facilidad">
+											<?php echo $this->Form->input('facilidad_texto', array('div' => false, 'label' => false,'type'=>'textarea','rows'=>'5','cols'=>'80', 'class'=> 'summernote form-control','id' =>'cat-facilidad')); //TEXT AREA?>
+										</div>
+								</div>
+							</fieldset>
+
+							<fieldset>
+    							<legend>Ventajas</legend>
+
+    							<div class="form-group">
+    									<label class="col-sm-2 control-label"><?php echo 'T&iacute;tulo'; ?></label>
+										<div class="col-sm-6">
+											<input name="data[Proyecto][ventaja_titulo]" class="txt-ventaja form-control" id="txtVentaja" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('ventaja_titulo')):''; ?>">
+										</div>
+								</div>
+								<div class="form-group">
+										<div id="div-cat-ventaja">
+											<?php echo $this->Form->input('ventaja_texto', array('div' => false, 'label' => false,'type'=>'textarea','rows'=>'5','cols'=>'80', 'class'=> 'summernote form-control','id' =>'cat-ventaja')); //TEXT AREA?>
+										</div>
+								</div>
+							</fieldset>	
+
 							<div class="hr-line-dashed"></div>
 							<div class="form-group">
 								<div class="col-sm-4 col-sm-offset-2">

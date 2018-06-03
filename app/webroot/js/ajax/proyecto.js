@@ -84,11 +84,116 @@ $(document).ready(function(){
 		$("textarea#cat-area-comun").html($('#div-cat-area-comun .note-editable').html());
 	});
 
-	$body.off('click','#sect1-texto .note-toolbar');
-	$body.on('click','#sect1-texto .note-toolbar',function(){
+	$body.off('click','#div-cat-area-comun .note-toolbar');
+	$body.on('click','#div-cat-area-comun .note-toolbar',function(){
 		
-		$("textarea#cat-ubi").html($('#div-cat-ubi .note-editable').html());
+		$("textarea#cat-area-comun").html($('#div-cat-area-comun .note-editable').html());
 	});
+
+	/// EDITOR CAT. DEPARTAMENTOS
+	$body.off('keypress','#div-cat-departamento .note-editable');
+	$body.on('keypress','#div-cat-departamento .note-editable',function(){
+		
+		$("textarea#cat-depart").html($('#div-cat-departamento .note-editable').html());
+	});
+
+	$body.off('click','#div-cat-departamento .note-toolbar');
+	$body.on('click','#div-cat-departamento .note-toolbar',function(){
+		
+		$("textarea#cat-depart").html($('#div-cat-departamento .note-editable').html());
+	});
+
+	/// EDITOR CAT. ÁREAS VERDES
+	$body.off('keypress','#div-cat-area-verd .note-editable');
+	$body.on('keypress','#div-cat-area-verd .note-editable',function(){
+		
+		$("textarea#cat-area-verd").html($('#div-cat-area-verd .note-editable').html());
+	});
+
+	$body.off('click','#div-cat-area-verd .note-toolbar');
+	$body.on('click','#div-cat-area-verd .note-toolbar',function(){
+		
+		$("textarea#cat-area-verd").html($('#div-cat-area-verd .note-editable').html());
+	});
+
+	/// EDITOR CAT. TECHO PROPIO
+	$body.off('keypress','#div-cat-tech-prop .note-editable');
+	$body.on('keypress','#div-cat-tech-prop .note-editable',function(){
+		
+		$("textarea#cat-tech-prop").html($('#div-cat-tech-prop .note-editable').html());
+	});
+
+	$body.off('click','#div-cat-tech-prop .note-toolbar');
+	$body.on('click','#div-cat-tech-prop .note-toolbar',function(){
+		
+		$("textarea#cat-tech-prop").html($('#div-cat-tech-prop .note-editable').html());
+	});
+
+	/// EDITOR CAT. PROYECTO
+	$body.off('keypress','#div-cat-proyecto .note-editable');
+	$body.on('keypress','#div-cat-proyecto .note-editable',function(){
+		
+		$("textarea#cat-proyecto").html($('#div-cat-proyecto .note-editable').html());
+	});
+
+	$body.off('click','#div-cat-proyecto .note-toolbar');
+	$body.on('click','#div-cat-proyecto .note-toolbar',function(){
+		
+		$("textarea#cat-proyecto").html($('#div-cat-proyecto .note-editable').html());
+	});
+
+	/// EDITOR CAT. CASAS
+	$body.off('keypress','#div-cat-casas .note-editable');
+	$body.on('keypress','#div-cat-casas .note-editable',function(){
+		
+		$("textarea#cat-casas").html($('#div-cat-casas .note-editable').html());
+	});
+
+	$body.off('click','#div-cat-casas .note-toolbar');
+	$body.on('click','#div-cat-casas .note-toolbar',function(){
+		
+		$("textarea#cat-casas").html($('#div-cat-casas .note-editable').html());
+	});
+
+	/// EDITOR CAT. PROMOCIONES
+	$body.off('keypress','#div-cat-promo .note-editable');
+	$body.on('keypress','#div-cat-promo .note-editable',function(){
+		
+		$("textarea#cat-promo").html($('#div-cat-promo .note-editable').html());
+	});
+
+	$body.off('click','#div-cat-promo .note-toolbar');
+	$body.on('click','#div-cat-promo .note-toolbar',function(){
+		
+		$("textarea#cat-promo").html($('#div-cat-promo .note-editable').html());
+	});
+
+	/// EDITOR CAT. MAS FACILIDADES
+	$body.off('keypress','#div-cat-facilidad .note-editable');
+	$body.on('keypress','#div-cat-facilidad .note-editable',function(){
+		
+		$("textarea#cat-facilidad").html($('#div-cat-facilidad .note-editable').html());
+	});
+
+	$body.off('click','#div-cat-facilidad .note-toolbar');
+	$body.on('click','#div-cat-facilidad .note-toolbar',function(){
+		
+		$("textarea#cat-facilidad").html($('#div-cat-facilidad .note-editable').html());
+	});
+
+	/// EDITOR CAT. VENTAJAS
+	$body.off('keypress','#div-cat-ventaja .note-editable');
+	$body.on('keypress','#div-cat-ventaja .note-editable',function(){
+		
+		$("textarea#cat-ventaja").html($('#div-cat-ventaja .note-editable').html());
+	});
+
+	$body.off('click','#div-cat-ventaja .note-toolbar');
+	$body.on('click','#div-cat-ventaja .note-toolbar',function(){
+		
+		$("textarea#cat-ventaja").html($('#div-cat-ventaja .note-editable').html());
+	});
+
 
 // FIN EVENTOS PARA EDITORES
 
