@@ -130,16 +130,16 @@ $(document).ready(function(){
 	});
 
 	/// EDITOR CAT. PROYECTO
-	$body.off('keypress','#div-cat-proyecto .note-editable');
-	$body.on('keypress','#div-cat-proyecto .note-editable',function(){
+	$body.off('keypress','#div-cat-proy .note-editable');
+	$body.on('keypress','#div-cat-proy .note-editable',function(){
 		
-		$("textarea#cat-proyecto").html($('#div-cat-proyecto .note-editable').html());
+		$("textarea#cat-proy").html($('#div-cat-proy .note-editable').html());
 	});
 
-	$body.off('click','#div-cat-proyecto .note-toolbar');
-	$body.on('click','#div-cat-proyecto .note-toolbar',function(){
+	$body.off('click','#div-cat-proy .note-toolbar');
+	$body.on('click','#div-cat-proy .note-toolbar',function(){
 		
-		$("textarea#cat-proyecto").html($('#div-cat-proyecto .note-editable').html());
+		$("textarea#cat-proy").html($('#div-cat-proy .note-editable').html());
 	});
 
 	/// EDITOR CAT. CASAS

@@ -235,14 +235,6 @@
 								</div>
 							</fieldset>
 							
-							<div class="hr-line-dashed"></div>
-							<div class="form-group">
-								<div class="col-sm-4 col-sm-offset-2">
-									<button type="button" class="btn btn-primary btn-crear-proyecto-trigger" style="margin-right:17px;"><?php echo __('Guardar'); ?></button>
-									<button type="button" class="btn btn-white btn-cancelar-crear-proyecto"><?php echo __('Cancelar');?></button>
-								</div>
-							</div>
-
 							<fieldset>
     							<legend>&Aacute;reas Verdes</legend>
 
@@ -282,12 +274,12 @@
     							<div class="form-group">
     									<label class="col-sm-2 control-label"><?php echo 'T&iacute;tulo'; ?></label>
 										<div class="col-sm-6">
-											<input name="data[Proyecto][pro_titulo]" class="txt-proyecto form-control" id="txtProyecto" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('pro_titulo')):''; ?>">
+											<input name="data[Proyecto][proy_titulo]" class="txt-proyecto form-control" id="txtProyecto" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('proy_titulo')):''; ?>">
 										</div>
 								</div>
 								<div class="form-group">
-										<div id="div-cat-proyecto">
-											<?php echo $this->Form->input('pro_texto', array('div' => false, 'label' => false,'type'=>'textarea','rows'=>'5','cols'=>'80', 'class'=> 'summernote form-control','id' =>'cat-proyecto')); //TEXT AREA?>
+										<div id="div-cat-proy">
+											<?php echo $this->Form->input('proy_texto', array('div' => false, 'label' => false,'type'=>'textarea','rows'=>'5','cols'=>'80', 'class'=> 'summernote form-control','id' =>'cat-proy')); //TEXT AREA?>
 										</div>
 								</div>
 							</fieldset>
