@@ -197,6 +197,113 @@ $(document).ready(function(){
 
 // FIN EVENTOS PARA EDITORES
 
+
+//ACTIVAR/ DESACTIVARCHECKBOX DE CATEGORIAS
+
+	$body.off('click','.chk-ubi');
+	$body.on('click','.chk-ubi',function(){
+		
+		if( $('.chk-ubi').is(':checked') ) {
+		    $('.div-chk-ubi').show();
+		}else{
+			$('.div-chk-ubi').hide();
+		}
+	});
+
+
+	$body.off('click','.chk-area-comun');
+	$body.on('click','.chk-area-comun',function(){
+		
+		if( $('.chk-area-comun').is(':checked') ) {
+		    $('.div-chk-area-comun').show();
+		}else{
+			$('.div-chk-area-comun').hide();
+		}
+	});
+
+	$body.off('click','.chk-departamento');
+	$body.on('click','.chk-departamento',function(){
+		
+		if( $('.chk-departamento').is(':checked') ) {
+		    $('.div-chk-departamento').show();
+		}else{
+			$('.div-chk-departamento').hide();
+		}
+	});
+
+	$body.off('click','.chk-area-verd');
+	$body.on('click','.chk-area-verd',function(){
+		
+		if( $('.chk-area-verd').is(':checked') ) {
+		    $('.div-chk-area-verd').show();
+		}else{
+			$('.div-chk-area-verd').hide();
+		}
+	});
+
+	$body.off('click','.chk-tech-prop');
+	$body.on('click','.chk-tech-prop',function(){
+		
+		if( $('.chk-tech-prop').is(':checked') ) {
+		    $('.div-chk-tech-prop').show();
+		}else{
+			$('.div-chk-tech-prop').hide();
+		}
+	});
+
+	$body.off('click','.chk-proy');
+	$body.on('click','.chk-proy',function(){
+		
+		if( $('.chk-proy').is(':checked') ) {
+		    $('.div-chk-proy').show();
+		}else{
+			$('.div-chk-proy').hide();
+		}
+	});
+
+	$body.off('click','.chk-casas');
+	$body.on('click','.chk-casas',function(){
+		
+		if( $('.chk-casas').is(':checked') ) {
+		    $('.div-chk-casas').show();
+		}else{
+			$('.div-chk-casas').hide();
+		}
+	});
+
+	$body.off('click','.chk-promo');
+	$body.on('click','.chk-promo',function(){
+		
+		if( $('.chk-promo').is(':checked') ) {
+		    $('.div-chk-promo').show();
+		}else{
+			$('.div-chk-promo').hide();
+		}
+	});
+
+	$body.off('click','.chk-facilidad');
+	$body.on('click','.chk-facilidad',function(){
+		
+		if( $('.chk-facilidad').is(':checked') ) {
+		    $('.div-chk-facilidad').show();
+		}else{
+			$('.div-chk-facilidad').hide();
+		}
+	});
+
+	$body.off('click','.chk-ventaja');
+	$body.on('click','.chk-ventaja',function(){
+		
+		if( $('.chk-ventaja').is(':checked') ) {
+		    $('.div-chk-ventaja').show();
+		}else{
+			$('.div-chk-ventaja').hide();
+		}
+	});
+
+//***----****\\
+
+
 	
 	$body.off('click','.btn-crear-proyecto-trigger');
 	$body.on('click','.btn-crear-proyecto-trigger',function(){
