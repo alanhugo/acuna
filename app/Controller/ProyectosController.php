@@ -183,6 +183,56 @@ class ProyectosController extends AppController{
 					unset($this->request->data['Proyecto']['sect1_img']);
 				}
 				/* FIN EDITAR IMAGEN SECCIÓN 1*/
+
+
+				/* EDITAR IMG CROQUIS*/
+
+				/* EDITAR IMAGEN CROQUIS 1 Y 2*/
+				
+				if($this->request->data['Proyecto']['img_croquis1']['name'] != ''){
+					
+					$thumbnail = $this->request->data['Proyecto']['img_croquis1']['name'];
+					$arr = explode(".", $thumbnail);
+					$extension = strtolower(array_pop($arr));
+					$new_file_name = time().'.'.$extension;
+					
+					$this->request->data['Proyecto']['img_croquis1'] = $new_file_name;
+						
+					//$image_tmp = $this->request->data['Proyecto']['thumbnail']['tmp_name'];
+					
+					
+					$uploaddir = APP.WEBROOT_DIR.'/files/croquis/';
+					$uploadfile = $uploaddir . basename($new_file_name);
+				
+					move_uploaded_file($_FILES['data']['tmp_name']['Proyecto']['img_croquis1'], $uploadfile);
+				
+				}else{
+					unset($this->request->data['Proyecto']['img_croquis1']);
+				}
+
+
+				if($this->request->data['Proyecto']['img_croquis2']['name'] != ''){
+					
+					$thumbnail = $this->request->data['Proyecto']['img_croquis2']['name'];
+					$arr = explode(".", $thumbnail);
+					$extension = strtolower(array_pop($arr));
+					$new_file_name = time().'.'.$extension;
+					
+					$this->request->data['Proyecto']['img_croquis2'] = $new_file_name;
+						
+					//$image_tmp = $this->request->data['Proyecto']['thumbnail']['tmp_name'];
+					
+					
+					$uploaddir = APP.WEBROOT_DIR.'/files/croquis/';
+					$uploadfile = $uploaddir . basename($new_file_name);
+				
+					move_uploaded_file($_FILES['data']['tmp_name']['Proyecto']['img_croquis2'], $uploadfile);
+				
+				}else{
+					unset($this->request->data['Proyecto']['img_croquis2']);
+				}
+
+				/**-----***/
 	
 				if ($this->Proyecto->save($this->request->data)) {
 					echo json_encode(array('success'=>true,'msg'=>__('Guardado con &eacute;xito.'),'Proyecto_id'=>$proyecto_id));
@@ -241,6 +291,37 @@ class ProyectosController extends AppController{
 				}
 				
 				/* FIN NUEVA IMAGEN SECCIÓN 1 */
+
+
+				/* NUEVA IMAGEN CROQUIS 1 Y 2 */
+
+				if($this->request->data['Proyecto']['img_croquis1']['name'] != ''){
+					$this->request->data['Proyecto']['img_croquis1'] = $this->request->data['Proyecto']['img_croquis1']['name'];
+					
+					//$image_tmp = $this->request->data['Proyecto']['thumbnail']['tmp_name'];
+					$uploaddir = APP.WEBROOT_DIR.'/files/croquis/';
+					$uploadfile = $uploaddir . basename($_FILES['data']['name']['Proyecto']['img_croquis1']);
+				
+					move_uploaded_file($_FILES['data']['tmp_name']['Proyecto']['img_croquis1'], $uploadfile);
+				
+				}else{
+					unset($this->request->data['Proyecto']['img_croquis1']);
+				}
+
+				if($this->request->data['Proyecto']['img_croquis2']['name'] != ''){
+					$this->request->data['Proyecto']['img_croquis2'] = $this->request->data['Proyecto']['img_croquis2']['name'];
+					
+					//$image_tmp = $this->request->data['Proyecto']['thumbnail']['tmp_name'];
+					$uploaddir = APP.WEBROOT_DIR.'/files/croquis/';
+					$uploadfile = $uploaddir . basename($_FILES['data']['name']['Proyecto']['img_croquis2']);
+				
+					move_uploaded_file($_FILES['data']['tmp_name']['Proyecto']['img_croquis2'], $uploadfile);
+				
+				}else{
+					unset($this->request->data['Proyecto']['img_croquis2']);
+				}
+				
+				/* FIN NUEVA IMAGEN */
 				
 
 				$this->request->data['Proyecto']['estado'] = 1;

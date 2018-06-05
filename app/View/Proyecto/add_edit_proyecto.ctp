@@ -363,7 +363,53 @@
 											</div>
 									</div>
 								</div>
-							</fieldset>	
+							</fieldset>
+
+
+							<fieldset>
+    							<legend>IM&Aacute;GENES DE CROQUIS:</legend>
+    							<div class="form-group">
+										<label class="col-sm-2 control-label">Imagen 1</label>
+										<div class="col-sm-6">
+											<div class='fileupload fileupload-new' data-provides='fileupload'>
+												<div class='uneditable-input span2'><i class='icon-file fileupload-exists'></i>
+													<span class="btn btn-default btn-file" style="width:106px;height: 37px;margin-bottom: 4px;">
+														<input type="file" name="data[Proyecto][img_croquis1]" style="opacity:0; position:absolute;height: 35px;left: 0px;top: 29px;" id="ImagenCroquis1">
+														<span class="fileinput-new">Select image</span>
+													</span>
+												</div>
+												<div class='fileupload-preview thumbnail' style='width:40%;height:40%;'>
+												<?php if(isset($obj_proyecto) && $obj_proyecto->getAttr('img_croquis1')!=''){?>
+													<img src="<?php echo ENV_WEBROOT_FULL_URL.'files/croquis/'.$obj_proyecto->getAttr('img_croquis1'); ?>">
+												<?php }else{?>
+													<img src="">
+												<?php }?>
+												</div>
+											</div>
+										</div>
+								</div>
+
+								<div class="form-group">
+										<label class="col-sm-2 control-label">Imagen 2</label>
+										<div class="col-sm-6">
+											<div class='fileupload fileupload-new' data-provides='fileupload'>
+												<div class='uneditable-input span2'><i class='icon-file fileupload-exists'></i>
+													<span class="btn btn-default btn-file" style="width:106px;height: 37px;margin-bottom: 4px;">
+														<input type="file" name="data[Proyecto][img_croquis2]" style="opacity:0; position:absolute;height: 35px;left: 0px;top: 29px;" id="ImagenCroquis2">
+														<span class="fileinput-new">Select image</span>
+													</span>
+												</div>
+												<div class='fileupload-preview thumbnail' style='width:40%;height:40%;'>
+												<?php if(isset($obj_proyecto) && $obj_proyecto->getAttr('img_croquis2')!=''){?>
+													<img src="<?php echo ENV_WEBROOT_FULL_URL.'files/croquis/'.$obj_proyecto->getAttr('img_croquis2'); ?>">
+												<?php }else{?>
+													<img src="">
+												<?php }?>
+												</div>
+											</div>
+										</div>
+								</div>
+    						</fieldset>
 
 							<div class="hr-line-dashed"></div>
 							<div class="form-group">
