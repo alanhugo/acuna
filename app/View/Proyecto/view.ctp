@@ -52,25 +52,25 @@
    <div class="b10-main">
 	  <div class="b10-buttons">
 		 <ul>
-		 	<li><a href="#" data-id="b10-tab3"><span>Ubicación</span></a></li>
-			<li><a href="#" data-id="b10-tab1"><span>Áreas Comunes</span></a></li>
-			<li><a href="#" data-id="b10-tab2"><span>Departamentos</span></a></li>
-			<li><a href="#" data-id="b10-tab2"><span>Áreas verdes</span></a></li>
-			<li><a href="#" data-id="b10-tab2"><span>Requisitos Techo Propio</span></a></li>
-			<li><a href="#" data-id="b10-tab2"><span>Proyecto</span></a></li>
-			<li><a href="#" data-id="b10-tab2"><span>Casas</span></a></li>
-			<li><a href="#" data-id="b10-tab2"><span>Promociones</span></a></li>
-			<li><a href="#" data-id="b10-tab4"><span>Más Facilidades</span></a></li>
-			<li><a href="#" data-id="b10-tab2"><span>Ventajas del Proyecto</span></a></li>
+		 	<li><a href="#" data-id="b10-tab1"><span>Ubicación</span></a></li>
+			<li><a href="#" data-id="b10-tab2"><span>Áreas Comunes</span></a></li>
+			<li><a href="#" data-id="b10-tab3"><span>Departamentos</span></a></li>
+			<li><a href="#" data-id="b10-tab4"><span>Áreas verdes</span></a></li>
+			<li><a href="#" data-id="b10-tab5"><span>Requisitos Techo Propio</span></a></li>
+			<li><a href="#" data-id="b10-tab6"><span>Proyecto</span></a></li>
+			<li><a href="#" data-id="b10-tab7"><span>Casas</span></a></li>
+			<li><a href="#" data-id="b10-tab8"><span>Promociones</span></a></li>
+			<li><a href="#" data-id="b10-tab9"><span>Más Facilidades</span></a></li>
+			<li><a href="#" data-id="b10-tab10"><span>Ventajas del Proyecto</span></a></li>
 		 </ul>
 	  </div>
 	  <div class="b19-content">
 		 <ul>
-			<li id="b10-tab1" class="b10-boxitem" style="background-image: url('theme/uploads/cualidades-areas.jpg');">
+			<li id="b10-tab1" class="b10-boxitem" style="background-image: url(<?php echo ENV_WEBROOT_FULL_URL.'files/proy-thumb/'.$obj_proyecto->getAttr('thumbnail');?>);">
 			   <div class="b10-table">
 				  <div class="b10-envolve">
 					 <div class="b10-title">
-						<h3>Excelente áreas comunes<strong>Disfruta las mejores áreas comunes</strong></h3>
+						<h3><?php echo $obj_proyecto->getAttr('ubicacion_titulo');?></h3>
 					 </div>
 					 <div class="b10-text">
 						<ul>
@@ -85,7 +85,7 @@
 				  </div>
 			   </div>
 			</li>
-			<li id="b10-tab2" class="b10-boxitem" style="background-image: url('theme/uploads/cualidades-depas.jpg');">
+			<li id="b10-tab2" class="b10-boxitem" style="background-image: url(<?php echo ENV_WEBROOT_FULL_URL.'files/proy-thumb/'.$obj_proyecto->getAttr('thumbnail');?>);">
 			   <div class="b10-table">
 				  <div class="b10-envolve">
 					 <div class="b10-title">
