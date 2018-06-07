@@ -25,18 +25,37 @@
       <meta property="og:url" content="http://www.wescon.pe/" />
       <meta property="og:type"               content="website" />
       <title></title>
+      <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
       <!-- inicio favicon  iphone retina, ipad, iphone en orden-->
       <link rel="icon" type="image/png" href="theme/uploads/favicon/256.png"/>
       <link rel="apple-touch-icon-precomposed" sizes="114x114" href="theme/uploads/favicon/114.png">
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="theme/uploads/favicon/72.png">
       <link rel="apple-touch-icon-precomposed" href="theme/uploads/favicon/57.png">
       <!-- end favicon -->
-      <link rel="stylesheet" href="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/css/jquery.bxslider.css'; ?>">
+      <link rel="stylesheet" href="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/css/jquery.bxslider.css'; ?>"/>
       <link rel="stylesheet" href="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/js/slick/slick.css'; ?>">
-      <link rel="stylesheet" href="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/js/slick/slick-theme.css';?>">
+      <link rel="stylesheet" href="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/js/slick/slick-theme.css';?>"/>
+      <link rel="stylesheet" href="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/js/owl-carousel/owl.carousel.css';?>"/>
+      <link rel="stylesheet" href="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/js/owl-carousel/owl.theme.default.min.css';?>"/>
+      <link rel="stylesheet" href="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/js/owl-carousel/animate.cairo_surface_status(surface)';?>"/>
       <link rel="stylesheet" type="text/css" href="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/css/styles.css';?>"/>
       <link rel="stylesheet" type="text/css" href="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/css/blocks_styl.css';?>"/>
       <link rel="stylesheet" href="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/css/validationEngine.jquery.css';?>" type="text/css"/>
+
+      <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/33/3/intl/es_419/common.js"></script>
+      <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/33/3/intl/es_419/util.js"></script>
+      <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/33/3/intl/es_419/marker.js"></script>
+      <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/33/3/intl/es_419/map.js"></script>
+
+      <style type="text/css">.gm-style {
+        font: 400 11px Roboto, Arial, sans-serif;
+        text-decoration: none;
+      }
+      .gm-style img { max-width: none; }</style>
+
+      <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/33/3/intl/es_419/onion.js"></script>
+      <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/33/3/intl/es_419/controls.js"></script>
+      <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/33/3/intl/es_419/stats.js"></script>
       <!--[if lt IE 9]><script src="static/js/html5.js"></script><script src="static/js/respond.js" type="text/javascript"></script>
       <link rel="stylesheet" type="text/css" href="http://www.wescon.pe/static/css/ie.css"/>
       <![endif]-->
@@ -67,9 +86,12 @@
 	  <script src="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/js/jquery.placeholder.js'; ?>" type="text/javascript"></script>
 	  <script src="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/js/jquery.validationEngine.js'; ?>" type="text/javascript"></script>
 	  <script src="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/js/jquery.validationEngine-es.js'; ?>" type="text/javascript"></script>
+    <script src="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/js/owl-carousel/owl.carousel.js'; ?>" type="text/javascript"></script>
 	  <script src="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/js/main.js'; ?>" type="text/javascript"></script><!-- JSADD START -->
 	  <script src="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/js/jquery.bxslider.min.js'; ?>"></script>
-	  <script src="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/js/slick/slick.js'; ?>"></script><script>
+	  <script src="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/js/slick/slick.js'; ?>"></script>
+
+    <script>
          $(function(){
              $('.b1-slider').bxSlider({
                  mode:'vertical',
@@ -230,7 +252,7 @@
         });
 
 
-       /* $('.js-b12-lanzador').owlCarousel({
+        $('.js-b12-lanzador').owlCarousel({
             loop:false,
             autoplay:false,
             margin:20,
@@ -247,7 +269,7 @@
                 }
             }
 
-        });*/
+        });
 
         owl = $('.js-b12-lanzador');
         owl.on('changed.owl.carousel',function(property){
@@ -329,7 +351,5 @@
          	
          });
       </script>
-
-
    </body>
 </html>

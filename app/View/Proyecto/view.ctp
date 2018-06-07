@@ -353,11 +353,12 @@
    <div class="b50-pop-content">
 	  <span class="icon-close b50-close"></span>
 	  <div class="b50-pop-info" data-id="1_1" style="display:none">
-		 <div class="b50-img"><img src="theme/uploads/planos-amauta/3-ambientes-1.jpg" width="620" height="411" alt=""></div>
+		 <div class="b50-img"><img src="<?php echo ENV_WEBROOT_FULL_URL.'files/croquis/'.$obj_proyecto->getAttr('img_croquis1');?>" width="620" height="411" alt=""></div>
 		 <div class="b50-details">
 			<div class="b50-details-table">
 			   <div class="b50-details-cell">
 				  <div class="b50-list">
+				  	<!--
 					 <h3>Desde 61 hasta 70m2</h3>
 					 <ul>
 						<li>Dormitorio Principal</li>
@@ -369,17 +370,19 @@
 						<li>&Aacute;rea de estudio</li>
 						<li>Balc&oacute;n</li>
 					 </ul>
+					-->
 				  </div>
 			   </div>
 			</div>
 		 </div>
 	  </div>
 	  <div class="b50-pop-info" data-id="1_2" style="display:none">
-		 <div class="b50-img"><img src="theme/uploads/planos-amauta/2-ambientes--2017-05-22--18-32-01.jpg" width="620" height="411" alt=""></div>
+		 <div class="b50-img"><img src="<?php echo ENV_WEBROOT_FULL_URL.'files/croquis/'.$obj_proyecto->getAttr('img_croquis1');?>" width="620" height="411" alt=""></div>
 		 <div class="b50-details">
 			<div class="b50-details-table">
 			   <div class="b50-details-cell">
 				  <div class="b50-list">
+				  	<!--
 					 <h3>Desde 55 hasta 60m2</h3>
 					 <ul>
 						<li>Dormitorio Principal</li>
@@ -390,6 +393,7 @@
 						<li>2 Ba&ntilde;os Completos</li>
 						<li>Balc&oacute;n</li>
 					 </ul>
+					-->
 				  </div>
 			   </div>
 			</div>
@@ -397,3 +401,214 @@
 	  </div>
    </div>
 </div>
+
+<script type="text/javascript">
+	
+     function initMap() {
+            var map;
+            var color = [
+    {
+        "featureType": "administrative.country",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "color": "#2c52a2"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.province",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "color": "#2c52a2"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.locality",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "color": "#2c52a2"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.neighborhood",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "color": "#2c52a2"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.land_parcel",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "hue": "#ff0000"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.land_parcel",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "color": "#2c52a2"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape.natural",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#e0efef"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape.natural.landcover",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#f5f5f5"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "hue": "#1900ff"
+            },
+            {
+                "color": "#c0e8e8"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.park",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#c6ebbd"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "lightness": 100
+            },
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "transit.line",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "lightness": 700
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#7dcdcd"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#addbf1"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "color": "#2c52a2"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            }
+        ]
+    }
+];
+            var latlng = new google.maps.LatLng(-6.797421,-79.886248);
+            var pin = '/uploads/ubicacion/sitcom-sauces.png';
+            var image = {
+                url : pin,
+                size: new google.maps.Size(199, 182),
+                origin: new google.maps.Point(0, 0),
+                anchor: new google.maps.Point(100, 180)
+            };
+
+            var marker = new google.maps.Marker({
+                map: map,
+                position: latlng,
+                icon: image,
+            });
+
+            var mapOptions = {
+                zoom: 15,
+                center: latlng,
+                mapTypeControl   : true,
+                disableDefaultUI : true,
+                zoomControl      : true,
+                scrollwheel      : false,
+                //draggable        : false,
+                //Para el mapa en gris
+            };
+
+            map = new google.maps.Map(document.getElementById('gmap'), mapOptions);
+
+            var mapType = new google.maps.StyledMapType(color, { name:"Grayscale" });
+            map.mapTypes.set('map', mapType);
+            marker.setMap(map);
+            map.setMapTypeId('map');
+
+    }
+
+</script>
