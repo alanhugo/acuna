@@ -191,6 +191,8 @@
 	  </div>
    </div>
 </section>
+
+ <?php /*
 <section class="b11 wancho">
    <div class="b11-cnt">
 	  <div class="b11-main">
@@ -229,6 +231,8 @@
 			</div>
 			<!--div class="b11-img-menu"><ul class="b11-img-element"><li class="b11-img-item"><a href="#"><img src="../../../static/img/b11-mini.jpg" alt=""></a></li></ul></div-->
 		 </div>
+
+		
 		 <div class="b11-title">
 			<h2 class="g-title-2">Nuestros mejores <br />
 			   espacios para ti
@@ -255,31 +259,32 @@
 			</ul>
 			<div class="b11-btn"><a href="http://www.dragma3d.com/AMAUTA-WESCON/index.htm" class="btn-white">RECORRIDO 360</a></div>
 		 </div>
+		
 	  </div>
    </div>
-</section>
+</section>*/?>
 <section class="b12">
    <div class="b12-cnt">
 	  <div class="cf">
 		 <div class="b12-left">
-			<div class="b12-top-tab"><a class="b12-top-link b12-tab-top-link" data-top="tab1" href="">LOS MEJORES DEPARTAMENTOS DE LIMA CERCADO</a></div>
+			<div class="b12-top-tab"><a class="b12-top-link b12-tab-top-link" data-top="tab1" href=""><?php echo $obj_proyecto->getAttr('thumb_titulo');?><br><span><?php echo $obj_proyecto->getAttr('thumb_subtitulo');?></a></div>
 			<div class="b12-content-tab">
 			   <div class="b12-tab-top-item" id="tab1">
 				  <div class="b12-cnt-tab">
 					 <div class="b12-cnt-img">
 						<div class="b12-cnt-padding">
 						   <div id="slider-tab1_1" class="b12-img-item">
-							  <figure><a class="b50-pitcher" href="uploads/planos-amauta/3-ambientes-1.jpg" data-id="1_1" ><img src="theme/uploads/planos-amauta/3-ambientes-1.jpg" width="620" height="411" alt=""></a></figure>
+							  <figure><a class="b50-pitcher" href="<?php echo ENV_WEBROOT_FULL_URL.'files/croquis/'.$obj_proyecto->getAttr('img_croquis1');?>" data-id="1_1" ><img src="<?php echo ENV_WEBROOT_FULL_URL.'files/croquis/'.$obj_proyecto->getAttr('img_croquis1');?>" width="620" height="411" alt=""></a></figure>
 						   </div>
 						   <div id="slider-tab1_2" class="b12-img-item">
-							  <figure><a class="b50-pitcher" href="uploads/planos-amauta/2-ambientes--2017-05-22--18-32-01.jpg" data-id="1_2" ><img src="theme/uploads/planos-amauta/2-ambientes--2017-05-22--18-32-01.jpg" width="620" height="411" alt=""></a></figure>
+							  <figure><a class="b50-pitcher" href="<?php echo ENV_WEBROOT_FULL_URL.'files/croquis/'.$obj_proyecto->getAttr('img_croquis2');?>" data-id="1_2" ><img src="<?php echo ENV_WEBROOT_FULL_URL.'files/croquis/'.$obj_proyecto->getAttr('img_croquis2');?>" width="620" height="411" alt=""></a></figure>
 						   </div>
 						</div>
 					 </div>
 					 <div class="b12-carrusel">
 						<div class="b12-carrusel-cnt js-b12-lanzador">
-						   <div data-id="slider-tab1_1" class="b12-imgx b12-pager-item"><img src="theme/uploads/planos-amauta/3-ambientes-1.jpg" width="123" height="82" alt=""></div>
-						   <div data-id="slider-tab1_2" class="b12-imgx b12-pager-item"><img src="theme/uploads/planos-amauta/2-ambientes--2017-05-22--18-32-01.jpg" width="123" height="82" alt=""></div>
+						   <div data-id="slider-tab1_1" class="b12-imgx b12-pager-item"><img src="<?php echo ENV_WEBROOT_FULL_URL.'files/croquis/'.$obj_proyecto->getAttr('img_croquis1');?>" width="82" height="82" alt=""></div>
+						   <div data-id="slider-tab1_2" class="b12-imgx b12-pager-item"><img src="<?php echo ENV_WEBROOT_FULL_URL.'files/croquis/'.$obj_proyecto->getAttr('img_croquis2');?>" width="82" height="82" alt=""></div>
 						</div>
 					 </div>
 				  </div>
