@@ -174,8 +174,162 @@
          		scroll: false,
          		validateNonVisibleFields: true
          	}); 
+
+
+
+
+           $('.b13-pitcher-open').click(function(event) {
+            event.preventDefault();
+            $('.b13-map').addClass('active');
+        });
+
+        $('.b13-pitcher-close').click(function(event) {
+            event.preventDefault();
+            $('.b13-map').removeClass('active');
+        });
+
+
+        $('.b50-pitcher').on('click', function(event) {
+            event.preventDefault();
+            var id = $(this).attr('data-id');
+            console.log(id, '<--- este');
+            $('.b50-pop-info').css('display', 'none');
+            $('.b50-pop-info[data-id="'+id+'"]').css('display', '');
+            $('.b50-pop-up').addClass('active');
+        });
+
+        $('.b50-close, .b50-overlay').click(function(event) {
+            event.preventDefault();
+            $('.b50-pop-up').removeClass('active');
+        });
+
+        $('.b12-tab-top-link:first-child').addClass('active');
+        $('.b12-tab-top-item:first-child').addClass('active');
+
+
+        $('.b12-top-tab .b12-top-link').click(function(event) {
+            event.preventDefault();
+            $('.b12-tab-top-link').removeClass('active');
+            $(this).addClass('active');
+            var data_id_top= $(this).attr('data-top');
+            console.log(data_id_top);
+            $('.b12-content-tab .b12-tab-top-item').removeClass('active');
+            $('.b12-tab-top-item[id="'+ data_id_top+'"]').addClass('active');
+
+        });
+
+        $('.b12-img-item:first-child').addClass('active');
+
+        $('.b12-cnt-tab .b12-pager-item').click(function(e) {
+            e.preventDefault();
+            var data_id_slider = $(this).attr('data-id');
+            $(this).closest('.b12-cnt-tab').find('.b12-pager-item').removeClass('active');
+            $(this).addClass('active');
+            $(this).closest('.b12-cnt-tab').find('.b12-img-item').removeClass('active');
+            $(this).closest('.b12-cnt-tab').find('.b12-img-item[id="'+data_id_slider+'"]').addClass('active');
+        });
+
+
+       /* $('.js-b12-lanzador').owlCarousel({
+            loop:false,
+            autoplay:false,
+            margin:20,
+            nav:true,
+            responsive:{
+                0:{
+                    items:3
+                },
+                400:{
+                    items:3
+                },
+                768:{
+                    items:3
+                }
+            }
+
+        });*/
+
+        owl = $('.js-b12-lanzador');
+        owl.on('changed.owl.carousel',function(property){
+            var current = property.item.index;
+            $(property.target).find('.owl-item').removeClass('select').find('.b12-pager-item').removeClass('active');
+            var idtab = $(property.target).find(".owl-item").eq(current).addClass('select').find('.b12-pager-item').addClass('active').attr('data-id');
+            console.log(idtab);
+
+            $(property.target).closest('.b12-cnt-tab').find('.b12-img-item').removeClass('active');
+            $(property.target).closest('.b12-cnt-tab').find('.b12-img-item[id="'+idtab+'"]').addClass('active');
+        });
+
+
+        $('.b10-buttons li:first-child').addClass('active');
+        $('.b10-boxitem:first-child').addClass('active');
+        // tab
+        $('.b10-buttons a').click(function(e) {
+            e.preventDefault();
+            $('.b10-buttons li').removeClass('active');
+            $(this).parent().addClass('active');
+            var b10_data = $(this).attr('data-id');
+            $('.b10-boxitem').removeClass('active');
+            $('.b10-boxitem[id="'+b10_data+'"]').addClass('active');
+        });
+        // end
+
+
+        /*$('.b11-slider').bxSlider({
+            infinite:true,
+            controls:false,
+            auto:true,
+            pagerCustom: '#bx-pager'
+        });*/
+        $('.b11-slider').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          asNavFor: '.b11-nav',
+          responsive: [
+            {
+                breakpoint: 481,
+                settings: {
+                    autoplay: true
+                }
+            }
+        ]
+        });
+        $('.b11-nav').slick({
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          asNavFor: '.b11-slider',
+          dots: true,
+          vertical: true,
+          verticalSwiping: true,
+          adaptiveHeight: true,
+          focusOnSelect: true,
+          responsive: [
+            {
+                breakpoint: 961,
+                settings: {
+                    vertical:false
+                }
+            },
+            {
+                breakpoint: 851,
+                settings: {
+                    vertical:false,
+                    slidesToShow: 3
+                }
+
+            }
+        ]
+        });
+
+
+
+
+
          	
          });
       </script>
+
+
    </body>
 </html>

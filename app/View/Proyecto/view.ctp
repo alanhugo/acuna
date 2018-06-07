@@ -52,88 +52,137 @@
    <div class="b10-main">
 	  <div class="b10-buttons">
 		 <ul>
-		 	<li><a href="#" data-id="b10-tab1"><span>Ubicación</span></a></li>
-			<li><a href="#" data-id="b10-tab2"><span>Áreas Comunes</span></a></li>
-			<li><a href="#" data-id="b10-tab3"><span>Departamentos</span></a></li>
-			<li><a href="#" data-id="b10-tab4"><span>Áreas verdes</span></a></li>
-			<li><a href="#" data-id="b10-tab5"><span>Requisitos Techo Propio</span></a></li>
-			<li><a href="#" data-id="b10-tab6"><span>Proyecto</span></a></li>
-			<li><a href="#" data-id="b10-tab7"><span>Casas</span></a></li>
-			<li><a href="#" data-id="b10-tab8"><span>Promociones</span></a></li>
-			<li><a href="#" data-id="b10-tab9"><span>Más Facilidades</span></a></li>
-			<li><a href="#" data-id="b10-tab10"><span>Ventajas del Proyecto</span></a></li>
+		 	<?php echo ($obj_proyecto->getAttr('ubicacion_titulo') != '')? "<li><a href='#' data-id='b10-tab1'><span>Ubicación</span></a></li>" : ""; ?>
+			<?php echo ($obj_proyecto->getAttr('area_com_titulo') != '')? "<li><a href='#' data-id='b10-tab2'><span>Áreas Comunes</span></a></li>" : ""; ?>
+			<?php echo ($obj_proyecto->getAttr('depart_titulo') != '')? "<li><a href='#' data-id='b10-tab3'><span>Departamentos</span></a></li>" : ""; ?>
+			<?php echo ($obj_proyecto->getAttr('area_verd_titulo') != '')? "<li><a href='#' data-id='b10-tab4'><span>Áreas verdes</span></a></li>" : ""; ?>
+			<?php echo ($obj_proyecto->getAttr('tech_pro_titulo') != '')? "<li><a href='#' data-id='b10-tab5'><span>Requisitos Techo Propio</span></a></li>" : ""; ?>
+			<?php echo ($obj_proyecto->getAttr('proy_titulo') != '')? "<li><a href='#' data-id='b10-tab6'><span>Proyectos</span></a></li>" : ""; ?>
+			<?php echo ($obj_proyecto->getAttr('casas_titulo') != '')? "<li><a href='#' data-id='b10-tab7'><span>Casas</span></a></li>" : ""; ?>
+			<?php echo ($obj_proyecto->getAttr('promo_titulo') != '')? "<li><a href='#' data-id='b10-tab8'><span>Promociones</span></a></li>" : ""; ?>
+			<?php echo ($obj_proyecto->getAttr('facilidad_titulo') != '')? "<li><a href='#' data-id='b10-tab9'><span>Más facilidades</span></a></li>" : ""; ?>
+			<?php echo ($obj_proyecto->getAttr('ventaja_titulo') != '')? "<li><a href='#' data-id='b10-tab10'><span>Ventajas del Proyecto</span></a></li>" : ""; ?>
 		 </ul>
 	  </div>
 	  <div class="b19-content">
 		 <ul>
 			<li id="b10-tab1" class="b10-boxitem" style="background-image: url(<?php echo ENV_WEBROOT_FULL_URL.'files/proy-thumb/'.$obj_proyecto->getAttr('thumbnail');?>);">
+				   <div class="b10-table">
+					  <div class="b10-envolve">
+						 <div class="b10-title">
+							<h3><?php echo $obj_proyecto->getAttr('ubicacion_titulo');?></h3>
+						 </div>
+						 <div class="b10-text">
+							<?php echo $obj_proyecto->getAttr('ubicacion_texto');?>
+							<p>&nbsp;</p>
+						 </div>
+					  </div>
+				   </div>
+				</li>
+				<li id="b10-tab2" class="b10-boxitem" style="background-image: url(<?php echo ENV_WEBROOT_FULL_URL.'files/proy-thumb/'.$obj_proyecto->getAttr('thumbnail');?>);">
+				   <div class="b10-table">
+					  <div class="b10-envolve">
+						 <div class="b10-title">
+							<h3><?php echo $obj_proyecto->getAttr('area_com_titulo');?></h3>
+						 </div>
+						 <div class="b10-text">
+							<?php echo $obj_proyecto->getAttr('area_com_texto');?>
+						</div>
+					 </div>
+				  </div>
+			</li>
+			<li id="b10-tab3" class="b10-boxitem" style="background-image: url(<?php echo ENV_WEBROOT_FULL_URL.'files/proy-thumb/'.$obj_proyecto->getAttr('thumbnail');?>);">
 			   <div class="b10-table">
 				  <div class="b10-envolve">
 					 <div class="b10-title">
-						<h3><?php echo $obj_proyecto->getAttr('ubicacion_titulo');?></h3>
+						<h3><?php echo $obj_proyecto->getAttr('depart_titulo');?></h3>
 					 </div>
 					 <div class="b10-text">
-						<ul>
-						   <li>Club House</li>
-						   <li>Piscina</li>
-						   <li>Terrazas y zona de Parrillas</li>
-						   <li>Sala de usos m&uacute;ltiples</li>
-						   <li>&Aacute;reas verdes</li>
-						</ul>
-						<p>&nbsp;</p>
+						<?php echo $obj_proyecto->getAttr('depart_texto');?>
 					 </div>
 				  </div>
 			   </div>
 			</li>
-			<li id="b10-tab2" class="b10-boxitem" style="background-image: url(<?php echo ENV_WEBROOT_FULL_URL.'files/proy-thumb/'.$obj_proyecto->getAttr('thumbnail');?>);">
+			<li id="b10-tab4" class="b10-boxitem" style="background-image: url(<?php echo ENV_WEBROOT_FULL_URL.'files/proy-thumb/'.$obj_proyecto->getAttr('thumbnail');?>);">
 			   <div class="b10-table">
 				  <div class="b10-envolve">
 					 <div class="b10-title">
-						<h3>Una experiencia única<strong>Los mejores acabados y distribución</strong></h3>
+						<h3><?php echo $obj_proyecto->getAttr('area_verd_titulo');?></h3>
 					 </div>
 					 <div class="b10-text">
-						<ul>
-						   <li>Proyecto en esquina, acceso de luz natural</li>
-						   <li>3 cisternas + equipo electr&oacute;geno para casos de emergencia (abastecimientos racionado hasta 4 d&iacute;as)</li>
-						   <li>Altura piso a techo 2.40m</li>
-						   <li>Piso porcel&aacute;nico</li>
-						   <li>Cocina con muebles altos y bajos</li>
-						</ul>
+						<?php echo $obj_proyecto->getAttr('area_verd_texto');?>
 					 </div>
 				  </div>
 			   </div>
 			</li>
-			<li id="b10-tab3" class="b10-boxitem" style="background-image: url('theme/uploads/ubicacion.jpg');">
+			<li id="b10-tab5" class="b10-boxitem" style="background-image: url(<?php echo ENV_WEBROOT_FULL_URL.'files/proy-thumb/'.$obj_proyecto->getAttr('thumbnail');?>);">
 			   <div class="b10-table">
 				  <div class="b10-envolve">
 					 <div class="b10-title">
-						<h3>Una ubicación estratégica<strong>Vive al Centro de Todo</strong></h3>
+						<h3><?php echo $obj_proyecto->getAttr('tech_prop_titulo');?></h3>
 					 </div>
 					 <div class="b10-text">
-						<ul>
-						   <li>Cerca de Real Plaza Centro C&iacute;vico</li>
-						   <li>Estaci&oacute;n del metropolitano</li>
-						   <li>Principales Avenidas ( Av. Colonial, Venezuelam etc.)</li>
-						   <li>Cerca de principales Universidades ( PUCP, San Marcos, etc)</li>
-						   <li>Cerca de Bre&ntilde;a, Callao, Los Olivos, San Miguel y m&aacute;s</li>
-						</ul>
+						<?php echo $obj_proyecto->getAttr('tech_prop_texto');?>
 					 </div>
 				  </div>
 			   </div>
 			</li>
-			<li id="b10-tab4" class="b10-boxitem" style="background-image: url('theme/uploads/cualidades-facilidades.jpg');">
+			<li id="b10-tab6" class="b10-boxitem" style="background-image: url(<?php echo ENV_WEBROOT_FULL_URL.'files/proy-thumb/'.$obj_proyecto->getAttr('thumbnail');?>);">
 			   <div class="b10-table">
 				  <div class="b10-envolve">
 					 <div class="b10-title">
-						<h3>Accede con facilidad a tu depa propio<strong>Tenemos las mejores condiciones</strong></h3>
+						<h3><?php echo $obj_proyecto->getAttr('proy_titulo');?></h3>
 					 </div>
 					 <div class="b10-text">
-						<ul>
-						   <li>Firma minuta con S/ 6000</li>
-						   <li>Financia tu inicial hasta en 9 meses</li>
-						   <li>Te calificamos al instante con nuestar ejecutiva BCP</li>
-						   <li>Entrega Julio 2017</li>
-						</ul>
+						<?php echo $obj_proyecto->getAttr('proy_texto');?>
+					 </div>
+				  </div>
+			   </div>
+			</li>
+			<li id="b10-tab7" class="b10-boxitem" style="background-image: url(<?php echo ENV_WEBROOT_FULL_URL.'files/proy-thumb/'.$obj_proyecto->getAttr('thumbnail');?>);">
+			   <div class="b10-table">
+				  <div class="b10-envolve">
+					 <div class="b10-title">
+						<h3><?php echo $obj_proyecto->getAttr('casas_titulo');?></h3>
+					 </div>
+					 <div class="b10-text">
+						<?php echo $obj_proyecto->getAttr('casas_texto');?>
+					 </div>
+				  </div>
+			   </div>
+			</li>
+			<li id="b10-tab8" class="b10-boxitem" style="background-image: url(<?php echo ENV_WEBROOT_FULL_URL.'files/proy-thumb/'.$obj_proyecto->getAttr('thumbnail');?>);">
+			   <div class="b10-table">
+				  <div class="b10-envolve">
+					 <div class="b10-title">
+						<h3><?php echo $obj_proyecto->getAttr('promo_titulo');?></h3>
+					 </div>
+					 <div class="b10-text">
+						<?php echo $obj_proyecto->getAttr('promo_texto');?>
+					 </div>
+				  </div>
+			   </div>
+			</li>
+			<li id="b10-tab9" class="b10-boxitem" style="background-image: url(<?php echo ENV_WEBROOT_FULL_URL.'files/proy-thumb/'.$obj_proyecto->getAttr('thumbnail');?>);">
+			   <div class="b10-table">
+				  <div class="b10-envolve">
+					 <div class="b10-title">
+						<h3><?php echo $obj_proyecto->getAttr('facilidad_titulo');?></h3>
+					 </div>
+					 <div class="b10-text">
+						<?php echo $obj_proyecto->getAttr('facilidad_texto');?>
+					 </div>
+				  </div>
+			   </div>
+			</li>
+			<li id="b10-tab10" class="b10-boxitem" style="background-image: url(<?php echo ENV_WEBROOT_FULL_URL.'files/proy-thumb/'.$obj_proyecto->getAttr('thumbnail');?>);">
+			   <div class="b10-table">
+				  <div class="b10-envolve">
+					 <div class="b10-title">
+						<h3><?php echo $obj_proyecto->getAttr('ventaja_titulo');?></h3>
+					 </div>
+					 <div class="b10-text">
+						<?php echo $obj_proyecto->getAttr('ventaja_texto');?>
 					 </div>
 				  </div>
 			   </div>
