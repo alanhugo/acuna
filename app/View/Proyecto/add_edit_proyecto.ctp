@@ -411,6 +411,21 @@
 								</div>
     						</fieldset>
 
+    						<fieldset>
+    							<legend>MAPA</legend>
+	    							<div class="form-group">
+	    									<label class="col-sm-2 control-label"><?php echo 'T&iacute;tulo'; ?></label>
+											<div class="col-sm-6">
+												<input name="data[Proyecto][mapa_titulo]" class="txt-area form-control" id="txtUbiTitulo" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('mapa_titulo')):''; ?>">
+											</div>
+									</div>
+									<div class="form-group">
+											<div id="div-mapa">
+												<?php echo $this->Form->input('mapa_texto', array('div' => false, 'label' => false,'type'=>'textarea','rows'=>'5','cols'=>'80', 'class'=> 'summernote form-control','id' =>'txt-mapa')); //TEXT AREA?>
+											</div>
+									</div>
+							</fieldset>
+
 							<div class="hr-line-dashed"></div>
 							<div class="form-group">
 								<div class="col-sm-4 col-sm-offset-2">

@@ -338,11 +338,9 @@
 	  </div>
 	  <div class="b13-dir wancho">
 		 <div class="b13-dir-cnt ">
-			<h2>Proyecto<br />
-			   Prolongación Arica 2272
+			<h2><?php echo $obj_proyecto->getAttr('mapa_titulo');?><br />
 			</h2>
-			<p>Encuéntranos en nuestra Sala de Ventas</p>
-			<p>Lunes a Domingo de 9am a 6 pm</p>
+			<?php echo $obj_proyecto->getAttr('mapa_texto');?>
 			<div class="b13-btn-abrir"><a href="" class="btn-big b13-pitcher-open" type="submit">VER MAPA</a></div>
 		 </div>
 	  </div>

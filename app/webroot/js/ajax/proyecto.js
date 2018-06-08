@@ -195,6 +195,20 @@ $(document).ready(function(){
 	});
 
 
+	/// EDITOR MAPA
+	$body.off('keypress','#div-mapa .note-editable');
+	$body.on('keypress','#div-mapa .note-editable',function(){
+		
+		$("textarea#txt-mapa").html($('#div-mapa .note-editable').html());
+	});
+
+	$body.off('click','#div-mapa .note-toolbar');
+	$body.on('click','#div-mapa .note-toolbar',function(){
+		
+		$("textarea#txt-mapa").html($('#div-mapa .note-editable').html());
+	});
+
+
 // FIN EVENTOS PARA EDITORES
 
 
