@@ -1,13 +1,13 @@
-<section class="b23 wancho" style="background-image: url('theme/uploads/cococenos/conocenos-banner.png')">
+<section class="b23 wancho" style="background-image: url(<?php echo ENV_WEBROOT_FULL_URL.'files/conocenos_banner1/'.$obj_conocenos->getAttr('banner');?>)">
    <div class="b23cntbox">
 	  <div class="b23table">
 		 <div class="left">
 			<div class="b23-title">
-			   <h2 class="g-title white">Profesionales comprometidos<br><span>en brindar un gran servicio de calidad</span></h2>
+			   <h2 class="g-title white"><?php echo $obj_conocenos->getAttr('banner_titulo'); ?></h2>
 			</div>
 		 </div>
 		 <div class="right">
-			<div class="b23-btn"><a href="https://youtu.be/itkR6__FPRQ" class="btn-white">VER VIDEO</a></div>
+			<!--<div class="b23-btn"><a href="https://youtu.be/itkR6__FPRQ" class="btn-white">VER VIDEO</a></div>-->
 		 </div>
 	  </div>
    </div>
@@ -15,39 +15,39 @@
 <section class="b24">
    <div class="wancho">
 	  <div class="b24-text">
-		 <p><strong>Wescon Desarrollador Inmobiliario</strong>, es una empresa inmobiliaria formada por capitales 100% nacionales, que cuenta con un staff de profesionales dedicados a la promoci&oacute;n, construcci&oacute;n y gerenciamiento de proyectos inmobiliarios, con un alto est&aacute;ndar de calidad y protecci&oacute;n del medio ambiente.</p>
-		 <p>Nuestro principal compromiso es&nbsp;<strong>brindar</strong>&nbsp;a nuestros clientes&nbsp;<strong>bienestar</strong>&nbsp;a trav&eacute;s de un producto inmobiliario de&nbsp;<strong>calidad</strong>, dirigido a satisfacer sus necesidades de vivienda, mejorando as&iacute; su&nbsp;<strong>calidad de vida</strong></p>
+		 <?php echo $obj_conocenos->getAttr('introduccion'); ?>
 	  </div>
    </div>
 </section>
 <section class="b15 wancho">
    <div class="b15cntitem">
 	  <div class="b15-img">
-		 <div class="b15-img-cnt"><img src="theme/uploads/cococenos/conocenos-foto11.png" alt=""></div>
+		 <div class="b15-img-cnt"><img src= <?php echo ENV_WEBROOT_FULL_URL.'files/conocenos_banner1/'.$obj_conocenos->getAttr('banner2');?>></div>
 	  </div>
    </div>
    <div class="b15-cnt">
 	  <div class="wancho">
 		 <div class="b15-title">
-			<h2>Porque tenemos metas<br>y lo demostramos</h2>
+			<h2><?php echo $obj_conocenos->getAttr('banner2_titulo'); ?></h2>
 		 </div>
 		 <div class="b15-mv">
 			<div class="b15-mision">
 			   <div class="b15-text">
 				  <h3>Misión</h3>
-				  <p>Entregar Bienestar a las familias que conforman nuestros Proyectos, convirtiendo su compra en una gran y grata experiencia, desde la primera visita hasta el Servicio Post venta.</p>
+				  <?php echo $obj_conocenos->getAttr('mision'); ?>
 			   </div>
 			</div>
 			<div class="b15-vision">
 			   <div class="b15-text">
 				  <h3>Visión</h3>
-				  <p>Ser reconocidos al 2018, como una de las&nbsp;<strong>cinco mejores empresas de Desarrollo Inmobiliario</strong>, orientadas a la vivienda social en el Per&uacute;.</p>
+				  <?php echo $obj_conocenos->getAttr('vision'); ?>
 			   </div>
 			</div>
 		 </div>
 	  </div>
    </div>
 </section>
+<?php /*
 <section class="b16 wancho">
    <div class="cf">
 	  <div class="b16-cnt">
@@ -151,3 +151,4 @@
 	  </div>
    </div>
 </section>
+*/ ?>

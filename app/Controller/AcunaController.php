@@ -17,8 +17,13 @@ class AcunaController extends AppController{
 	}
 	
 	public function conocenos() {
-        
+
 		$this->layout = "wescon";
+        
+		$this->loadModel('Conoceno');
+        $obj_conocenos = $this->Conoceno->findById(1);
+        $this->set(compact('obj_conocenos'));
+
 	}
 	
 	public function venta() {

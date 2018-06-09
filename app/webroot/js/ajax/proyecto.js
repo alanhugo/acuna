@@ -52,16 +52,16 @@ $(document).ready(function(){
 // EVENTOS PARA EDITORES
 
 	///  EDITOR SECCIÓN UNO
-	$body.off('keypress','#sect1-texto .note-editable');
-	$body.on('keypress','#sect1-texto .note-editable',function(){
+	$body.off('keypress','#div-sect1-texto .note-editable');
+	$body.on('keypress','#div-sect1-texto .note-editable',function(){
 		
-		$("textarea#sect1-texto").html($('#sect1-texto .note-editable').html());
+		$("textarea#sect1-texto").html($('#div-sect1-texto .note-editable').html());
 	});
 
-	$body.off('click','#sect1-texto .note-toolbar');
-	$body.on('click','#sect1-texto .note-toolbar',function(){
+	$body.off('click','#div-sect1-texto .note-toolbar');
+	$body.on('click','#div-sect1-texto .note-toolbar',function(){
 		
-		$("textarea#sect1-texto").html($('#sect1-texto .note-editable').html());
+		$("textarea#sect1-texto").html($('#div-sect1-texto.note-editable').html());
 	});
 
 	/// EDITOR CAT. UBICACIÓN

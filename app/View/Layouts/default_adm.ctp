@@ -162,6 +162,7 @@
     <!-- Scripts de Mantenimientos -->
     <script src="<?= ENV_WEBROOT_FULL_URL;?>js/ajax/banner.js" type="text/javascript"></script>
     <script src="<?= ENV_WEBROOT_FULL_URL;?>js/ajax/proyecto.js" type="text/javascript"></script>
+    <script src="<?= ENV_WEBROOT_FULL_URL;?>js/ajax/conoceno.js" type="text/javascript"></script>
    
     <script>var env_webroot_script = '<?php echo ENV_WEBROOT_FULL_URL; ?>';</script>
 
