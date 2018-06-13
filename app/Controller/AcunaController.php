@@ -3,6 +3,7 @@ class AcunaController extends AppController{
 	public $name = 'Acuna';
 	
 	public function beforeFilter(){
+		$this->Auth->allow(array('index','conocenos','venta','entregado','contacto','content'));
 		parent::beforeFilter();
 	}
 	
@@ -27,7 +28,9 @@ class AcunaController extends AppController{
 	}
 	
 	public function venta() {
-        
+        $this->loadModel('Proyecto');
+        $obj_proyectos = $this->Proyecto->listAllProyectos();
+        $this->set(compact('obj_proyectos'));
 		$this->layout = "wescon";
 	}
 	

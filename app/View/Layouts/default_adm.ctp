@@ -111,7 +111,7 @@
     <nav class="navbar-default navbar-static-side" role="navigation">
         <div class="sidebar-collapse">
             <!-- Elemento Menu -->
-			<?php //echo $this->Element('menu'); ?>
+			<?php echo $this->Element('menu_admin'); ?>
         </div>
     </nav>
 
@@ -128,14 +128,10 @@
         </div>
             <ul class="nav navbar-top-links navbar-right">
                 <li>
-                    <span class="m-r-sm text-muted welcome-message">Bienvenido <strong><?php echo ucwords($this->Session->read('Auth.User.username'))?></strong>.</span>|
+                    <span class="m-r-sm text-muted welcome-message">Bienvenido <strong><?php echo ucwords($this->Session->read('Auth.User.username'))?></strong></span>|
                 </li>
                 <li>
-                	<?php //echo ucwords(utf8_encode($obj_logged_user->Area->getAttr('nombre'))); ?> |
-                </li>
-               
-                <li>
-                    <a href="<?php echo ENV_WEBROOT_FULL_URL?>usuarios/logout">
+                    <a href="<?php echo ENV_WEBROOT_FULL_URL?>users/logout">
                         <i class="fa fa-sign-out"></i> Salir
                     </a>
                 </li>

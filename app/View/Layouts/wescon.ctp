@@ -69,7 +69,7 @@
       <div class="cnt-wrapper">
          <div class="wrapper">
             <!-- HEADER START -->
-            <?php echo $this->Element('menu'); ?>
+            <?php echo $this->Element('menu_web'); ?>
             <!-- HEADER END -->
 			<!-- CONTENT START -->
             <?php echo $this->fetch('content'); ?>

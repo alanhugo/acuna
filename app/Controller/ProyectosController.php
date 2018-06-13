@@ -1,6 +1,11 @@
 <?php
 class ProyectosController extends AppController{
 	public $name = 'Proyecto';	
+
+	public function beforeFilter(){
+		$this->Auth->allow(array('view'));
+		parent::beforeFilter();
+	}
 	
 	public function index($page=null,$order_by=null,$order_by_or=null,$search_proyecto=null) {
 		/*if($this->obj_logged_user->getAttr('tipo_user_id') == 2) {

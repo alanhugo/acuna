@@ -19,7 +19,11 @@
 	  <div class="b1-link"><a href="#proyectos"><span class="icon-bottom"></span></a></div>
    </div>
 </section>
-<div class="wancho" align="right"><a href=<?php echo ENV_WEBROOT_FULL_URL.'banners/index'?>>Editar</a></div>
+<div class="wancho" align="right">
+	<?php if(AuthComponent::user('id')){ ?>
+	<a href="<?php echo ENV_WEBROOT_FULL_URL.'banners/index'?>"><img src="<?php echo ENV_WEBROOT_FULL_URL?>/img/929428.png" style="width: 42px;padding-top: 10px;"/></a>
+	<?php }?>
+</div>
 <section id="proyectos" class="b2">
    <div class="wancho">
 	  <div class="b2-title">
@@ -58,7 +62,12 @@
 	  <div class="b2-btn"><a class="btn-big" href="proyectos-en-venta/proyectos-en-venta.html">VER MAS PROYECTOS</a></div>
    </div>
 </section>
-<div class="wancho" align="right"><a href=<?php echo ENV_WEBROOT_FULL_URL.'proyectos/index'?>>Editar</a></div>
+<div class="wancho" align="right">
+	<?php if(AuthComponent::user('id')){ ?>
+	<a href="<?php echo ENV_WEBROOT_FULL_URL.'proyectos/index'?>"><img src="<?php echo ENV_WEBROOT_FULL_URL?>/img/929428.png" style="width: 42px;padding-top: 10px;"/></a>
+	<?php }?>
+</div>
+<!--
 <section class="b3">
    <div class="wancho">
 	  <div class="b3-video">
@@ -70,7 +79,7 @@
 			</div>
 		 </div>
 	  </div>
-	  <div class="b3-cnt">
+	  <div class="b3-cnt"> 
 		 <div class="b3-title">
 			<h2 class="g-title-2">Construyendo bienestar para ti <br><span> y para toda tu familia</span></h2>
 		 </div>
@@ -124,7 +133,7 @@
 	  </div>
    </div>
 </section>
-
+-->
 <section class="b6 contacto">
    <div class="wancho">
 	  <div class="b6-ctn">
