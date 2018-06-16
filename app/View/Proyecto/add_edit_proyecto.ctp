@@ -29,12 +29,12 @@
 											<div class='fileupload fileupload-new' data-provides='fileupload'>
 												<div class='uneditable-input span2'><i class='icon-file fileupload-exists'></i>
 													<span class="btn btn-default btn-file" style="width:106px;height: 37px;margin-bottom: 4px;">
-														<input type="file" name="data[Proyecto][proy_banner]" style="opacity:0; position:absolute;height: 35px;left: 0px;top: 29px;" id="ProyectoImagen">
+														<input type="file" name="data[Proyecto][proy_banner]" style="height: 35px;left: 0px;" id="ProyectoImagen">
 														<span class="fileinput-new">Select image</span>
 													</span>
 												</div>
 												<div class='fileupload-preview thumbnail' style='width:40%;height:40%;'>
-												<?php if(isset($obj_proyecto) && $obj_proyecto->getAttr('proy-banner')!=''){?>
+												<?php if(isset($obj_proyecto) && $obj_proyecto->getAttr('proy_banner')!=''){?>
 													<img src="<?php echo ENV_WEBROOT_FULL_URL.'files/proy-banner/'.$obj_proyecto->getAttr('proy_banner'); ?>">
 												<?php }else{?>
 													<img src="">
@@ -67,7 +67,7 @@
 											<div class='fileupload fileupload-new' data-provides='fileupload'>
 												<div class='uneditable-input span2'><i class='icon-file fileupload-exists'></i>
 													<span class="btn btn-default btn-file" style="width:106px;height: 37px;margin-bottom: 4px;">
-														<input type="file" name="data[Proyecto][thumbnail]" style="opacity:0; position:absolute;height: 35px;left: 0px;top: 29px;" id="ProyectoImagen">
+														<input type="file" name="data[Proyecto][thumbnail]" style="height: 35px;left: 0px;" id="ProyectoImagen">
 														<span class="fileinput-new">Select image</span>
 													</span>
 												</div>
@@ -103,7 +103,7 @@
 											<div class='fileupload fileupload-new' data-provides='fileupload'>
 												<div class='uneditable-input span2'><i class='icon-file fileupload-exists'></i>
 													<span class="btn btn-default btn-file" style="width:106px;height: 37px;margin-bottom: 4px;">
-														<input type="file" name="data[Proyecto][sect1_img]" style="opacity:0; position:absolute;height: 35px;left: 0px;top: 29px;" id="ProyectoImagen2">
+														<input type="file" name="data[Proyecto][sect1_img]" style="height: 35px;left: 0px;" id="ProyectoImagen2">
 														<span class="fileinput-new">Select image</span>
 													</span>
 												</div>
@@ -374,7 +374,7 @@
 											<div class='fileupload fileupload-new' data-provides='fileupload'>
 												<div class='uneditable-input span2'><i class='icon-file fileupload-exists'></i>
 													<span class="btn btn-default btn-file" style="width:106px;height: 37px;margin-bottom: 4px;">
-														<input type="file" name="data[Proyecto][img_croquis1]" style="opacity:0; position:absolute;height: 35px;left: 0px;top: 29px;" id="ImagenCroquis1">
+														<input type="file" name="data[Proyecto][img_croquis1]" style="height: 35px;left: 0px;" id="ImagenCroquis1">
 														<span class="fileinput-new">Select image</span>
 													</span>
 												</div>
@@ -395,7 +395,7 @@
 											<div class='fileupload fileupload-new' data-provides='fileupload'>
 												<div class='uneditable-input span2'><i class='icon-file fileupload-exists'></i>
 													<span class="btn btn-default btn-file" style="width:106px;height: 37px;margin-bottom: 4px;">
-														<input type="file" name="data[Proyecto][img_croquis2]" style="opacity:0; position:absolute;height: 35px;left: 0px;top: 29px;" id="ImagenCroquis2">
+														<input type="file" name="data[Proyecto][img_croquis2]" style="height: 35px;left: 0px;" id="ImagenCroquis2">
 														<span class="fileinput-new">Select image</span>
 													</span>
 												</div>

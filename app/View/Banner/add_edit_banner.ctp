@@ -39,7 +39,7 @@
 									<div class='fileupload fileupload-new' data-provides='fileupload'>
 										<div class='uneditable-input span2'><i class='icon-file fileupload-exists'></i>
 											<span class="btn btn-default btn-file" style="width:106px;height: 37px;margin-bottom: 4px;">
-												<input type="file" name="data[Banner][imagen]" style="opacity:0; position:absolute;height: 35px;left: 0px;top: 29px;" id="BannerImagen">
+												<input type="file" name="data[Banner][imagen]" style="height: 35px;left: 0px;" id="BannerImagen">
 												<span class="fileinput-new">Select image</span>
 											</span>
 										</div>

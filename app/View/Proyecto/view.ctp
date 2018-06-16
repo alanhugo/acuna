@@ -6,13 +6,13 @@
 			   <h2 class="g-title white"><?php echo $obj_proyecto->getAttr('thumb_titulo');?><br><span><?php echo $obj_proyecto->getAttr('thumb_subtitulo');?></span></h2>
 			</div>
 		 </div>
-		 <div class="right btn-2">
+		 <!--<div class="right btn-2">
 			<div class="b23-btn">
 			   <div class="b23-botone"><a href="https://www.youtube.com/watch?v=UIGDRmhspM8&t=34s&spfreload=5" class="btn-white-2">VER VIDEO</a></div>
 			   <span>&nbsp;</span>
 			   <div class="b23-botone"><a href="http://www.wescon.pe/uploads/brochure/book-2daetapa-2-ilovepdf-compressed.pdf" download="/uploads/brochure/book-2daetapa-2-ilovepdf-compressed.pdf" class="btn-white">DESCARGAR BROCHURE</a></div>
 			</div>
-		 </div>
+		 </div>-->
 	  </div>
    </div>
 </section>
