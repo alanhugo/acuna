@@ -44,16 +44,15 @@
 
 							<div class="form-group">
 								<label class="col-sm-2 control-label"><?php echo 'Introducción'; ?></label>
-								<label class="col-sm-2 control-label"><?php echo 'Visión'; ?></label>
 									<div id="div-intro">
-										<?php echo $this->Form->input('introduccion', array('div' => false, 'label' => false,'type'=>'textarea','rows'=>'5','cols'=>'80', 'class'=> 'summernote form-control','id' =>'text-intro')); //TEXT AREA?>
+										<?php echo $this->Form->input('introduccion', array('div' => false, 'label' => false,'type'=>'textarea','rows'=>'3','cols'=>'80', 'class'=> 'summernote form-control','id' =>'text-intro')); //TEXT AREA?>
 									</div>
 							</div>
 							
 							<div class="form-group">
 								<label class="col-sm-2 control-label"><?php echo 'Visión'; ?></label>
 									<div id="div-vision">
-										<?php echo $this->Form->input('vision', array('div' => false, 'label' => false,'type'=>'textarea','rows'=>'5','cols'=>'80', 'class'=> 'summernote form-control','id' =>'text-vision')); //TEXT AREA?>
+										<?php echo $this->Form->input('vision', array('div' => false, 'label' => false,'type'=>'textarea','rows'=>'3','cols'=>'80', 'class'=> 'summernote form-control','id' =>'text-vision')); //TEXT AREA?>
 									</div>
 							</div>
 
@@ -61,7 +60,7 @@
 							<div class="form-group">
 								<label class="col-sm-2 control-label"><?php echo 'Misión'; ?></label>
 									<div id="div-mision">
-										<?php echo $this->Form->input('mision', array('div' => false, 'label' => false,'type'=>'textarea','rows'=>'5','cols'=>'80', 'class'=> 'summernote form-control','id' =>'text-mision')); //TEXT AREA?>
+										<?php echo $this->Form->input('mision', array('div' => false, 'label' => false,'type'=>'textarea','rows'=>'3','cols'=>'80', 'class'=> 'summernote form-control','id' =>'text-mision')); //TEXT AREA?>
 									</div>
 							</div>
 

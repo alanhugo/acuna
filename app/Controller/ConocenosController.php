@@ -35,13 +35,13 @@ class ConocenosController extends AppController{
 			$search_conoceno = '';
 		}
 		
-		$list_conoceno_all = $this->Conoceno->listAllConocenos($order_by, utf8_encode($search_conoceno),$order_by_or);
-		$list_conocenos = $this->Conoceno->listFindConocenos($order_by, $search_conoceno,$order_by_or, $start, $per_page);
-		$count = count($list_conoceno_all);
-		$no_of_paginations = ceil($count / $per_page);
-		$page = $page + 1;
+		//$list_conoceno_all = $this->Conoceno->listAllConocenos($order_by, utf8_encode($search_conoceno),$order_by_or);
+		$list_conocenos = $this->Conoceno->listFindConocenos($order_by, $search_conoceno, $order_by_or);
+		//$count = count($list_conoceno_all);
+		//$no_of_paginations = ceil($count / $per_page);
+		//$page = $page + 1;
 		
-		$this->set(compact('list_conocenos','page','no_of_paginations'));
+		$this->set(compact('list_conocenos'));
 	}
 	
 	public function find_conocenos($page=null,$order_by=null,$order_by_or=null,$search_conoceno=null) {
