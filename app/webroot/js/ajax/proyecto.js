@@ -11,7 +11,65 @@ $(document).ready(function(){
 			
 			$('div#proyecto #add_edit_proyecto_container').unbind();
 			$('div#proyecto #add_edit_proyecto_container').load(env_webroot_script + 'proyectos/add_edit_proyecto/'+proyecto_id,function(){
+				if( $('.chk-ubi').is(':checked') ) {
+				    $('.div-chk-ubi').show();
+				}else{
+					$('.div-chk-ubi').hide();
+				}
 
+				if( $('.chk-area-comun').is(':checked') ) {
+				    $('.div-chk-area-comun').show();
+				}else{
+					$('.div-chk-area-comun').hide();
+				}
+
+				if( $('.chk-departamento').is(':checked') ) {
+				    $('.div-chk-departamento').show();
+				}else{
+					$('.div-chk-departamento').hide();
+				}
+
+				if( $('.chk-area-verd').is(':checked') ) {
+				    $('.div-chk-area-verd').show();
+				}else{
+					$('.div-chk-area-verd').hide();
+				}
+
+				if( $('.chk-tech-prop').is(':checked') ) {
+				    $('.div-chk-tech-prop').show();
+				}else{
+					$('.div-chk-tech-prop').hide();
+				}
+
+				if( $('.chk-proy').is(':checked') ) {
+				    $('.div-chk-proy').show();
+				}else{
+					$('.div-chk-proy').hide();
+				}
+
+				if( $('.chk-casas').is(':checked') ) {
+				    $('.div-chk-casas').show();
+				}else{
+					$('.div-chk-casas').hide();
+				}
+
+				if( $('.chk-promo').is(':checked') ) {
+				    $('.div-chk-promo').show();
+				}else{
+					$('.div-chk-promo').hide();
+				}
+
+				if( $('.chk-facilidad').is(':checked') ) {
+				    $('.div-chk-facilidad').show();
+				}else{
+					$('.div-chk-facilidad').hide();
+				}
+
+				if( $('.chk-ventaja').is(':checked') ) {
+				    $('.div-chk-ventaja').show();
+				}else{
+					$('.div-chk-ventaja').hide();
+				}
 			});
 		},
 		
