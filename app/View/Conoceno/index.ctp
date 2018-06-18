@@ -9,9 +9,11 @@
 			</li>
 		</ol>
 	</div>
-	<?php if(count($list_conocenos) ==0) { ?>
-	<div class="col-lg-2" style="padding-top:30px"><button class="btn btn-primary btn-nuevo-conoceno"><i class="icon-plus"></i> <?php echo utf8_encode(__('Agregar')); ?></button></div>
-	<?php } ?>
+		<?php if(count($list_conocenos) ==0) { ?>
+		<div class="col-lg-2" style="padding-top:30px">
+			<button class="btn btn-primary btn-nuevo-conoceno"><i class="icon-plus"></i> <?php echo utf8_encode(__('Agregar')); ?></button>
+		</div>
+		<?php } ?>
  </div>
 
 <div class="wrapper wrapper-content animated fadeInRight">

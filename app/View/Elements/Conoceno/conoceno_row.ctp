@@ -1,5 +1,5 @@
 <table
-		class="table table-striped table-bordered table-hover dataTables-example" id="dtable_banners">
+		class="table table-striped table-bordered table-hover dataTables-example" id="dtable_conocenos">
 		<thead>
 			<tr>
 				<th></th>
@@ -11,15 +11,15 @@
 		<tbody>
 			<?php $cont=1?>
 			<?php foreach ($list_conocenos as $conoceno){ ?>
-			<tr class="banner_row_container"
-				banner_id="<?php echo $conoceno->getAttr('id'); ?>">
+			<tr class="conoceno_row_container"
+				conoceno_id="<?php echo $conoceno->getAttr('id'); ?>">
 				<td><?php echo $cont++?></td>
 				<td><?php echo utf8_encode($conoceno->getAttr('banner_titulo')); ?></td>
-				<td><img src = <?php echo ENV_WEBROOT_FULL_URL.'files/conocenos/'.$conoceno->getAttr('banner'); ?> width='80'></td>
-				<td><a><i class="fa fa-edit text-navy edit-banner-trigger"></i> </a>
+				<td><img src = <?php echo ENV_WEBROOT_FULL_URL.'files/conocenos_banner1/'.$conoceno->getAttr('banner'); ?> width='80'></td>
+				<td><a><i class="fa fa-edit text-navy edit-conoceno-trigger"></i> </a>
 					<a href="#myModalDeleteConocenos" role="button" data-toggle="modal"
 					data-target="#myModalDeleteConocenos"><i
-						class="fa fa-trash-o text-navy open-model-delete-banner"></i> </a>
+						class="fa fa-trash-o text-navy open-model-delete-conoceno"></i> </a>
 				</td>
 			</tr>
 			<?php }?>
