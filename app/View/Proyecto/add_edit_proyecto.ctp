@@ -185,7 +185,7 @@
     						</fieldset>
 
     						<fieldset>
-    							<legend><input type="checkbox" value="" <?php echo (isset($obj_proyecto) && $obj_proyecto->getAttr('ubicacion_titulo') != '')? 'checked':''; ?> class="chk-ubi"> Ubicaci&oacute;n </legend>
+    							<legend><input type="checkbox" value="" <?php echo (isset($obj_proyecto) && $obj_proyecto->getAttr('ubicacion_titulo') != '')? 'checked':''; ?> class="chk-ubi"> <label class="chk-ubi1"> Ubicaci&oacute;n </label></legend>
     							<div class="div-chk-ubi" hidden>
 	    							<div class="form-group">
 	    									<label class="col-sm-2 control-label"><?php echo 'T&iacute;tulo'; ?></label>
@@ -203,7 +203,7 @@
 							</fieldset>
 
 							<fieldset>
-    							<legend><input type="checkbox" value="" <?php echo (isset($obj_proyecto) && $obj_proyecto->getAttr('area_com_titulo') != '')? 'checked':''; ?> class="chk-area-comun"> &Aacute;rea Com&uacute;n</legend>
+    							<legend><input type="checkbox" value="" <?php echo (isset($obj_proyecto) && $obj_proyecto->getAttr('area_com_titulo') != '')? 'checked':''; ?> class="chk-area-comun"> <label class="chk-area-comun1">&Aacute;rea Com&uacute;n</label></legend>
 
     							<div class="div-chk-area-comun" hidden>
 	    							<div class="form-group">
@@ -222,7 +222,7 @@
 							</fieldset>
 
 							<fieldset>
-    							<legend><input type="checkbox" value="" <?php echo (isset($obj_proyecto) && $obj_proyecto->getAttr('depart_titulo') != '')? 'checked':''; ?> class="chk-departamento"> Departamentos</legend>
+    							<legend><input type="checkbox" value="" <?php echo (isset($obj_proyecto) && $obj_proyecto->getAttr('depart_titulo') != '')? 'checked':''; ?> class="chk-departamento"> <label class="chk-departamento1">Departamentos</label></legend>
     							<div class="div-chk-departamento" hidden>
 	    							<div class="form-group">
 	    									<label class="col-sm-2 control-label"><?php echo 'T&iacute;tulo'; ?></label>
@@ -240,7 +240,7 @@
 							</fieldset>
 							
 							<fieldset>
-    							<legend><input type="checkbox" value="" <?php echo (isset($obj_proyecto) && $obj_proyecto->getAttr('area_verd_titulo') != '')? 'checked':''; ?> class="chk-area-verd"> &Aacute;reas Verdes</legend>
+    							<legend><input type="checkbox" value="" <?php echo (isset($obj_proyecto) && $obj_proyecto->getAttr('area_verd_titulo') != '')? 'checked':''; ?> class="chk-area-verd"> <label class="chk-area-verd1">&Aacute;reas Verdes</label></legend>
 
     							<div class="div-chk-area-verd" hidden>
 	    							<div class="form-group">
@@ -259,7 +259,7 @@
 							</fieldset>
 							
 							<fieldset>
-    							<legend><input type="checkbox" value="" <?php echo (isset($obj_proyecto) && $obj_proyecto->getAttr('tech_prop_titulo') != '')? 'checked':''; ?> class="chk-tech-prop"> Techo propio</legend>
+    							<legend><input type="checkbox" value="" <?php echo (isset($obj_proyecto) && $obj_proyecto->getAttr('tech_prop_titulo') != '')? 'checked':''; ?> class="chk-tech-prop"> <label class="chk-tech-prop1">Techo propio</label></legend>
     							<div class="div-chk-tech-prop" hidden>
 	    							<div class="form-group">
 	    									<label class="col-sm-2 control-label"><?php echo 'T&iacute;tulo'; ?></label>
@@ -276,7 +276,7 @@
 							</fieldset>	
 
 							<fieldset>
-    							<legend><input type="checkbox" value="" <?php echo (isset($obj_proyecto) && $obj_proyecto->getAttr('proy_titulo') != '')? 'checked':''; ?> class="chk-proy"> Proyecto</legend>
+    							<legend><input type="checkbox" value="" <?php echo (isset($obj_proyecto) && $obj_proyecto->getAttr('proy_titulo') != '')? 'checked':''; ?> class="chk-proy"> <label class="chk-proy1">Proyecto</label></legend>
 
     							<div class="div-chk-proy" hidden>
 	    							<div class="form-group">
@@ -294,7 +294,7 @@
 							</fieldset>
 
 							<fieldset>
-    							<legend><input type="checkbox" value="" <?php echo (isset($obj_proyecto) && $obj_proyecto->getAttr('casas_titulo') != '')? 'checked':''; ?> class="chk-casas"> Casas</legend>
+    							<legend><input type="checkbox" value="" <?php echo (isset($obj_proyecto) && $obj_proyecto->getAttr('casas_titulo') != '')? 'checked':''; ?> class="chk-casas"> <label class="chk-casas1">Casas</label></legend>
 
     							<div class="div-chk-casas" hidden>
 	    							<div class="form-group">
@@ -312,7 +312,7 @@
 							</fieldset>	
 
 							<fieldset>
-    							<legend><input type="checkbox" value="" <?php echo (isset($obj_proyecto) && $obj_proyecto->getAttr('promo_titulo') != '')? 'checked':''; ?> class="chk-promo"> Promociones</legend>
+    							<legend><input type="checkbox" value="" <?php echo (isset($obj_proyecto) && $obj_proyecto->getAttr('promo_titulo') != '')? 'checked':''; ?> class="chk-promo"> <label class="chk-promo1">Promociones</label></legend>
 
     							<div class="div-chk-promo" hidden>
 	    							<div class="form-group">
@@ -330,7 +330,7 @@
 							</fieldset>
 
 							<fieldset>
-    							<legend><input type="checkbox" value="" <?php echo (isset($obj_proyecto) && $obj_proyecto->getAttr('facilidad_titulo') != '')? 'checked':''; ?> class="chk-facilidad"> M&aacute;s facilidades</legend>
+    							<legend><input type="checkbox" value="" <?php echo (isset($obj_proyecto) && $obj_proyecto->getAttr('facilidad_titulo') != '')? 'checked':''; ?> class="chk-facilidad"> <label class="chk-facilidad1">M&aacute;s facilidades</label></legend>
 
     							<div class="div-chk-facilidad" hidden>
 	    							<div class="form-group">
@@ -348,7 +348,7 @@
 							</fieldset>
 
 							<fieldset>
-    							<legend><input type="checkbox" value="" <?php echo (isset($obj_proyecto) && $obj_proyecto->getAttr('ventaja_titulo') != '')? 'checked':''; ?> class="chk-ventaja"> Ventajas</legend>
+    							<legend><input type="checkbox" value="" <?php echo (isset($obj_proyecto) && $obj_proyecto->getAttr('ventaja_titulo') != '')? 'checked':''; ?> class="chk-ventaja"> <label class="chk-ventaja1">Ventajas</label></legend>
 
     							<div class="div-chk-ventaja" hidden>
 	    							<div class="form-group">
@@ -417,6 +417,12 @@
 	    									<label class="col-sm-2 control-label"><?php echo 'T&iacute;tulo'; ?></label>
 											<div class="col-sm-6">
 												<input name="data[Proyecto][mapa_titulo]" class="txt-area form-control" id="txtUbiTitulo" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('mapa_titulo')):''; ?>">
+											</div>
+									</div>
+									<div class="form-group">
+											<label class="col-sm-2 control-label">Ubicaci&oacute;n</label>
+											<div class="col-sm-6">
+												<input name="data[Proyecto][ubicacion]" class="txt-area form-control" id="txtUbicacion" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('ubicacion')):''; ?>">
 											</div>
 									</div>
 									<div class="form-group">

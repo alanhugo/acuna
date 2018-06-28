@@ -11,65 +11,7 @@ $(document).ready(function(){
 			
 			$('div#proyecto #add_edit_proyecto_container').unbind();
 			$('div#proyecto #add_edit_proyecto_container').load(env_webroot_script + 'proyectos/add_edit_proyecto/'+proyecto_id,function(){
-				if( $('.chk-ubi').is(':checked') ) {
-				    $('.div-chk-ubi').show();
-				}else{
-					$('.div-chk-ubi').hide();
-				}
-
-				if( $('.chk-area-comun').is(':checked') ) {
-				    $('.div-chk-area-comun').show();
-				}else{
-					$('.div-chk-area-comun').hide();
-				}
-
-				if( $('.chk-departamento').is(':checked') ) {
-				    $('.div-chk-departamento').show();
-				}else{
-					$('.div-chk-departamento').hide();
-				}
-
-				if( $('.chk-area-verd').is(':checked') ) {
-				    $('.div-chk-area-verd').show();
-				}else{
-					$('.div-chk-area-verd').hide();
-				}
-
-				if( $('.chk-tech-prop').is(':checked') ) {
-				    $('.div-chk-tech-prop').show();
-				}else{
-					$('.div-chk-tech-prop').hide();
-				}
-
-				if( $('.chk-proy').is(':checked') ) {
-				    $('.div-chk-proy').show();
-				}else{
-					$('.div-chk-proy').hide();
-				}
-
-				if( $('.chk-casas').is(':checked') ) {
-				    $('.div-chk-casas').show();
-				}else{
-					$('.div-chk-casas').hide();
-				}
-
-				if( $('.chk-promo').is(':checked') ) {
-				    $('.div-chk-promo').show();
-				}else{
-					$('.div-chk-promo').hide();
-				}
-
-				if( $('.chk-facilidad').is(':checked') ) {
-				    $('.div-chk-facilidad').show();
-				}else{
-					$('.div-chk-facilidad').hide();
-				}
-
-				if( $('.chk-ventaja').is(':checked') ) {
-				    $('.div-chk-ventaja').show();
-				}else{
-					$('.div-chk-ventaja').hide();
-				}
+				
 			});
 		},
 		
@@ -282,6 +224,19 @@ $(document).ready(function(){
 		}
 	});
 
+	var ubi = 0;
+	$body.off('click','.chk-ubi1');
+	$body.on('click','.chk-ubi1',function(){
+		
+		if( ubi == 0) {
+			ubi = 1;
+		    $('.div-chk-ubi').show();
+		}else{
+			ubi = 0;
+			$('.div-chk-ubi').hide();
+		}
+	});
+
 
 	$body.off('click','.chk-area-comun');
 	$body.on('click','.chk-area-comun',function(){
@@ -293,6 +248,21 @@ $(document).ready(function(){
 		}
 	});
 
+	var area = 0;
+	$body.off('click','.chk-area-comun1');
+	$body.on('click','.chk-area-comun1',function(){
+		
+		if( area == 0) {
+			area = 1;
+		    $('.div-chk-area-comun').show();
+		}else{
+			area = 0;
+			$('.div-chk-area-comun').hide();
+		}
+	});
+
+
+
 	$body.off('click','.chk-departamento');
 	$body.on('click','.chk-departamento',function(){
 		
@@ -302,6 +272,21 @@ $(document).ready(function(){
 			$('.div-chk-departamento').hide();
 		}
 	});
+
+	var departamento = 0;
+	$body.off('click','.chk-departamento1');
+	$body.on('click','.chk-departamento1',function(){
+		
+		if( departamento == 0) {
+			departamento = 1;
+		    $('.div-chk-departamento').show();
+		}else{
+			departamento = 0;
+			$('.div-chk-departamento').hide();
+		}
+	});
+
+
 
 	$body.off('click','.chk-area-verd');
 	$body.on('click','.chk-area-verd',function(){
@@ -313,6 +298,21 @@ $(document).ready(function(){
 		}
 	});
 
+	var areaverd = 0;
+	$body.off('click','.chk-area-verd1');
+	$body.on('click','.chk-area-verd1',function(){
+		
+		if( areaverd == 0) {
+			areaverd = 1;
+		    $('.div-chk-area-verd').show();
+		}else{
+			areaverd = 0;
+			$('.div-chk-area-verd').hide();
+		}
+	});
+
+
+
 	$body.off('click','.chk-tech-prop');
 	$body.on('click','.chk-tech-prop',function(){
 		
@@ -322,6 +322,21 @@ $(document).ready(function(){
 			$('.div-chk-tech-prop').hide();
 		}
 	});
+
+	var tech = 0;
+	$body.off('click','.chk-tech-prop1');
+	$body.on('click','.chk-tech-prop1',function(){
+		
+		if( tech == 0) {
+			tech = 1;
+		    $('.div-chk-tech-prop').show();
+		}else{
+			tech = 0;
+			$('.div-chk-tech-prop').hide();
+		}
+	});
+
+
 
 	$body.off('click','.chk-proy');
 	$body.on('click','.chk-proy',function(){
@@ -333,6 +348,21 @@ $(document).ready(function(){
 		}
 	});
 
+	var proy = 0;
+	$body.off('click','.chk-proy1');
+	$body.on('click','.chk-proy1',function(){
+		
+		if( proy == 0) {
+			proy = 1;
+		    $('.div-chk-proy').show();
+		}else{
+			proy = 0;
+			$('.div-chk-proy').hide();
+		}
+	});
+
+
+
 	$body.off('click','.chk-casas');
 	$body.on('click','.chk-casas',function(){
 		
@@ -342,6 +372,21 @@ $(document).ready(function(){
 			$('.div-chk-casas').hide();
 		}
 	});
+
+	var casas = 0;
+	$body.off('click','.chk-casas1');
+	$body.on('click','.chk-casas1',function(){
+		
+		if( casas == 0) {
+			casas = 1;
+		    $('.div-chk-casas').show();
+		}else{
+			casas = 0;
+			$('.div-chk-casas').hide();
+		}
+	});
+
+
 
 	$body.off('click','.chk-promo');
 	$body.on('click','.chk-promo',function(){
@@ -353,6 +398,21 @@ $(document).ready(function(){
 		}
 	});
 
+	var promo = 0;
+	$body.off('click','.chk-promo1');
+	$body.on('click','.chk-promo1',function(){
+		
+		if( promo == 0) {
+			promo = 1;
+		    $('.div-chk-promo').show();
+		}else{
+			promo = 0;
+			$('.div-chk-promo').hide();
+		}
+	});
+
+
+
 	$body.off('click','.chk-facilidad');
 	$body.on('click','.chk-facilidad',function(){
 		
@@ -363,12 +423,40 @@ $(document).ready(function(){
 		}
 	});
 
+	var facilidad = 0;
+	$body.off('click','.chk-facilidad1');
+	$body.on('click','.chk-facilidad1',function(){
+		
+		if( facilidad == 0) {
+			facilidad = 1;
+		    $('.div-chk-facilidad').show();
+		}else{
+			facilidad = 0;
+			$('.div-chk-facilidad').hide();
+		}
+	});
+
+
+
 	$body.off('click','.chk-ventaja');
 	$body.on('click','.chk-ventaja',function(){
 		
 		if( $('.chk-ventaja').is(':checked') ) {
 		    $('.div-chk-ventaja').show();
 		}else{
+			$('.div-chk-ventaja').hide();
+		}
+	});
+
+	var ventaja = 0;
+	$body.off('click','.chk-ventaja1');
+	$body.on('click','.chk-ventaja1',function(){
+		
+		if( ventaja == 0) {
+			ventaja = 1;
+		    $('.div-chk-ventaja').show();
+		}else{
+			ventaja = 0;
 			$('.div-chk-ventaja').hide();
 		}
 	});
