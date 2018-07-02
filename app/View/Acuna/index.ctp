@@ -8,7 +8,7 @@
 				   <div class="b1-table">
 					  <div class="b1-text">
 						 <h2><?php echo $banner->getAttr('titulo');?><br><span><?php echo $banner->getAttr('subtitulo');?></span></h2>
-						 <a class="btn-yellow" href="proyectos-en-venta/proyectos-en-venta.html" >INFORMATE AQUI</a>
+						 <a class="btn-yellow" href="<?php echo ENV_WEBROOT_FULL_URL;?>proyectos-en-venta" >INFORMATE AQUI</a>
 					  </div>
 				   </div>
 				</div>

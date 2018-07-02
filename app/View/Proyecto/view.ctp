@@ -291,42 +291,9 @@
 			   </div>
 			</div>
 		 </div>
-		 <div class="b12-right">
-			<div class="b12-title">
-			   <h2 class="g-title yellow">Amauta te espera<br><span>¡ escríbenos ahora !</span></h2>
-			</div>
-			<div class="b12-form">
-			   <form name="form" method="post" action="/reserva-process/3/" novalidate="novalidate" id="form-reserva">
-				  <div class="b6-col-2">
-					 <div class="b6-col-left">
-						<div class="b6-input"><input type="text" id="form_nombre" name="form[nombre]" required="required" class="validate[required]" /><label for="form_nombre">Nombre y Apellidos:</label></div>
-					 </div>
-					 <div class="b6-col-right">
-						<div class="b6-input"><input type="text" id="form_documento" name="form[documento]" required="required" maxlength="255" class="validate[required]" /><label for="form_documento">Nº Documento:</label></div>
-					 </div>
-				  </div>
-				  <div class="b6-col-2">
-					 <div class="b6-col-left">
-						<div class="b6-input"><input type="text" id="form_telefono" name="form[telefono]" required="required" maxlength="255" class="validate[required]" /><label for="form_telefono">Teléfono:</label></div>
-					 </div>
-					 <div class="b6-col-right">
-						<div class="b6-input"><input type="text" id="form_email" name="form[email]" required="required" maxlength="255" class="validate[required,custom[email]]" /><label for="form_email">Correo:</label></div>
-					 </div>
-				  </div>
-				  <div class="b6-col-1">
-					 <div class="b6-input b6-select">
-						<select id="form_plano" name="form[plano]" required="required" class="validate[required]">
-						   <option value="" selected="selected"></option>
-						   <option value="1">Los Mejores departamentos de Lima Cercado</option>
-						</select>
-						<label for="form_plano">Escoge tu preferido:</label>
-					 </div>
-				  </div>
-				  <div class="b6-btn"><button class="btn-big" type="submit">INFORMATE AQUÍ</button></div>
-				  <input type="hidden" id="form__token" name="form[_token]" value="kSOTXbzIxW5U2U14wi1vH8eV6-Om7bAVG3SLdRK8ykk" />
-			   </form>
-			</div>
-		 </div>
+		 
+		 <?php echo $this->Element('contacto'); ?>
+
 	  </div>
    </div>
 </section>
@@ -403,180 +370,179 @@
 <script type="text/javascript">
 	
      function initMap() {
-                var map;
-                var color = [
-         {
-            "featureType": "administrative.country",
-            "elementType": "labels.text.fill",
-            "stylers": [
-                {
-                    "color": "#2c52a2"
-                }
-            ]
-         },
-         {
-            "featureType": "administrative.province",
-            "elementType": "labels.text.fill",
-            "stylers": [
-                {
-                    "color": "#2c52a2"
-                }
-            ]
-         },
-         {
-            "featureType": "administrative.locality",
-            "elementType": "labels.text.fill",
-            "stylers": [
-                {
-                    "color": "#2c52a2"
-                }
-            ]
-         },
-         {
-            "featureType": "administrative.neighborhood",
-            "elementType": "labels.text.fill",
-            "stylers": [
-                {
-                    "color": "#2c52a2"
-                }
-            ]
-         },
-         {
-            "featureType": "administrative.land_parcel",
-            "elementType": "labels.text.fill",
-            "stylers": [
-                {
-                    "hue": "#ff0000"
-                }
-            ]
-         },
-         {
-            "featureType": "administrative.land_parcel",
-            "elementType": "labels.text.stroke",
-            "stylers": [
-                {
-                    "color": "#2c52a2"
-                }
-            ]
-         },
-         {
-            "featureType": "landscape.natural",
-            "elementType": "geometry.fill",
-            "stylers": [
-                {
-                    "visibility": "on"
-                },
-                {
-                    "color": "#e0efef"
-                }
-            ]
-         },
-         {
-            "featureType": "landscape.natural.landcover",
-            "elementType": "geometry.fill",
-            "stylers": [
-                {
-                    "color": "#f5f5f5"
-                }
-            ]
-         },
-         {
-            "featureType": "poi",
-            "elementType": "geometry.fill",
-            "stylers": [
-                {
-                    "visibility": "on"
-                },
-                {
-                    "hue": "#1900ff"
-                },
-                {
-                    "color": "#c0e8e8"
-                }
-            ]
-         },
-         {
-            "featureType": "poi.park",
-            "elementType": "geometry.fill",
-            "stylers": [
-                {
-                    "color": "#c6ebbd"
-                }
-            ]
-         },
-         {
-            "featureType": "road",
-            "elementType": "geometry",
-            "stylers": [
-                {
-                    "lightness": 100
-                },
-                {
-                    "visibility": "simplified"
-                }
-            ]
-         },
-         {
-            "featureType": "road",
-            "elementType": "labels",
-            "stylers": [
-                {
-                    "visibility": "off"
-                }
-            ]
-         },
-         {
-            "featureType": "transit.line",
-            "elementType": "geometry",
-            "stylers": [
-                {
-                    "visibility": "on"
-                },
-                {
-                    "lightness": 700
-                }
-            ]
-         },
-         {
-            "featureType": "water",
-            "elementType": "all",
-            "stylers": [
-                {
-                    "color": "#7dcdcd"
-                }
-            ]
-         },
-         {
-            "featureType": "water",
-            "elementType": "geometry.fill",
-            "stylers": [
-                {
-                    "color": "#addbf1"
-                }
-            ]
-         },
-         {
-            "featureType": "water",
-            "elementType": "labels.text.fill",
-            "stylers": [
-                {
-                    "color": "#2c52a2"
-                }
-            ]
-         },
-         {
-            "featureType": "water",
-            "elementType": "labels.text.stroke",
-            "stylers": [
-                {
-                    "color": "#ffffff"
-                }
-            ]
-         }
-         ];
-                
+            var map;
+            var color = [
+			    {
+			        "featureType": "administrative.country",
+			        "elementType": "labels.text.fill",
+			        "stylers": [
+			            {
+			                "color": "#2c52a2"
+			            }
+			        ]
+			    },
+			    {
+			        "featureType": "administrative.province",
+			        "elementType": "labels.text.fill",
+			        "stylers": [
+			            {
+			                "color": "#2c52a2"
+			            }
+			        ]
+			    },
+			    {
+			        "featureType": "administrative.locality",
+			        "elementType": "labels.text.fill",
+			        "stylers": [
+			            {
+			                "color": "#2c52a2"
+			            }
+			        ]
+			    },
+			    {
+			        "featureType": "administrative.neighborhood",
+			        "elementType": "labels.text.fill",
+			        "stylers": [
+			            {
+			                "color": "#2c52a2"
+			            }
+			        ]
+			    },
+			    {
+			        "featureType": "administrative.land_parcel",
+			        "elementType": "labels.text.fill",
+			        "stylers": [
+			            {
+			                "hue": "#ff0000"
+			            }
+			        ]
+			    },
+			    {
+			        "featureType": "administrative.land_parcel",
+			        "elementType": "labels.text.stroke",
+			        "stylers": [
+			            {
+			                "color": "#2c52a2"
+			            }
+			        ]
+			    },
+			    {
+			        "featureType": "landscape.natural",
+			        "elementType": "geometry.fill",
+			        "stylers": [
+			            {
+			                "visibility": "on"
+			            },
+			            {
+			                "color": "#e0efef"
+			            }
+			        ]
+			    },
+			    {
+			        "featureType": "landscape.natural.landcover",
+			        "elementType": "geometry.fill",
+			        "stylers": [
+			            {
+			                "color": "#f5f5f5"
+			            }
+			        ]
+			    },
+			    {
+			        "featureType": "poi",
+			        "elementType": "geometry.fill",
+			        "stylers": [
+			            {
+			                "visibility": "on"
+			            },
+			            {
+			                "hue": "#1900ff"
+			            },
+			            {
+			                "color": "#c0e8e8"
+			            }
+			        ]
+			    },
+			    {
+			        "featureType": "poi.park",
+			        "elementType": "geometry.fill",
+			        "stylers": [
+			            {
+			                "color": "#c6ebbd"
+			            }
+			        ]
+			    },
+			    {
+			        "featureType": "road",
+			        "elementType": "geometry",
+			        "stylers": [
+			            {
+			                "lightness": 100
+			            },
+			            {
+			                "visibility": "simplified"
+			            }
+			        ]
+			    },
+			    {
+			        "featureType": "road",
+			        "elementType": "labels",
+			        "stylers": [
+			            {
+			                "visibility": "off"
+			            }
+			        ]
+			    },
+			    {
+			        "featureType": "transit.line",
+			        "elementType": "geometry",
+			        "stylers": [
+			            {
+			                "visibility": "on"
+			            },
+			            {
+			                "lightness": 700
+			            }
+			        ]
+			    },
+			    {
+			        "featureType": "water",
+			        "elementType": "all",
+			        "stylers": [
+			            {
+			                "color": "#7dcdcd"
+			            }
+			        ]
+			    },
+			    {
+			        "featureType": "water",
+			        "elementType": "geometry.fill",
+			        "stylers": [
+			            {
+			                "color": "#addbf1"
+			            }
+			        ]
+			    },
+			    {
+			        "featureType": "water",
+			        "elementType": "labels.text.fill",
+			        "stylers": [
+			            {
+			                "color": "#2c52a2"
+			            }
+			        ]
+			    },
+			    {
+			        "featureType": "water",
+			        "elementType": "labels.text.stroke",
+			        "stylers": [
+			            {
+			                "color": "#ffffff"
+			            }
+			        ]
+			    }
+			];
 
-            var latlng = new google.maps.LatLng(-6.797421,-79.886248);
+            var latlng = new google.maps.LatLng(<?php echo $obj_proyecto->getAttr('ubicacion');?>);
             var pin = '<?php echo ENV_WEBROOT_FULL_URL; ?>theme/uploads/ubicacion/marker.png';
             var image = {
                 url : pin,

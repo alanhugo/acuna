@@ -3,7 +3,7 @@ class ProyectosController extends AppController{
 	public $name = 'Proyecto';	
 
 	public function beforeFilter(){
-		$this->Auth->allow(array('view'));
+		$this->Auth->allow(array('view','contact_enviar_email'));
 		parent::beforeFilter();
 	}
 	
@@ -112,7 +112,7 @@ class ProyectosController extends AppController{
 		$this->loadModel('TipoVivienda');
 		$this->loadModel('Banco');
 
-		
+		//debug($this->request);exit();
 		if($this->request->is('post')  || $this->request->is('put')){
 			if(isset($proyecto_id) && intval($proyecto_id) > 0){
 				
@@ -394,5 +394,31 @@ class ProyectosController extends AppController{
 			}
 			exit();*/
 		}	
-	}	
+	}
+
+	public function contact_enviar_email(){
+		$this->layout = 'ajax';
+
+		App::uses('CakeEmail', 'Network/Email');
+
+		$Email = new CakeEmail();
+	    $Email->config('gmail')
+	          ->emailFormat('html')
+	          ->from("alan_hugo@outlook.com")        
+	          ->to('alan_hugo@outlook.com')
+	          ->subject("Enviado desde la Web AcunaInmobiliaria.com"); // all data is correct i checked several times
+
+	    $cuerpo = "<b>Nombre:</b>".$this->request['data']['Contacto']['nombre']."<br>";
+	    $cuerpo .= "<b>DNI:</b>".$this->request['data']['Contacto']['documento']."<br>";
+	    $cuerpo .= "<b>Telefono:</b>".$this->request['data']['Contacto']['telefono']."<br>";
+	    $cuerpo .= "<b>Email:</b>".$this->request['data']['Contacto']['correo']."<br>";
+	    //debug($cuerpo);
+	    $Email->send($cuerpo);
+
+
+
+		debug($this->request);
+		exit();
+	}
+
 }
