@@ -56,7 +56,7 @@
 			<?php echo ($obj_proyecto->getAttr('area_com_titulo') != '')? "<li><a href='#' data-id='b10-tab2'><span>Áreas Comunes</span></a></li>" : ""; ?>
 			<?php echo ($obj_proyecto->getAttr('depart_titulo') != '')? "<li><a href='#' data-id='b10-tab3'><span>Departamentos</span></a></li>" : ""; ?>
 			<?php echo ($obj_proyecto->getAttr('area_verd_titulo') != '')? "<li><a href='#' data-id='b10-tab4'><span>Áreas verdes</span></a></li>" : ""; ?>
-			<?php echo ($obj_proyecto->getAttr('tech_pro_titulo') != '')? "<li><a href='#' data-id='b10-tab5'><span>Requisitos Techo Propio</span></a></li>" : ""; ?>
+			<?php echo ($obj_proyecto->getAttr('tech_prop_titulo') != '')? "<li><a href='#' data-id='b10-tab5'><span>Requisitos Techo Propio</span></a></li>" : ""; ?>
 			<?php echo ($obj_proyecto->getAttr('proy_titulo') != '')? "<li><a href='#' data-id='b10-tab6'><span>Proyectos</span></a></li>" : ""; ?>
 			<?php echo ($obj_proyecto->getAttr('casas_titulo') != '')? "<li><a href='#' data-id='b10-tab7'><span>Casas</span></a></li>" : ""; ?>
 			<?php echo ($obj_proyecto->getAttr('promo_titulo') != '')? "<li><a href='#' data-id='b10-tab8'><span>Promociones</span></a></li>" : ""; ?>
