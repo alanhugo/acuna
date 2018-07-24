@@ -4,9 +4,6 @@
 	<div class="wancho">
 	   <div class="footer-top cf">
 		  <div class="footer-copy-left"><a href="www.wescon.html"><img src="theme/static/img/logo-footer.png" alt="" width="201" height="51"></a></div>
-		  <div class="footer-copy-right">
-			 <p><span>Miembro de:</span><span><img src="theme/static/img/aziperu-asociado.png" alt=""></span></p>
-		  </div>
 	   </div>
 	   <div class="footer-center">
 		  <ul>
@@ -41,15 +38,10 @@
 				   <li><a href="https://www.facebook.com/wescon.pe" target="_blank"><span class="icon-facebook"></span></a></li>
 				   <li><a href="" target="_blank"><span class="icon-whatsapp"></span></a></li>
 				   <li><a href="https://www.youtube.com/" target="_blank"><span class="icon-youtube"></span></a></li>
-				   <li><a href="https://www.youtube.com/" target="_blank"><span class="icon-blogger"></span></a></li>
 				</ul>
 			 </li>
 		  </ul>
 	   </div>
-	</div>
-	<div class="footer-bottom">
-	   <p>Wescon <span id="id_year"></span> Todos los derechos reservados.</p>
-	   <p>Diseño Página web: <a class="link-staff" target="_blank" href="https://www.staffdigital.pe/"><strong class="staffteam">staffdigital</strong></a></p>
 	</div>
  </section>
 </footer>

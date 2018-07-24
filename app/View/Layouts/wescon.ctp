@@ -42,11 +42,16 @@
       <link rel="stylesheet" type="text/css" href="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/css/blocks_styl.css';?>"/>
       <link rel="stylesheet" href="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/css/validationEngine.jquery.css';?>" type="text/css"/>
 
-      <style type="text/css">.gm-style {
+      <style type="text/css">
+      .gm-style {
         font: 400 11px Roboto, Arial, sans-serif;
         text-decoration: none;
       }
-      .gm-style img { max-width: none; }</style>
+      .gm-style img { max-width: none; }
+      .error-message{ color: red;}
+      .hide{ display: none;}
+      .show{ display: block;}
+      </style>
    </head>
    <body class="">
       <!-- html solo para el menu responsive -->
@@ -331,6 +336,41 @@
           });
          	
          });
+      </script>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $body = $('body');
+
+        $body.off('click','.submit-contacto');
+        $body.on('click', '.submit-contacto' , function(){
+          //$(this).attr("disabled", "disabled");
+          $form = $(this).parents('form').eq(0);
+          $.ajax({
+            url: $form.attr('action'),
+            data: $form.serialize(),
+            type: 'post',
+            dataType: 'json'
+          }).done(function(data){
+            //$('.submit-contacto').removeAttr("disabled");
+
+            if(data.success){
+              alert("Felicidades, se envio correctamente tu mensaje.");
+            }else{
+              data.validation.forEach( function(valor, indice, array) {
+                console.log("En el índice " + indice + " hay este valor: " + valor);
+                $('.error-'+valor).removeClass('hide');
+                $('.error-'+valor).addClass('show');
+                $('[name="data[Contacto]['+valor+']"]').keypress(function() {
+                  $('.error-'+valor).removeClass('show');
+                  $('.error-'+valor).addClass('hide');
+                });
+              });
+            }
+            
+          });
+        });
+
+      });
       </script>
    </body>
 </html>

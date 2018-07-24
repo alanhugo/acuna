@@ -398,27 +398,60 @@ class ProyectosController extends AppController{
 
 	public function contact_enviar_email(){
 		$this->layout = 'ajax';
+		$arr_validation = array();
+		$success = true;
 
-		App::uses('CakeEmail', 'Network/Email');
+		if($this->request['data']['Contacto']['nombre'] == ''){
+			$success = false;
+			$arr_validation[] = 'nombre';			
+		}
+		
+		if($this->request['data']['Contacto']['dni'] == ''){
+			$success = false;
+			$arr_validation[] = 'dni';
+		}
 
-		$Email = new CakeEmail();
-	    $Email->config('gmail')
-	          ->emailFormat('html')
-	          ->from("alan_hugo@outlook.com")        
-	          ->to('alan_hugo@outlook.com')
-	          ->subject("Enviado desde la Web AcunaInmobiliaria.com"); // all data is correct i checked several times
+		if($this->request['data']['Contacto']['telefono'] == ''){
+			$success = false;
+			$arr_validation[] = 'telefono';
+		}
 
-	    $cuerpo = "<b>Nombre:</b>".$this->request['data']['Contacto']['nombre']."<br>";
-	    $cuerpo .= "<b>DNI:</b>".$this->request['data']['Contacto']['documento']."<br>";
-	    $cuerpo .= "<b>Telefono:</b>".$this->request['data']['Contacto']['telefono']."<br>";
-	    $cuerpo .= "<b>Email:</b>".$this->request['data']['Contacto']['correo']."<br>";
-	    //debug($cuerpo);
-	    $Email->send($cuerpo);
+		if($this->request['data']['Contacto']['correo'] == ''){
+			$success = false;
+			$arr_validation[] = 'correo';
+			$msg = __('Es obligatorio el correo');	
+		}
+		//debug($success);
+		if($success){
+			App::uses('CakeEmail', 'Network/Email');
+
+			$Email = new CakeEmail();
+		    $Email->config('gmail')
+		          ->emailFormat('html')
+		          ->from("alan_hugo@outlook.com")        
+		          ->to('alan_hugo@outlook.com')
+		          ->subject("Enviado desde la Web AcunaInmobiliaria.com"); // all data is correct i checked several times
+
+		    $cuerpo = "<b>Nombre: </b>".$this->request['data']['Contacto']['nombre']."<br>";
+		    $cuerpo .= "<b>DNI: </b>".$this->request['data']['Contacto']['dni']."<br>";
+		    $cuerpo .= "<b>Telefono: </b>".$this->request['data']['Contacto']['telefono']."<br>";
+		    $cuerpo .= "<b>Email: </b>".$this->request['data']['Contacto']['correo']."<br>";
+		    //debug($cuerpo);
+		    $Email->send($cuerpo);
 
 
+		    $arr_return['success'] = $success;
+		    echo json_encode($arr_return);
+			exit();
+		}else{
 
-		debug($this->request);
-		exit();
+			$arr_return['success'] = $success;
+			$arr_return['validation'] = $arr_validation;
+			
+			echo json_encode($arr_return);
+			exit();
+		}
+		
 	}
 
 }
