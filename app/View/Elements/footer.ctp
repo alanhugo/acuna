@@ -3,7 +3,7 @@
  <section class="footer-copy">
 	<div class="wancho">
 	   <div class="footer-top cf">
-		  <div class="footer-copy-left"><a href="www.wescon.html"><img src="theme/static/img/logo-footer.png" alt="" width="201" height="51"></a></div>
+		  <div class="footer-copy-left"></div>
 	   </div>
 	   <div class="footer-center">
 		  <ul>

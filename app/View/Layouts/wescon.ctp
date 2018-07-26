@@ -20,17 +20,17 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" >
       <TITLE>Acu&ntilde;a  Inmobiliario</TITLE>
-      <META NAME="Description" CONTENT="Inmobiliaria con proyectos en Venta de Casas y departamentos en Lima -Chincha - Chiclayo
+      <META NAME="Description" CONTENT="Inmobiliaria con proyectos en Venta de Casas y departamentos - Chiclayo
          ">
       <meta property="og:url" content="http://www.wescon.pe/" />
       <meta property="og:type"               content="website" />
       <title></title>
       <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
       <!-- inicio favicon  iphone retina, ipad, iphone en orden-->
-      <link rel="icon" type="image/png" href="theme/uploads/favicon/256.png"/>
-      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="theme/uploads/favicon/114.png">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="theme/uploads/favicon/72.png">
-      <link rel="apple-touch-icon-precomposed" href="theme/uploads/favicon/57.png">
+      <link rel="icon" type="image/png" href="<?php echo ENV_WEBROOT_FULL_URL;?>img/favicon.png"/>
+      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo ENV_WEBROOT_FULL_URL;?>img/favicon.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo ENV_WEBROOT_FULL_URL;?>img/favicon.png">
+      <link rel="apple-touch-icon-precomposed" href="<?php echo ENV_WEBROOT_FULL_URL;?>img/favicon.png">
       <!-- end favicon -->
       <link rel="stylesheet" href="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/css/jquery.bxslider.css'; ?>"/>
       <link rel="stylesheet" href="<?php echo ENV_WEBROOT_FULL_URL.'theme/static/js/slick/slick.css'; ?>">

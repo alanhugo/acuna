@@ -2,7 +2,7 @@
    <div class="fixheader">
 	  <div class="wancho header-ctn">
 		 <nav class="menu cf">
-			<div class="menu-left"><a href="<?php echo ENV_WEBROOT_FULL_URL;?>" class="header-logo"><img src="<?php echo ENV_WEBROOT_FULL_URL;?>img/logo_acuna.jpg" alt="" width="181" height="50"></a></div>
+			<div class="menu-left"><a href="<?php echo ENV_WEBROOT_FULL_URL;?>" class="header-logo"><img src="<?php echo ENV_WEBROOT_FULL_URL;?>img/logo-acuna.png" alt="" width="140" height="60"></a></div>
 			<div class="menu-right">
 			   <div class="menu-wrap">
 				  <ul class="menu-list clone-list">
