@@ -116,7 +116,7 @@ CakeLog::config('error', array(
 
 switch (Configure::read('environment')){
 	case 'localhost':
-		Configure::write('acuna.url','http://localhost/github/acuna/');
+		Configure::write('acuna.url','http://localhost/acuna/');
 		//Configure::write('SCRIPT_MIN','');
 		break;
 	case 'production':
@@ -124,7 +124,7 @@ switch (Configure::read('environment')){
 		//Configure::write('SCRIPT_MIN','.min');
 		break;
 	default:
-		Configure::write('acuna.url','http://localhost/github/acuna/');
+		Configure::write('acuna.url','http://localhost/acuna/');
 		//Configure::write('SCRIPT_MIN','');
 }
 

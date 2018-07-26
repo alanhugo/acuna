@@ -22,7 +22,7 @@
 <section class="b15 wancho">
    <div class="b15cntitem">
 	  <div class="b15-img">
-		 <div class="b15-img-cnt"><img src= <?php echo ENV_WEBROOT_FULL_URL.'files/conocenos_banner1/'.$obj_conocenos->getAttr('banner2');?>></div>
+		 <div class="b15-img-cnt"><img src= <?php echo ENV_WEBROOT_FULL_URL.'files/conocenos_banner2/'.$obj_conocenos->getAttr('banner2');?>></div>
 	  </div>
    </div>
    <div class="b15-cnt">

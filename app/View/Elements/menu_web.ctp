@@ -14,7 +14,7 @@
 				  </ul>
 				  <ul class="menu-list clone-number">
 					 <li><a class="btn-cotizar h-btn-resp" href="<?php echo ENV_WEBROOT_FULL_URL;?>contacto"><span class="h-textbtn">COTIZAR AHORA</span></a></li>
-					 <li><a class="menu-tel" href=""><span class="resp-textnumber">Call center:</span><span class="icon-tel-2"></span>719-5533</a></li>
+					 <li><a class="menu-tel" href="JavaScript:Void(0);"><span class="resp-textnumber">Call center:</span><span class="icon-tel-2"></span>074 652169</a></li>
 					 <li><a class="btn-cotizar h-btn-desk" href="<?php echo ENV_WEBROOT_FULL_URL;?>contacto"><span class="h-textbtn">COTIZAR AHORA</span></a></li>
 				  </ul>
 			   </div>
