@@ -2,7 +2,7 @@
    <div class="wancho" style="padding-bottom: 40px">
 	  <div class="b6-ctn">
 		 <div class="left">
-			<div class="b6-img"><img src="<?php echo ENV_WEBROOT_FULL_URL;?>theme/uploads/b6-left.png" alt=""></div>
+			<div class="b6-img"><img src="<?php echo ENV_WEBROOT_FULL_URL;?>img/pareja.png" alt=""></div>
 		 </div>
 			<div class="right">
 				<div class="b12-title">
@@ -40,7 +40,11 @@
 							</div>
 						 </div>
 					  </div>
-					  <div class="b6-btn"><input type="button" class="btn-big submit-contacto" value="INFORMATE AQUÍ"></div>
+					  <div class="b6-btn">
+						<input type="button" class="btn-big submit-contacto" value="INFORMATE AQUI">
+						<img class="loadingAprobar hide" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+						<div class="sendExito hide" style="padding-top: 10px;color: #181818;">Felicidades, se envio correctamente tu mensaje.</div>
+					  </div>
 					  <input type="hidden" id="form__token" name="form[_token]" value="kSOTXbzIxW5U2U14wi1vH8eV6-Om7bAVG3SLdRK8ykk" />
 				   </form>
 				</div>

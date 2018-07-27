@@ -343,18 +343,33 @@
 
         $body.off('click','.submit-contacto');
         $body.on('click', '.submit-contacto' , function(){
-          //$(this).attr("disabled", "disabled");
-          $form = $(this).parents('form').eq(0);
+          $('.submit-contacto').attr("disabled", "disabled");
+          $('.loadingAprobar').addClass('show');
+		  $('.submit-contacto').attr("value", "Enviando.. ");
+
+		  $form = $(this).parents('form').eq(0);
           $.ajax({
             url: $form.attr('action'),
             data: $form.serialize(),
             type: 'post',
             dataType: 'json'
           }).done(function(data){
-            //$('.submit-contacto').removeAttr("disabled");
-
-            if(data.success){
-              alert("Felicidades, se envio correctamente tu mensaje.");
+            $('.submit-contacto').removeAttr("disabled");
+			$('.loadingAprobar').removeClass('show');
+			$('.loadingAprobar').addClass('hide');
+            $('.submit-contacto').attr("value", "INFORMATE AQUI");
+			
+			if(data.success){
+			  $('#form_nombre').attr("value", "");
+			  $('#form_documento').attr("value", "");
+			  $('#form_telefono').attr("value", "");
+			  $('#form_email').attr("value", "");
+              //alert("Felicidades, se envio correctamente tu mensaje.");
+			  $('.sendExito').addClass('show');
+			  setTimeout(function(){
+					$('.sendExito').removeClass('show');
+					$('.sendExito').addClass('hide');
+			  },5000)
             }else{
               data.validation.forEach( function(valor, indice, array) {
                 console.log("En el índice " + indice + " hay este valor: " + valor);
