@@ -20,7 +20,7 @@
 				<td><img src = <?php echo ENV_WEBROOT_FULL_URL.'files/proy-thumb/'.$proyecto->getAttr('thumbnail'); ?> width='80'></td>
 				<td><a><i class="fa fa-edit text-navy edit-proyecto-trigger"></i> </a>
 					<a href="#myModalDeleteProyecto" role="button" data-toggle="modal"
-					data-target="#myModalDeleteproyecto"><i
+					data-target="#myModalDeleteProyecto"><i
 						class="fa fa-trash-o text-navy open-model-delete-proyecto"></i> </a>
 				</td>
 			</tr>

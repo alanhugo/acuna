@@ -61,7 +61,7 @@
 				</div>
 				<div class="modal-body">
 					<p>
-						<strong><?php echo utf8_encode(__('¿Estas seguro de querer Eliminar el Registro?')); ?>
+						<strong><?php echo '¿Estas seguro de querer Eliminar el Registro?'; ?>
 						</strong>
 					</p>
 				</div>
