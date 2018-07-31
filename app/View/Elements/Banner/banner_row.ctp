@@ -20,9 +20,10 @@
 				<td><img src = <?php echo ENV_WEBROOT_FULL_URL.'files/banner/'.$banner->getAttr('imagen'); ?> width='80'></td>
 				<td><a><i class="fa fa-edit text-navy edit-banner-trigger"></i> </a>
 					<a href="#myModalDeleteBanner" role="button" data-toggle="modal"
-					data-target="#myModalDeletebanner"><i
+					data-target="#myModalDeleteBanner"><i
 						class="fa fa-trash-o text-navy open-model-delete-banner"></i> </a>
 				</td>
 			</tr>
 			<?php }?>
 		</tbody>
+<table>
