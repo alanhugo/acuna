@@ -50,7 +50,7 @@
 	</div>
  </div>
 
-	<div class="modal inmodal" id="myModalDeleteConocenos" tabindex="-1"
+	<div class="modal inmodal" id="myModalDeleteConoceno" tabindex="-1"
 		role="dialog" aria-hidden="true" conoceno_id=''>
 		<div class="modal-dialog">
 			<div class="modal-content animated fadeIn">

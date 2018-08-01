@@ -1,5 +1,4 @@
-<table
-		class="table table-striped table-bordered table-hover dataTables-example" id="dtable_banners">
+<table class="table table-striped table-bordered table-hover dataTables-example" id="dtable_banners">
 		<thead>
 			<tr>
 				<th></th>
@@ -26,4 +25,4 @@
 			</tr>
 			<?php }?>
 		</tbody>
-<table>
+	</table>

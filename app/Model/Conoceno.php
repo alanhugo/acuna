@@ -34,7 +34,7 @@ App::uses('AppModel','Model');
                             'Conoceno.banner_titulo LIKE'=> '%'.$search_conoceno.'%',
                             //'Conoceno.mision LIKE'=> '%'.$search_conoceno.'%',
                             //'Conoceno.vision LIKE'=> '%'.$search_conoceno.'%',
-                            //'Conoceno.estado != ' => 0
+                            'Conoceno.estado != ' => 0
                     ),
                     /*'page'=> $start,
                     'limit'=> $per_page,

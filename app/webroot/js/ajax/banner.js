@@ -30,9 +30,9 @@ $(document).ready(function(){
 						$('#dtable_banners').DataTable();
 					});
 					//toastr.success(data.msg);
-				}else{
+				}/*else{
 					//toastr.error(value[0]);
-				}
+				}*/
 			});	
 		}
 	}
