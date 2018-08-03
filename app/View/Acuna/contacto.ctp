@@ -6,6 +6,7 @@
 		</div>
 	</div>
 </section>
+
 <section class="b20">
 	<div class="wancho">
 		<div class="b20-contact">
@@ -40,7 +41,8 @@
 		</div>
 	</div>
 </section>
-<section class="b21 wancho">
+
+<section class="b21 wancho" style="display:none">
 	<div class="">
 		<div class="b21-map">
 			<div id="gmap"></div>
@@ -49,6 +51,7 @@
 		<div class="b21-btn-abrir"><a href="" class="btn-big b21-pitcher-open" type="submit">VER MAPA</a></div>
 	</div>
 </section>
+
 <section class="b22 wancho">
 	<div class="b22-img"><img src="theme/uploads/contactanos-imagen-1-san-isidro.png" alt=""></div>
 	<div class="b22-cnt cf">
