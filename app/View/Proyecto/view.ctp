@@ -192,8 +192,6 @@
    </div>
 </section>
 
-<?php echo $this->Element('contacto'); ?>
-
 <section class="b13 wancho">
    <div class="b13-cnt">
 	  <div class="b13-map">
@@ -210,6 +208,9 @@
 	  </div>
    </div>
 </section>
+
+<?php echo $this->Element('contacto'); ?>
+
 <div class="b50-pop-up">
    <div class="b50-overlay"></div>
    <div class="b50-pop-content">
