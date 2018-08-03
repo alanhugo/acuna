@@ -209,7 +209,7 @@
    </div>
 </section>
 
-<?php echo $this->Element('contacto'); ?>
+<?php //echo $this->Element('contacto'); ?>
 
 <div class="b50-pop-up">
    <div class="b50-overlay"></div>
