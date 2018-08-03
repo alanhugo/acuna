@@ -29,7 +29,7 @@
     <link href="<?php echo ENV_WEBROOT_FULL_URL?>css/plugins/chosen/chosen.css" rel="stylesheet">
 	<link href="<?php echo ENV_WEBROOT_FULL_URL?>css/plugins/datapicker/datepicker3.css" rel="stylesheet">
     
-    <link href="<?php echo ENV_WEBROOT_FULL_URL?>css/animate.css" rel="stylesheet">
+    <!-- <link href="<?php echo ENV_WEBROOT_FULL_URL?>css/animate.css" rel="stylesheet">-->
     
     
     <link href="<?php echo ENV_WEBROOT_FULL_URL?>css/plugins/summernote/summernote.css" rel="stylesheet">

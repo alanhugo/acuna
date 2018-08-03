@@ -29,10 +29,10 @@ $(document).ready(function(){
 					$('#conteiner_all_rows').load(env_webroot_script + escape('proyectos/find_proyectos/1/'+null+'/'+null+'/'+''+'/'+''),function(){
 						$('#dtable_proyectos').DataTable();
 					});
-					toastr.success(data.msg);
-				}else{
-					toastr.error(value[0]);
-				}
+					//toastr.success(data.msg);
+				}/*else{
+					//toastr.error(value[0]);
+				}*/
 			});	
 		}
 	}

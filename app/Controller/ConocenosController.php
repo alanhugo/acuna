@@ -220,7 +220,6 @@ class ConocenosController extends AppController{
 	
 		if($this->request->is('post')){
 			$conoceno_id = $this->request->data['conoceno_id'];
-			
 			$obj_conoceno = $this->Conoceno->findById($conoceno_id);
 			if($obj_conoceno->saveField('estado', 0)){
 				echo json_encode(array('success'=>true,'msg'=>__('Eliminado con &eacute;xito.')));

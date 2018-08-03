@@ -25,13 +25,11 @@ $(document).ready(function(){
 				dataType: 'json'
 			}).done(function(data){
 				if(data.success == true){
-					$('.conoceno_row_container[conoceno_id='+conoceno_id+']').fadeOut(function(){$(this).remove()});
-					$('#conteiner_all_rows').load(env_webroot_script + escape('conocenos/find_conocenos/1/'+null+'/'+null+'/'+''+'/'+''),function(){
+					//$('.conoceno_row_container[conoceno_id='+conoceno_id+']').fadeOut(function(){$(this).remove()});
+					location.reload();
+					/*$('#conteiner_all_rows').load(env_webroot_script + escape('conocenos/find_conocenos/1/'+null+'/'+null+'/'+''+'/'+''),function(){
 						$('#dtable_conocenos').DataTable();
-					});
-					toastr.success(data.msg);
-				}else{
-					toastr.error(value[0]);
+					});			*/
 				}
 			});	
 		}
@@ -120,6 +118,7 @@ $(document).ready(function(){
 				$('#conteiner_all_rows').load(env_webroot_script + escape('conocenos/find_conocenos/1/'+null+'/'+null+'/'+''+'/'+''),function(){
 					$('#dtable_conocenos').DataTable();
 				});
+				$('.btn-nuevo-conoceno').hide();
 				//toastr.success(data.msg);
 			}else{
 				$.each(data.validation, function( key, value ) {

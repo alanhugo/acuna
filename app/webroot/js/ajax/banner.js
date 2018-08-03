@@ -29,10 +29,10 @@ $(document).ready(function(){
 					$('#conteiner_all_rows').load(env_webroot_script + escape('banners/find_banners/1/'+null+'/'+null+'/'+''+'/'+''),function(){
 						$('#dtable_banners').DataTable();
 					});
-					toastr.success(data.msg);
-				}else{
-					toastr.error(value[0]);
-				}
+					//toastr.success(data.msg);
+				}/*else{
+					//toastr.error(value[0]);
+				}*/
 			});	
 		}
 	}
@@ -69,10 +69,10 @@ $(document).ready(function(){
 				$('#conteiner_all_rows').load(env_webroot_script + escape('banners/find_banners/1/'+null+'/'+null+'/'+''+'/'+''),function(){
 					$('#dtable_banners').DataTable();
 				});
-				toastr.success(data.msg);
+				//toastr.success(data.msg);
 			}else{
 				$.each(data.validation, function( key, value ) {
-					toastr.error(value[0]);
+					//toastr.error(value[0]);
 					$('[name="data[Banner]['+key+']"]').parent().addClass('control-group has-error');
 					$('[name="data[Banner]['+key+']"]').change(function() {
 						$('[name="data[Banner]['+key+']"]').parent().removeClass('control-group has-error');
