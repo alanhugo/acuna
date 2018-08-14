@@ -73,7 +73,7 @@
 							<h3><?php echo h($obj_proyecto->getAttr('ubicacion_titulo'));?></h3>
 						 </div>
 						 <div class="b10-text">
-							<?php echo h($obj_proyecto->getAttr('ubicacion_texto'));?>
+							<?php echo $obj_proyecto->getAttr('ubicacion_texto');?>
 							<p>&nbsp;</p>
 						 </div>
 					  </div>
@@ -86,7 +86,7 @@
 							<h3><?php echo h($obj_proyecto->getAttr('area_com_titulo'));?></h3>
 						 </div>
 						 <div class="b10-text">
-							<?php echo h($obj_proyecto->getAttr('area_com_texto'));?>
+							<?php echo $obj_proyecto->getAttr('area_com_texto');?>
 						</div>
 					 </div>
 				  </div>
@@ -98,7 +98,7 @@
 						<h3><?php echo h($obj_proyecto->getAttr('depart_titulo'));?></h3>
 					 </div>
 					 <div class="b10-text">
-						<?php echo h($obj_proyecto->getAttr('depart_texto'));?>
+						<?php echo $obj_proyecto->getAttr('depart_texto');?>
 					 </div>
 				  </div>
 			   </div>
@@ -110,7 +110,7 @@
 						<h3><?php echo h($obj_proyecto->getAttr('area_verd_titulo'));?></h3>
 					 </div>
 					 <div class="b10-text">
-						<?php echo h($obj_proyecto->getAttr('area_verd_texto'));?>
+						<?php echo $obj_proyecto->getAttr('area_verd_texto');?>
 					 </div>
 				  </div>
 			   </div>
@@ -122,7 +122,7 @@
 						<h3><?php echo h($obj_proyecto->getAttr('tech_prop_titulo'));?></h3>
 					 </div>
 					 <div class="b10-text">
-						<?php echo h($obj_proyecto->getAttr('tech_prop_texto'));?>
+						<?php echo $obj_proyecto->getAttr('tech_prop_texto');?>
 					 </div>
 				  </div>
 			   </div>
@@ -134,7 +134,7 @@
 						<h3><?php echo h($obj_proyecto->getAttr('proy_titulo'));?></h3>
 					 </div>
 					 <div class="b10-text">
-						<?php echo h($obj_proyecto->getAttr('proy_texto'));?>
+						<?php echo $obj_proyecto->getAttr('proy_texto');?>
 					 </div>
 				  </div>
 			   </div>
@@ -146,7 +146,7 @@
 						<h3><?php echo h($obj_proyecto->getAttr('casas_titulo'));?></h3>
 					 </div>
 					 <div class="b10-text">
-						<?php echo h($obj_proyecto->getAttr('casas_texto'));?>
+						<?php echo $obj_proyecto->getAttr('casas_texto');?>
 					 </div>
 				  </div>
 			   </div>
@@ -158,7 +158,7 @@
 						<h3><?php echo h($obj_proyecto->getAttr('promo_titulo'));?></h3>
 					 </div>
 					 <div class="b10-text">
-						<?php echo h($obj_proyecto->getAttr('promo_texto'));?>
+						<?php echo $obj_proyecto->getAttr('promo_texto');?>
 					 </div>
 				  </div>
 			   </div>
@@ -170,7 +170,7 @@
 						<h3><?php echo h($obj_proyecto->getAttr('facilidad_titulo'));?></h3>
 					 </div>
 					 <div class="b10-text">
-						<?php echo h($obj_proyecto->getAttr('facilidad_texto'));?>
+						<?php echo $obj_proyecto->getAttr('facilidad_texto');?>
 					 </div>
 				  </div>
 			   </div>
@@ -182,7 +182,7 @@
 						<h3><?php echo h($obj_proyecto->getAttr('ventaja_titulo'));?></h3>
 					 </div>
 					 <div class="b10-text">
-						<?php echo h($obj_proyecto->getAttr('ventaja_texto'));?>
+						<?php echo $obj_proyecto->getAttr('ventaja_texto');?>
 					 </div>
 				  </div>
 			   </div>
