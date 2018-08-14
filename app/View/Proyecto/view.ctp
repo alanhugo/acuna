@@ -24,7 +24,7 @@
 			   <h2><?php echo h($obj_proyecto->getAttr('sect1_titulo'));?><br><span><?php echo h($obj_proyecto->getAttr('sect1_subtitulo'));?></span></h2>
 			</div>
 			<div class="b9-text">
-			   <?php echo h($obj_proyecto->getAttr('sect1_texto')); ?>
+			   <?php echo $obj_proyecto->getAttr('sect1_texto'); ?>
 			</div>
 		 </div>
 		 <div class="b23-botone"><a href="http://www.wescon.pe/uploads/brochure/book-2daetapa-2-ilovepdf-compressed.pdf" class="btn-white" download="/uploads/brochure/book-2daetapa-2-ilovepdf-compressed.pdf" >DESCARGAR BROCHURE</a></div>
