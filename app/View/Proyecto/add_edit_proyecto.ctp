@@ -51,13 +51,13 @@
 									<div class="form-group">
 										<label class="col-sm-2 control-label"><?php echo 'Título'; ?></label>
 										<div class="col-sm-6">
-											<input name="data[Proyecto][thumb_titulo]" class="txtProyecto form-control" id="txtProyecto" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('thumb_titulo')):''; ?>">
+											<input name="data[Proyecto][thumb_titulo]" class="txtProyecto form-control" id="txtProyecto" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?h($obj_proyecto->getAttr('thumb_titulo')):''; ?>">
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="col-sm-2 control-label"><?php echo 'subtítulo'; ?></label>
 										<div class="col-sm-6">
-											<input name="data[Proyecto][thumb_subtitulo]" class="txtProyecto form-control" id="txtProyecto" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('thumb_subtitulo')):''; ?>">
+											<input name="data[Proyecto][thumb_subtitulo]" class="txtProyecto form-control" id="txtProyecto" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?h($obj_proyecto->getAttr('thumb_subtitulo')):''; ?>">
 										</div>
 									</div>
 
@@ -87,13 +87,13 @@
 									<div class="form-group">
 										<label class="col-sm-2 control-label"><?php echo 'Título Sección 1'; ?></label>
 										<div class="col-sm-6">
-											<input name="data[Proyecto][sect1_titulo]" class="txtProyecto form-control" id="txtProyecto" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('sect1_titulo')):''; ?>">
+											<input name="data[Proyecto][sect1_titulo]" class="txtProyecto form-control" id="txtProyecto" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?h($obj_proyecto->getAttr('sect1_titulo')):''; ?>">
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="col-sm-2 control-label"><?php echo 'Subtítulo Sección 1'; ?></label>
 										<div class="col-sm-6">
-											<input name="data[Proyecto][sect1_subtitulo]" class="txtProyecto form-control" id="txtProyecto" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('sect1_subtitulo')):''; ?>">
+											<input name="data[Proyecto][sect1_subtitulo]" class="txtProyecto form-control" id="txtProyecto" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?h($obj_proyecto->getAttr('sect1_subtitulo')):''; ?>">
 										</div>
 									</div>
 									
@@ -132,7 +132,7 @@
     							<div class="form-group">
 										<label class="col-sm-2 control-label"><?php echo 'Área'; ?></label>
 										<div class="col-sm-6">
-											<input name="data[Proyecto][area]" class="txt-area form-control" id="txtArea" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('area')):''; ?>">
+											<input name="data[Proyecto][area]" class="txt-area form-control" id="txtArea" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?h($obj_proyecto->getAttr('area')):''; ?>">
 										</div>
 								</div>
 
@@ -190,7 +190,7 @@
 	    							<div class="form-group">
 	    									<label class="col-sm-2 control-label"><?php echo 'T&iacute;tulo'; ?></label>
 											<div class="col-sm-6">
-												<input name="data[Proyecto][ubicacion_titulo]" class="txt-area form-control" id="txtUbiTitulo" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('ubicacion_titulo')):''; ?>">
+												<input name="data[Proyecto][ubicacion_titulo]" class="txt-area form-control" id="txtUbiTitulo" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?h($obj_proyecto->getAttr('ubicacion_titulo')):''; ?>">
 											</div>
 									</div>
 									<div class="form-group">
@@ -227,7 +227,7 @@
 	    							<div class="form-group">
 	    									<label class="col-sm-2 control-label"><?php echo 'T&iacute;tulo'; ?></label>
 											<div class="col-sm-6">
-												<input name="data[Proyecto][depart_titulo]" class="txt-departamento form-control" id="txtDepaTitulo" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('depart_titulo')):''; ?>">
+												<input name="data[Proyecto][depart_titulo]" class="txt-departamento form-control" id="txtDepaTitulo" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?h($obj_proyecto->getAttr('depart_titulo')):''; ?>">
 											</div>
 									</div>
 									<div class="form-group">
@@ -246,7 +246,7 @@
 	    							<div class="form-group">
 	    									<label class="col-sm-2 control-label"><?php echo 'T&iacute;tulo'; ?></label>
 											<div class="col-sm-6">
-												<input name="data[Proyecto][area_verd_titulo]" class="txt-verd-tit form-control" id="txtVerdeTitulo" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('area_verd_titulo')):''; ?>">
+												<input name="data[Proyecto][area_verd_titulo]" class="txt-verd-tit form-control" id="txtVerdeTitulo" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?h($obj_proyecto->getAttr('area_verd_titulo')):''; ?>">
 											</div>
 									</div>
 									<div class="form-group">
@@ -264,7 +264,7 @@
 	    							<div class="form-group">
 	    									<label class="col-sm-2 control-label"><?php echo 'T&iacute;tulo'; ?></label>
 											<div class="col-sm-6">
-												<input name="data[Proyecto][tech_prop_titulo]" class="txt-tech-prop form-control" id="txtTechTitulo" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('tech_prop_titulo')):''; ?>">
+												<input name="data[Proyecto][tech_prop_titulo]" class="txt-tech-prop form-control" id="txtTechTitulo" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?h($obj_proyecto->getAttr('tech_prop_titulo')):''; ?>">
 											</div>
 									</div>
 									<div class="form-group">
@@ -282,7 +282,7 @@
 	    							<div class="form-group">
 	    									<label class="col-sm-2 control-label"><?php echo 'T&iacute;tulo'; ?></label>
 											<div class="col-sm-6">
-												<input name="data[Proyecto][proy_titulo]" class="txt-proyecto form-control" id="txtProyecto" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('proy_titulo')):''; ?>">
+												<input name="data[Proyecto][proy_titulo]" class="txt-proyecto form-control" id="txtProyecto" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?h($obj_proyecto->getAttr('proy_titulo')):''; ?>">
 											</div>
 									</div>
 									<div class="form-group">
@@ -300,7 +300,7 @@
 	    							<div class="form-group">
 	    									<label class="col-sm-2 control-label"><?php echo 'T&iacute;tulo'; ?></label>
 											<div class="col-sm-6">
-												<input name="data[Proyecto][casas_titulo]" class="txt-proyecto form-control" id="txtCasas" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('casas_titulo')):''; ?>">
+												<input name="data[Proyecto][casas_titulo]" class="txt-proyecto form-control" id="txtCasas" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?h($obj_proyecto->getAttr('casas_titulo')):''; ?>">
 											</div>
 									</div>
 									<div class="form-group">
@@ -318,7 +318,7 @@
 	    							<div class="form-group">
 	    									<label class="col-sm-2 control-label"><?php echo 'T&iacute;tulo'; ?></label>
 											<div class="col-sm-6">
-												<input name="data[Proyecto][promo_titulo]" class="txt-promo form-control" id="txtPromo" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('promo_titulo')):''; ?>">
+												<input name="data[Proyecto][promo_titulo]" class="txt-promo form-control" id="txtPromo" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?h($obj_proyecto->getAttr('promo_titulo')):''; ?>">
 											</div>
 									</div>
 									<div class="form-group">
@@ -336,7 +336,7 @@
 	    							<div class="form-group">
 	    									<label class="col-sm-2 control-label"><?php echo 'T&iacute;tulo'; ?></label>
 											<div class="col-sm-6">
-												<input name="data[Proyecto][facilidad_titulo]" class="txt-facil form-control" id="txtFacil" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('facilidad_titulo')):''; ?>">
+												<input name="data[Proyecto][facilidad_titulo]" class="txt-facil form-control" id="txtFacil" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?h($obj_proyecto->getAttr('facilidad_titulo')):''; ?>">
 											</div>
 									</div>
 									<div class="form-group">
@@ -354,7 +354,7 @@
 	    							<div class="form-group">
 	    									<label class="col-sm-2 control-label"><?php echo 'T&iacute;tulo'; ?></label>
 											<div class="col-sm-6">
-												<input name="data[Proyecto][ventaja_titulo]" class="txt-ventaja form-control" id="txtVentaja" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('ventaja_titulo')):''; ?>">
+												<input name="data[Proyecto][ventaja_titulo]" class="txt-ventaja form-control" id="txtVentaja" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?h($obj_proyecto->getAttr('ventaja_titulo')):''; ?>">
 											</div>
 									</div>
 									<div class="form-group">
@@ -416,13 +416,13 @@
 	    							<div class="form-group">
 	    									<label class="col-sm-2 control-label"><?php echo 'T&iacute;tulo'; ?></label>
 											<div class="col-sm-6">
-												<input name="data[Proyecto][mapa_titulo]" class="txt-area form-control" id="txtUbiTitulo" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('mapa_titulo')):''; ?>">
+												<input name="data[Proyecto][mapa_titulo]" class="txt-area form-control" id="txtUbiTitulo" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?h($obj_proyecto->getAttr('mapa_titulo')):''; ?>">
 											</div>
 									</div>
 									<div class="form-group">
 											<label class="col-sm-2 control-label">Ubicaci&oacute;n</label>
 											<div class="col-sm-6">
-												<input name="data[Proyecto][ubicacion]" class="txt-area form-control" id="txtUbicacion" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?utf8_decode($obj_proyecto->getAttr('ubicacion')):''; ?>">
+												<input name="data[Proyecto][ubicacion]" class="txt-area form-control" id="txtUbicacion" maxlength="100" type="text" value="<?php echo (isset($obj_proyecto))?h($obj_proyecto->getAttr('ubicacion')):''; ?>">
 											</div>
 									</div>
 									<div class="form-group">

@@ -3,7 +3,7 @@
 	  <div class="b23table">
 		 <div class="left">
 			<div class="b23-title">
-			   <h2 class="g-title white"><?php echo $obj_proyecto->getAttr('thumb_titulo');?><br><span><?php echo $obj_proyecto->getAttr('thumb_subtitulo');?></span></h2>
+			   <h2 class="g-title white"><?php echo h($obj_proyecto->getAttr('thumb_titulo'));?><br><span><?php echo h($obj_proyecto->getAttr('thumb_subtitulo'));?></span></h2>
 			</div>
 		 </div>
 		 <!--<div class="right btn-2">
@@ -21,10 +21,10 @@
 	  <div class="b9-desc">
 		 <div class="b9-ctn-text">
 			<div class="b9-title">
-			   <h2><?php echo $obj_proyecto->getAttr('sect1_titulo');?><br><span><?php echo $obj_proyecto->getAttr('sect1_subtitulo');?></span></h2>
+			   <h2><?php echo h($obj_proyecto->getAttr('sect1_titulo'));?><br><span><?php echo h($obj_proyecto->getAttr('sect1_subtitulo'));?></span></h2>
 			</div>
 			<div class="b9-text">
-			   <?php echo $obj_proyecto->getAttr('sect1_texto'); ?>
+			   <?php echo h($obj_proyecto->getAttr('sect1_texto')); ?>
 			</div>
 		 </div>
 		 <div class="b23-botone"><a href="http://www.wescon.pe/uploads/brochure/book-2daetapa-2-ilovepdf-compressed.pdf" class="btn-white" download="/uploads/brochure/book-2daetapa-2-ilovepdf-compressed.pdf" >DESCARGAR BROCHURE</a></div>
@@ -33,15 +33,15 @@
 			<ul class="b9-char-cnt">
 			   <li class="b9-area b9-char-item">
 				  <p>Área</p>
-				  <p><strong><?php echo $obj_proyecto->getAttr('area');?></strong></p>
+				  <p><strong><?php echo h($obj_proyecto->getAttr('area'));?></strong></p>
 			   </li>
 			   <li class="b9-type b9-char-item">
 				  <p>Tipo</p>
-				  <p><strong><?php echo $obj_proyecto->TipoVivienda->getAttr('descripcion');?></strong></p>
+				  <p><strong><?php echo h($obj_proyecto->TipoVivienda->getAttr('descripcion'));?></strong></p>
 			   </li>
 			   <li class="b9-fin b9-char-item">
 				  <p>Financiado</p>
-				  <p><?php echo $obj_proyecto->Banco->getAttr('nombre');?><!--<img src="theme/uploads/bancos/bcp.png" alt="">--></p>
+				  <p><?php echo h($obj_proyecto->Banco->getAttr('nombre'));?><!--<img src="theme/uploads/bancos/bcp.png" alt="">--></p>
 			   </li>
 			</ul>
 		 </div>
@@ -70,10 +70,10 @@
 				   <div class="b10-table">
 					  <div class="b10-envolve">
 						 <div class="b10-title">
-							<h3><?php echo $obj_proyecto->getAttr('ubicacion_titulo');?></h3>
+							<h3><?php echo h($obj_proyecto->getAttr('ubicacion_titulo'));?></h3>
 						 </div>
 						 <div class="b10-text">
-							<?php echo $obj_proyecto->getAttr('ubicacion_texto');?>
+							<?php echo h($obj_proyecto->getAttr('ubicacion_texto'));?>
 							<p>&nbsp;</p>
 						 </div>
 					  </div>
@@ -83,10 +83,10 @@
 				   <div class="b10-table">
 					  <div class="b10-envolve">
 						 <div class="b10-title">
-							<h3><?php echo $obj_proyecto->getAttr('area_com_titulo');?></h3>
+							<h3><?php echo h($obj_proyecto->getAttr('area_com_titulo'));?></h3>
 						 </div>
 						 <div class="b10-text">
-							<?php echo $obj_proyecto->getAttr('area_com_texto');?>
+							<?php echo h($obj_proyecto->getAttr('area_com_texto'));?>
 						</div>
 					 </div>
 				  </div>
@@ -95,10 +95,10 @@
 			   <div class="b10-table">
 				  <div class="b10-envolve">
 					 <div class="b10-title">
-						<h3><?php echo $obj_proyecto->getAttr('depart_titulo');?></h3>
+						<h3><?php echo h($obj_proyecto->getAttr('depart_titulo'));?></h3>
 					 </div>
 					 <div class="b10-text">
-						<?php echo $obj_proyecto->getAttr('depart_texto');?>
+						<?php echo h($obj_proyecto->getAttr('depart_texto'));?>
 					 </div>
 				  </div>
 			   </div>
@@ -107,10 +107,10 @@
 			   <div class="b10-table">
 				  <div class="b10-envolve">
 					 <div class="b10-title">
-						<h3><?php echo $obj_proyecto->getAttr('area_verd_titulo');?></h3>
+						<h3><?php echo h($obj_proyecto->getAttr('area_verd_titulo'));?></h3>
 					 </div>
 					 <div class="b10-text">
-						<?php echo $obj_proyecto->getAttr('area_verd_texto');?>
+						<?php echo h($obj_proyecto->getAttr('area_verd_texto'));?>
 					 </div>
 				  </div>
 			   </div>
@@ -119,10 +119,10 @@
 			   <div class="b10-table">
 				  <div class="b10-envolve">
 					 <div class="b10-title">
-						<h3><?php echo $obj_proyecto->getAttr('tech_prop_titulo');?></h3>
+						<h3><?php echo h($obj_proyecto->getAttr('tech_prop_titulo'));?></h3>
 					 </div>
 					 <div class="b10-text">
-						<?php echo $obj_proyecto->getAttr('tech_prop_texto');?>
+						<?php echo h($obj_proyecto->getAttr('tech_prop_texto'));?>
 					 </div>
 				  </div>
 			   </div>
@@ -131,10 +131,10 @@
 			   <div class="b10-table">
 				  <div class="b10-envolve">
 					 <div class="b10-title">
-						<h3><?php echo $obj_proyecto->getAttr('proy_titulo');?></h3>
+						<h3><?php echo h($obj_proyecto->getAttr('proy_titulo'));?></h3>
 					 </div>
 					 <div class="b10-text">
-						<?php echo $obj_proyecto->getAttr('proy_texto');?>
+						<?php echo h($obj_proyecto->getAttr('proy_texto'));?>
 					 </div>
 				  </div>
 			   </div>
@@ -143,10 +143,10 @@
 			   <div class="b10-table">
 				  <div class="b10-envolve">
 					 <div class="b10-title">
-						<h3><?php echo $obj_proyecto->getAttr('casas_titulo');?></h3>
+						<h3><?php echo h($obj_proyecto->getAttr('casas_titulo'));?></h3>
 					 </div>
 					 <div class="b10-text">
-						<?php echo $obj_proyecto->getAttr('casas_texto');?>
+						<?php echo h($obj_proyecto->getAttr('casas_texto'));?>
 					 </div>
 				  </div>
 			   </div>
@@ -155,10 +155,10 @@
 			   <div class="b10-table">
 				  <div class="b10-envolve">
 					 <div class="b10-title">
-						<h3><?php echo $obj_proyecto->getAttr('promo_titulo');?></h3>
+						<h3><?php echo h($obj_proyecto->getAttr('promo_titulo'));?></h3>
 					 </div>
 					 <div class="b10-text">
-						<?php echo $obj_proyecto->getAttr('promo_texto');?>
+						<?php echo h($obj_proyecto->getAttr('promo_texto'));?>
 					 </div>
 				  </div>
 			   </div>
@@ -167,10 +167,10 @@
 			   <div class="b10-table">
 				  <div class="b10-envolve">
 					 <div class="b10-title">
-						<h3><?php echo $obj_proyecto->getAttr('facilidad_titulo');?></h3>
+						<h3><?php echo h($obj_proyecto->getAttr('facilidad_titulo'));?></h3>
 					 </div>
 					 <div class="b10-text">
-						<?php echo $obj_proyecto->getAttr('facilidad_texto');?>
+						<?php echo h($obj_proyecto->getAttr('facilidad_texto'));?>
 					 </div>
 				  </div>
 			   </div>
@@ -179,10 +179,10 @@
 			   <div class="b10-table">
 				  <div class="b10-envolve">
 					 <div class="b10-title">
-						<h3><?php echo $obj_proyecto->getAttr('ventaja_titulo');?></h3>
+						<h3><?php echo h($obj_proyecto->getAttr('ventaja_titulo'));?></h3>
 					 </div>
 					 <div class="b10-text">
-						<?php echo $obj_proyecto->getAttr('ventaja_texto');?>
+						<?php echo h($obj_proyecto->getAttr('ventaja_texto'));?>
 					 </div>
 				  </div>
 			   </div>

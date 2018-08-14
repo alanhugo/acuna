@@ -67,7 +67,7 @@
 							<div class="form-group">
 								<label class="col-sm-2 control-label"><?php echo 'Titulo Banner 2'; ?></label>
 								<div class="col-sm-6">
-									<input name="data[Conoceno][banner2_titulo]" class="txtConoceno form-control" id="txtConoceno" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" maxlength="100" type="text" value="<?php echo (isset($obj_conoceno))?utf8_decode($obj_conoceno->getAttr('banner2_titulo')):''; ?>">
+									<input name="data[Conoceno][banner2_titulo]" class="txtConoceno form-control" id="txtConoceno" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" maxlength="100" type="text" value="<?php echo (isset($obj_conoceno))?h($obj_conoceno->getAttr('banner2_titulo')):''; ?>">
 								</div>
 							</div>
 							<div class="form-group">

@@ -14,7 +14,7 @@
 			<tr class="conoceno_row_container"
 				conoceno_id="<?php echo $conoceno->getAttr('id'); ?>">
 				<td><?php echo $cont++?></td>
-				<td><?php echo utf8_encode($conoceno->getAttr('banner2_titulo')); ?></td>
+				<td><?php echo h($conoceno->getAttr('banner2_titulo')); ?></td>
 				<td><img src = <?php echo ENV_WEBROOT_FULL_URL.'files/conocenos_banner1/'.$conoceno->getAttr('banner'); ?> width='80'></td>
 				<td><a><i class="fa fa-edit text-navy edit-conoceno-trigger"></i> </a>
 					<a href="#myModalDeleteConoceno" role="button" data-toggle="modal"

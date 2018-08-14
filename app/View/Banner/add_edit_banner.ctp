@@ -23,13 +23,13 @@
 							<div class="form-group">
 								<label class="col-sm-2 control-label"><?php echo 'Título'; ?></label>
 								<div class="col-sm-6">
-									<input name="data[Banner][titulo]" class="txtBanner form-control" id="txtBanner" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" maxlength="100" type="text" value="<?php echo (isset($obj_banner))?utf8_decode($obj_banner->getAttr('titulo')):''; ?>">
+									<input name="data[Banner][titulo]" class="txtBanner form-control" id="txtBanner" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" maxlength="100" type="text" value="<?php echo (isset($obj_banner))?h($obj_banner->getAttr('titulo')):''; ?>">
 								</div>
 							</div>
 							<div class="form-group">
 								<label class="col-sm-2 control-label"><?php echo 'subtítulo'; ?></label>
 								<div class="col-sm-6">
-									<input name="data[Banner][subtitulo]" class="txtBanner form-control" id="txtBanner" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" maxlength="100" type="text" value="<?php echo (isset($obj_banner))?utf8_decode($obj_banner->getAttr('subtitulo')):''; ?>">
+									<input name="data[Banner][subtitulo]" class="txtBanner form-control" id="txtBanner" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" maxlength="100" type="text" value="<?php echo (isset($obj_banner))?h($obj_banner->getAttr('subtitulo')):''; ?>">
 								</div>
 							</div>
 

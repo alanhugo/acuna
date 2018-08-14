@@ -6,8 +6,8 @@
 			<a href="<?php echo ENV_WEBROOT_FULL_URL.'proyectos/view/'.$proyecto->getAttr('id'); ?>">
 			   <!--<div class="b7-state"><span>Próxima Entrega</span></div>-->
 			   <div class="b7-text">
-				  <p class="b7-dor"><?php echo $proyecto->getAttr('thumb_titulo');?></p>
-				  <p class="b7-dir"><?php echo $proyecto->getAttr('thumb_subtitulo');?></p>
+				  <p class="b7-dor"><?php echo h($proyecto->getAttr('thumb_titulo'));?></p>
+				  <p class="b7-dir"><?php echo h($proyecto->getAttr('thumb_subtitulo'));?></p>
 			   </div>
 			</a>
 		 </li>

@@ -7,7 +7,7 @@
 				<div class="b1-cnt">
 				   <div class="b1-table">
 					  <div class="b1-text">
-						 <h2><?php echo $banner->getAttr('titulo');?><br><span><?php echo $banner->getAttr('subtitulo');?></span></h2>
+						 <h2><?php echo h($banner->getAttr('titulo'));?><br><span><?php echo h($banner->getAttr('subtitulo'));?></span></h2>
 						 <a class="btn-yellow" href="<?php echo ENV_WEBROOT_FULL_URL;?>proyectos-en-venta" >INFORMATE AQUI</a>
 					  </div>
 				   </div>
@@ -45,8 +45,8 @@
 										</div>
 										   <!--<div class="b2-state"><span>Próxima Entrega</span></div>-->
 										<div class="b2-text">
-											<p class="b2-dor"><?php echo $proyecto->getAttr('thumb_titulo');?></p>
-											<p class="b2-dir"><?php echo $proyecto->getAttr('thumb_subtitulo');?></p>
+											<p class="b2-dor"><?php echo h($proyecto->getAttr('thumb_titulo'));?></p>
+											<p class="b2-dir"><?php echo h($proyecto->getAttr('thumb_subtitulo'));?></p>
 										</div>
 								</div>
 							</a>

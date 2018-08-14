@@ -3,7 +3,7 @@
 	  <div class="b23table">
 		 <div class="left">
 			<div class="b23-title">
-			   <h2 class="g-title white"><?php echo $obj_conocenos->getAttr('banner_titulo'); ?></h2>
+			   <h2 class="g-title white"><?php echo h($obj_conocenos->getAttr('banner_titulo')); ?></h2>
 			</div>
 		 </div>
 		 <div class="right">
@@ -15,7 +15,7 @@
 <section class="b24">
    <div class="wancho">
 	  <div class="b24-text">
-		 <?php echo $obj_conocenos->getAttr('introduccion'); ?>
+		 <?php echo h($obj_conocenos->getAttr('introduccion')); ?>
 	  </div>
    </div>
 </section>
@@ -28,19 +28,19 @@
    <div class="b15-cnt">
 	  <div class="wancho">
 		 <div class="b15-title">
-			<h2><?php echo $obj_conocenos->getAttr('banner2_titulo'); ?></h2>
+			<h2><?php echo h($obj_conocenos->getAttr('banner2_titulo')); ?></h2>
 		 </div>
 		 <div class="b15-mv">
 			<div class="b15-mision">
 			   <div class="b15-text">
 				  <h3>Misión</h3>
-				  <?php echo $obj_conocenos->getAttr('mision'); ?>
+				  <?php echo h($obj_conocenos->getAttr('mision')); ?>
 			   </div>
 			</div>
 			<div class="b15-vision">
 			   <div class="b15-text">
 				  <h3>Visión</h3>
-				  <?php echo $obj_conocenos->getAttr('vision'); ?>
+				  <?php echo h($obj_conocenos->getAttr('vision')); ?>
 			   </div>
 			</div>
 		 </div>
