@@ -34,13 +34,13 @@
 			<div class="b15-mision">
 			   <div class="b15-text">
 				  <h3>Misión</h3>
-				  <?php echo h($obj_conocenos->getAttr('mision')); ?>
+				  <?php echo $obj_conocenos->getAttr('mision'); ?>
 			   </div>
 			</div>
 			<div class="b15-vision">
 			   <div class="b15-text">
 				  <h3>Visión</h3>
-				  <?php echo h($obj_conocenos->getAttr('vision')); ?>
+				  <?php echo $obj_conocenos->getAttr('vision'); ?>
 			   </div>
 			</div>
 		 </div>
