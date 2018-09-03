@@ -15,7 +15,7 @@
 <section class="b24">
    <div class="wancho">
 	  <div class="b24-text">
-		 <?php echo h($obj_conocenos->getAttr('introduccion')); ?>
+		 <?php echo $obj_conocenos->getAttr('introduccion'); ?>
 	  </div>
    </div>
 </section>
